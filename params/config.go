@@ -20,7 +20,7 @@ import (
 	"fmt"
 	"math/big"
 
-	"github.com/CAHF/EVA-00/common"
+	"github.com/EthereumVega/EVA-00D/common"
 )
 
 var (
