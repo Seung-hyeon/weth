@@ -25,10 +25,10 @@ import (
 	"math/rand"
 	"time"
 
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/core"
-	"github.com/ethereum/go-ethereum/log"
-	"github.com/ethereum/go-ethereum/params"
+	"github.com/EthereumVega/EVA-00D/common"
+	"github.com/EthereumVega/EVA-00D/core"
+	"github.com/EthereumVega/EVA-00D/log"
+	"github.com/EthereumVega/EVA-00D/params"
 )
 
 // makeGenesis creates a new genesis struct based on some user input.
@@ -44,7 +44,7 @@ func (w *wizard) makeGenesis() {
 			EIP150Block:    big.NewInt(2),
 			EIP155Block:    big.NewInt(3),
 			EIP158Block:    big.NewInt(3),
-			ByzantiumBlock: big.NewInt(4),
+			ThirdimpactBlock: big.NewInt(4),
 		},
 	}
 	// Figure out which consensus engine to choose
@@ -167,8 +167,8 @@ func (w *wizard) manageGenesis() {
 		w.conf.genesis.Config.EIP158Block = w.readDefaultBigInt(w.conf.genesis.Config.EIP158Block)
 
 		fmt.Println()
-		fmt.Printf("Which block should Byzantium come into effect? (default = %v)\n", w.conf.genesis.Config.ByzantiumBlock)
-		w.conf.genesis.Config.ByzantiumBlock = w.readDefaultBigInt(w.conf.genesis.Config.ByzantiumBlock)
+		fmt.Printf("Which block should Thirdimpact come into effect? (default = %v)\n", w.conf.genesis.Config.ThirdimpactBlock)
+		w.conf.genesis.Config.ThirdimpactBlock = w.readDefaultBigInt(w.conf.genesis.Config.ThirdimpactBlock)
 
 		out, _ := json.MarshalIndent(w.conf.genesis.Config, "", "  ")
 		fmt.Printf("Chain configuration updated:\n\n%s\n", out)

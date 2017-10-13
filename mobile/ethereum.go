@@ -16,14 +16,14 @@
 
 // Contains all the wrappers from the go-ethereum root package.
 
-package geth
+package weth
 
 import (
 	"errors"
 	"math/big"
 
-	ethereum "github.com/ethereum/go-ethereum"
-	"github.com/ethereum/go-ethereum/common"
+	ethereum "github.com/EthereumVega/EVA-00D"
+	"github.com/EthereumVega/EVA-00D/common"
 )
 
 // Subscription represents an event subscription where events are

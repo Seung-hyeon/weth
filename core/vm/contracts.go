@@ -21,11 +21,11 @@ import (
 	"errors"
 	"math/big"
 
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/common/math"
-	"github.com/ethereum/go-ethereum/crypto"
-	"github.com/ethereum/go-ethereum/crypto/bn256"
-	"github.com/ethereum/go-ethereum/params"
+	"github.com/EthereumVega/EVA-00D/common"
+	"github.com/EthereumVega/EVA-00D/common/math"
+	"github.com/EthereumVega/EVA-00D/crypto"
+	"github.com/EthereumVega/EVA-00D/crypto/bn256"
+	"github.com/EthereumVega/EVA-00D/params"
 	"golang.org/x/crypto/ripemd160"
 )
 
@@ -46,9 +46,9 @@ var PrecompiledContractsHomestead = map[common.Address]PrecompiledContract{
 	common.BytesToAddress([]byte{4}): &dataCopy{},
 }
 
-// PrecompiledContractsByzantium contains the default set of pre-compiled Ethereum
-// contracts used in the Byzantium release.
-var PrecompiledContractsByzantium = map[common.Address]PrecompiledContract{
+// PrecompiledContractsThirdimpact contains the default set of pre-compiled Ethereum
+// contracts used in the Thirdimpact release.
+var PrecompiledContractsThirdimpact = map[common.Address]PrecompiledContract{
 	common.BytesToAddress([]byte{1}): &ecrecover{},
 	common.BytesToAddress([]byte{2}): &sha256hash{},
 	common.BytesToAddress([]byte{3}): &ripemd160hash{},

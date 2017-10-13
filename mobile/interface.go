@@ -16,13 +16,13 @@
 
 // Contains perverted wrappers to allow crossing over empty interfaces.
 
-package geth
+package weth
 
 import (
 	"errors"
 	"math/big"
 
-	"github.com/ethereum/go-ethereum/common"
+	"github.com/EthereumVega/EVA-00D/common"
 )
 
 // Interface represents a wrapped version of Go's interface{}, with the capacity

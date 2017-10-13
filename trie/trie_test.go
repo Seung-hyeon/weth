@@ -34,7 +34,8 @@ import (
 	"github.com/EthereumVega/EVA-00D/crypto"
 	"github.com/EthereumVega/EVA-00D/ethdb"
 	"github.com/EthereumVega/EVA-00D/rlp"
-)
+	"github.com/EthereumVega/EVA-00D/ethdb"
+
 
 func init() {
 	spew.Config.Indent = "    "

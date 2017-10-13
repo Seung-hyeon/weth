@@ -29,12 +29,12 @@ import (
 	"strings"
 	"text/tabwriter"
 
-	"github.com/ethereum/go-ethereum/crypto"
-	"github.com/ethereum/go-ethereum/p2p"
-	"github.com/ethereum/go-ethereum/p2p/discover"
-	"github.com/ethereum/go-ethereum/p2p/simulations"
-	"github.com/ethereum/go-ethereum/p2p/simulations/adapters"
-	"github.com/ethereum/go-ethereum/rpc"
+	"github.com/EthereumVega/EVA-00D/crypto"
+	"github.com/EthereumVega/EVA-00D/p2p"
+	"github.com/EthereumVega/EVA-00D/p2p/discover"
+	"github.com/EthereumVega/EVA-00D/p2p/simulations"
+	"github.com/EthereumVega/EVA-00D/p2p/simulations/adapters"
+	"github.com/EthereumVega/EVA-00D/rpc"
 	"gopkg.in/urfave/cli.v1"
 )
 

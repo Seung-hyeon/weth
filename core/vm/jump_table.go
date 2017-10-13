@@ -20,7 +20,7 @@ import (
 	"errors"
 	"math/big"
 
-	"github.com/ethereum/go-ethereum/params"
+	"github.com/EthereumVega/EVA-00D/params"
 )
 
 type (
@@ -53,12 +53,12 @@ type operation struct {
 var (
 	frontierInstructionSet  = NewFrontierInstructionSet()
 	homesteadInstructionSet = NewHomesteadInstructionSet()
-	byzantiumInstructionSet = NewByzantiumInstructionSet()
+	thirdimpactInstructionSet = NewThirdimpactInstructionSet()
 )
 
-// NewByzantiumInstructionSet returns the frontier, homestead and
-// byzantium instructions.
-func NewByzantiumInstructionSet() [256]operation {
+// NewThirdimpactInstructionSet returns the frontier, homestead and
+// thirdimpact instructions.
+func NewThirdimpactInstructionSet() [256]operation {
 	// instructions that can be executed during the homestead phase.
 	instructionSet := NewHomesteadInstructionSet()
 	instructionSet[STATICCALL] = operation{

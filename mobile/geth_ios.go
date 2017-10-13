@@ -16,7 +16,7 @@
 
 // +build ios
 
-package geth
+package weth
 
 // clientIdentifier is a hard coded identifier to report into the network.
-var clientIdentifier = "iGeth"
+var clientIdentifier = "iWeth"

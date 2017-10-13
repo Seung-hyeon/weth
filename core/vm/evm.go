@@ -20,9 +20,9 @@ import (
 	"math/big"
 	"sync/atomic"
 
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/crypto"
-	"github.com/ethereum/go-ethereum/params"
+	"github.com/EthereumVega/EVA-00D/common"
+	"github.com/EthereumVega/EVA-00D/crypto"
+	"github.com/EthereumVega/EVA-00D/params"
 )
 
 // emptyCodeHash is used by create to ensure deployment is disallowed to already
@@ -41,8 +41,8 @@ type (
 func run(evm *EVM, snapshot int, contract *Contract, input []byte) ([]byte, error) {
 	if contract.CodeAddr != nil {
 		precompiles := PrecompiledContractsHomestead
-		if evm.ChainConfig().IsByzantium(evm.BlockNumber) {
-			precompiles = PrecompiledContractsByzantium
+		if evm.ChainConfig().IsThirdimpact(evm.BlockNumber) {
+			precompiles = PrecompiledContractsThirdimpact
 		}
 		if p := precompiles[*contract.CodeAddr]; p != nil {
 			return RunPrecompiledContract(p, input, contract)
@@ -151,8 +151,8 @@ func (evm *EVM) Call(caller ContractRef, addr common.Address, input []byte, gas 
 	)
 	if !evm.StateDB.Exist(addr) {
 		precompiles := PrecompiledContractsHomestead
-		if evm.ChainConfig().IsByzantium(evm.BlockNumber) {
-			precompiles = PrecompiledContractsByzantium
+		if evm.ChainConfig().IsThirdimpact(evm.BlockNumber) {
+			precompiles = PrecompiledContractsThirdimpact
 		}
 		if precompiles[addr] == nil && evm.ChainConfig().IsEIP158(evm.BlockNumber) && value.Sign() == 0 {
 			return nil, gas, nil

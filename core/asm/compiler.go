@@ -23,8 +23,8 @@ import (
 	"os"
 	"strings"
 
-	"github.com/ethereum/go-ethereum/common/math"
-	"github.com/ethereum/go-ethereum/core/vm"
+	"github.com/EthereumVega/EVA-00D/common/math"
+	"github.com/EthereumVega/EVA-00D/core/vm"
 )
 
 // Compiler contains information about the parsed source
