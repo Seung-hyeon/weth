@@ -24,13 +24,13 @@ import (
 	"runtime"
 	"time"
 
-	"github.com/CAHF/EVA-00/common"
-	"github.com/CAHF/EVA-00/common/math"
-	"github.com/CAHF/EVA-00/consensus"
-	"github.com/CAHF/EVA-00/consensus/misc"
-	"github.com/CAHF/EVA-00/core/state"
-	"github.com/CAHF/EVA-00/core/types"
-	"github.com/CAHF/EVA-00/params"
+	"github.com/EthereumVega/EVA-00D/common"
+	"github.com/EthereumVega/EVA-00D/common/math"
+	"github.com/EthereumVega/EVA-00D/consensus"
+	"github.com/EthereumVega/EVA-00D/consensus/misc"
+	"github.com/EthereumVega/EVA-00D/core/state"
+	"github.com/EthereumVega/EVA-00D/core/types"
+	"github.com/EthereumVega/EVA-00D/params"
 	set "gopkg.in/fatih/set.v0"
 )
 
