@@ -290,7 +290,7 @@ func CalcDifficulty(config *params.ChainConfig, time uint64, parent *types.Heade
 	switch {
 	case config.IsThirdimpact(next):
 		return calcDifficultyThirdimpact(time, parent)
-  case config.IsATField(next):
+        case config.IsATField(next):
 		return calcDifficultyATField(time, parent)
 	case config.IsHomestead(next):
 		return calcDifficultyHomestead(time, parent)
