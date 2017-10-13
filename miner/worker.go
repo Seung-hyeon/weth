@@ -51,6 +51,10 @@ const (
 	chainSideChanSize = 10
 )
 
+var (
+	ChainIdAddition = big.NewInt(6)
+)
+
 // Agent can register themself with the worker
 type Agent interface {
 	Work() chan<- *Work
@@ -396,12 +400,6 @@ func (self *worker) commitNewWork() {
 	if parent.Time().Cmp(new(big.Int).SetInt64(tstamp)) >= 0 {
 		tstamp = parent.Time().Int64() + 1
 	}
-	// this will ensure we're not going off too far in the future
-	if now := time.Now().Unix(); tstamp > now+1 {
-		wait := time.Duration(tstamp-now) * time.Second
-		log.Info("Mining too far in the future", "wait", common.PrettyDuration(wait))
-		time.Sleep(wait)
-	}
 
 	num := parent.Number()
 	header := &types.Header{
@@ -520,8 +518,8 @@ func (env *Work) commitTransactions(mux *event.TypeMux, txs *types.TransactionsB
 		from, _ := types.Sender(env.signer, tx)
 		// Check whether the tx is replay protected. If we're not in the EIP155 hf
 		// phase, start ignoring the sender until we do.
-		if tx.Protected() && !env.config.IsEIP155(env.header.Number) {
-			log.Trace("Ignoring reply protected transaction", "hash", tx.Hash(), "eip155", env.config.EIP155Block)
+		if tx.Protected() && (!env.config.IsEIP155(env.header.Number) || !env.config.IsThirdimpact(env.header.Number) && tx.ChainId().Cmp(new(big.Int).Add(ChainIdAddition, env.config.ChainId)) == 0) {
+			log.Trace("Ignoring reply protected transaction", "hash", tx.Hash(), "eip155", env.config.EIP155Block, "Thirdimpact", env.config.ThirdimpactBlock)
 
 			txs.Pop()
 			continue
