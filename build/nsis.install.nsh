@@ -24,14 +24,14 @@ Section "Weth" WETH_IDX
   createShortCut "$SMPROGRAMS\${APPNAME}\Uninstall.lnk" "$INSTDIR\uninstall.exe" "" "" ""
 
   # Firewall - remove rules (if exists)
-  SimpleFC::AdvRemoveRule "Weth incoming peers (TCP:30303)"
-  SimpleFC::AdvRemoveRule "Weth outgoing peers (TCP:30303)"
-  SimpleFC::AdvRemoveRule "Weth UDP discovery (UDP:30303)"
+  SimpleFC::AdvRemoveRule "Weth incoming peers (TCP:30313)"
+  SimpleFC::AdvRemoveRule "Weth outgoing peers (TCP:30313)"
+  SimpleFC::AdvRemoveRule "Weth UDP discovery (UDP:30313)"
 
   # Firewall - add rules
-  SimpleFC::AdvAddRule "Weth incoming peers (TCP:30303)" ""  6 1 1 2147483647 1 "$INSTDIR\weth.exe" "" "" "Ethereum" 30303 "" "" ""
-  SimpleFC::AdvAddRule "Weth outgoing peers (TCP:30303)" ""  6 2 1 2147483647 1 "$INSTDIR\weth.exe" "" "" "Ethereum" "" 30303 "" ""
-  SimpleFC::AdvAddRule "Weth UDP discovery (UDP:30303)" "" 17 2 1 2147483647 1 "$INSTDIR\weth.exe" "" "" "Ethereum" "" 30303 "" ""
+  SimpleFC::AdvAddRule "Weth incoming peers (TCP:30313)" ""  6 1 1 2147483647 1 "$INSTDIR\weth.exe" "" "" "Ethereum" 30313 "" "" ""
+  SimpleFC::AdvAddRule "Weth outgoing peers (TCP:30313)" ""  6 2 1 2147483647 1 "$INSTDIR\weth.exe" "" "" "Ethereum" "" 30313 "" ""
+  SimpleFC::AdvAddRule "Weth UDP discovery (UDP:30313)" "" 17 2 1 2147483647 1 "$INSTDIR\weth.exe" "" "" "Ethereum" "" 30313 "" ""
 
   # Set default IPC endpoint (https://github.com/ethereum/EIPs/issues/147)
   ${EnvVarUpdate} $0 "ETHEREUM_SOCKET" "R" "HKLM" "\\.\pipe\weth.ipc"

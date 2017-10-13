@@ -39,7 +39,7 @@ BOOTNODE_URL="enode://${BOOTNODE_PUBKEY}@${BOOTNODE_IP}:${BOOTNODE_PORT}"
 
 # static weth configuration
 WETH_IP="192.168.33.3"
-WETH_RPC_PORT="8545"
+WETH_RPC_PORT="8285"
 WETH_RPC_URL="http://${WETH_IP}:${WETH_RPC_PORT}"
 
 usage() {
