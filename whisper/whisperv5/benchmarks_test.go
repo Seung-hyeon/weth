@@ -19,7 +19,7 @@ package whisperv5
 import (
 	"testing"
 
-	"github.com/ethereum/go-ethereum/crypto"
+	"github.com/EthereumVega/EVA-00D/crypto"
 )
 
 func BenchmarkDeriveKeyMaterial(b *testing.B) {

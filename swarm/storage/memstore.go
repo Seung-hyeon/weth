@@ -22,7 +22,7 @@ import (
 	"fmt"
 	"sync"
 
-	"github.com/ethereum/go-ethereum/log"
+	"github.com/EthereumVega/EVA-00D/log"
 )
 
 const (

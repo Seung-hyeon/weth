@@ -25,7 +25,7 @@ import (
 	"path/filepath"
 	"strings"
 
-	"github.com/ethereum/go-ethereum/log"
+	"github.com/EthereumVega/EVA-00D/log"
 )
 
 // makeWizard creates and returns a new puppeth wizard.
