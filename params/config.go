@@ -40,7 +40,7 @@ var (
 		EIP155Block:    big.NewInt(2675000),
 		EIP158Block:    big.NewInt(2675000),
 		ATFieldBlock:   big.NewInt(4370000),
-    ThirdimpactBlock: big.NewInt(4670000),
+                ThirdimpactBlock: big.NewInt(4670000),
 
 		Ethash: new(EthashConfig),
 	}
@@ -72,7 +72,7 @@ var (
 		EIP155Block:    big.NewInt(3),
 		EIP158Block:    big.NewInt(3),
 		ATFieldBlock:   big.NewInt(1035301),
-    ThirdimpactBlock: big.NewInt(1035310),
+                ThirdimpactBlock: big.NewInt(1035310),
 
 		Clique: &CliqueConfig{
 			Period: 15,
@@ -113,8 +113,8 @@ type ChainConfig struct {
 	EIP155Block *big.Int `json:"eip155Block,omitempty"` // EIP155 HF block
 	EIP158Block *big.Int `json:"eip158Block,omitempty"` // EIP158 HF block
 
-  ATFieldBlock *big.Int `json:"atfieldBlock,omitempty"` // ATField HF block
-  ThirdimpactBlock *big.Int `json:"thirdimpactBlock,omitempty"` // Thirdimpact switch block (nil = no fork, 0 = alraedy on Thirdimpact)
+        ATFieldBlock *big.Int `json:"atfieldBlock,omitempty"` // ATField HF block
+        ThirdimpactBlock *big.Int `json:"thirdimpactBlock,omitempty"` // Thirdimpact switch block (nil = no fork, 0 = alraedy on Thirdimpact)
 
 	// Various consensus engines
 	Ethash *EthashConfig `json:"ethash,omitempty"`
