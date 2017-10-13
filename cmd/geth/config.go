@@ -75,14 +75,14 @@ type ethstatsConfig struct {
 	URL string `toml:",omitempty"`
 }
 
-type gethConfig struct {
+type wethConfig struct {
 	Eth      eth.Config
 	Shh      whisper.Config
 	Node     node.Config
 	Ethstats ethstatsConfig
 }
 
-func loadConfig(file string, cfg *gethConfig) error {
+func loadConfig(file string, cfg *wethConfig) error {
 	f, err := os.Open(file)
 	if err != nil {
 		return err
@@ -103,13 +103,13 @@ func defaultNodeConfig() node.Config {
 	cfg.Version = params.VersionWithCommit(gitCommit)
 	cfg.HTTPModules = append(cfg.HTTPModules, "eth", "shh")
 	cfg.WSModules = append(cfg.WSModules, "eth", "shh")
-	cfg.IPCPath = "geth.ipc"
+	cfg.IPCPath = "weth.ipc"
 	return cfg
 }
 
-func makeConfigNode(ctx *cli.Context) (*node.Node, gethConfig) {
+func makeConfigNode(ctx *cli.Context) (*node.Node, wethConfig) {
 	// Load defaults.
-	cfg := gethConfig{
+	cfg := wethConfig{
 		Eth:  eth.DefaultConfig,
 		Shh:  whisper.DefaultConfig,
 		Node: defaultNodeConfig(),
@@ -183,7 +183,7 @@ func makeFullNode(ctx *cli.Context) *node.Node {
 		copy(config.Commit[:], commit)
 		return release.NewReleaseService(ctx, config)
 	}); err != nil {
-		utils.Fatalf("Failed to register the Geth release oracle service: %v", err)
+		utils.Fatalf("Failed to register the Weth release oracle service: %v", err)
 	}
 	return stack
 }

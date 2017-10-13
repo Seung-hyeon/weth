@@ -37,8 +37,8 @@ func TestState(t *testing.T) {
 	// Expected failures:
 	st.fails(`^stRevertTest/RevertPrecompiledTouch\.json/EIP158`, "bug in test")
 	st.fails(`^stRevertTest/RevertPrefoundEmptyOOG\.json/EIP158`, "bug in test")
-	st.fails(`^stRevertTest/RevertPrecompiledTouch\.json/Byzantium`, "bug in test")
-	st.fails(`^stRevertTest/RevertPrefoundEmptyOOG\.json/Byzantium`, "bug in test")
+	st.fails(`^stRevertTest/RevertPrecompiledTouch\.json/Thirdimpact`, "bug in test")
+	st.fails(`^stRevertTest/RevertPrefoundEmptyOOG\.json/Thirdimpact`, "bug in test")
 	st.fails(`^stRandom/randomStatetest645\.json/EIP150/.*`, "known bug #15119")
 	st.fails(`^stRandom/randomStatetest645\.json/Frontier/.*`, "known bug #15119")
 	st.fails(`^stRandom/randomStatetest645\.json/Homestead/.*`, "known bug #15119")
@@ -47,8 +47,8 @@ func TestState(t *testing.T) {
 	st.fails(`^stRandom/randomStatetest644\.json/Homestead/.*`, "known bug #15119")
 	st.fails(`^stCreateTest/TransactionCollisionToEmpty\.json/EIP158/2`, "known bug ")
 	st.fails(`^stCreateTest/TransactionCollisionToEmpty\.json/EIP158/3`, "known bug ")
-	st.fails(`^stCreateTest/TransactionCollisionToEmpty\.json/Byzantium/2`, "known bug ")
-	st.fails(`^stCreateTest/TransactionCollisionToEmpty\.json/Byzantium/3`, "known bug ")
+	st.fails(`^stCreateTest/TransactionCollisionToEmpty\.json/Thirdimpact/2`, "known bug ")
+	st.fails(`^stCreateTest/TransactionCollisionToEmpty\.json/Thirdimpact/3`, "known bug ")
 	st.walk(t, stateTestDir, func(t *testing.T, name string, test *StateTest) {
 		for _, subtest := range test.Subtests() {
 			subtest := subtest

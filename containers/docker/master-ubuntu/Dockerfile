@@ -4,12 +4,12 @@ RUN \
   apt-get update && apt-get upgrade -q -y && \
   apt-get install -y --no-install-recommends golang git make gcc libc-dev ca-certificates && \
   git clone --depth 1 --branch release/1.7 https://github.com/EthereumVega/EVA-00D && \
-  (cd go-ethereum && make geth) && \
-  cp go-ethereum/build/bin/geth /geth && \
+  (cd go-ethereum && make weth) && \
+  cp go-ethereum/build/bin/weth /weth && \
   apt-get remove -y golang git make gcc libc-dev && apt autoremove -y && apt-get clean && \
   rm -rf /go-ethereum
 
 EXPOSE 8545
 EXPOSE 30303
 
-ENTRYPOINT ["/geth"]
+ENTRYPOINT ["/weth"]

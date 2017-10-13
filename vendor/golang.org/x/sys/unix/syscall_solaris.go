@@ -286,11 +286,11 @@ func Wait4(pid int, wstatus *WaitStatus, options int, rusage *Rusage) (int, erro
 	return wpid, nil
 }
 
-//sys	gethostname(buf []byte) (n int, err error)
+//sys	wethostname(buf []byte) (n int, err error)
 
-func Gethostname() (name string, err error) {
+func Wethostname() (name string, err error) {
 	var buf [MaxHostNameLen]byte
-	n, err := gethostname(buf[:])
+	n, err := wethostname(buf[:])
 	if n != 0 {
 		return "", err
 	}
