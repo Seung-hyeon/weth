@@ -42,7 +42,7 @@ func (w *wizard) makeGenesis() {
 		Config: &params.ChainConfig{
 			HomesteadBlock: big.NewInt(1),
 			EIP150Block:    big.NewInt(2),
-			EIP155Block:    big.NewInt(3),
+			ATFieldBlock:    big.NewInt(3),
 			EIP158Block:    big.NewInt(3),
 			ThirdimpactBlock: big.NewInt(4),
 		},
@@ -159,8 +159,8 @@ func (w *wizard) manageGenesis() {
 		w.conf.genesis.Config.EIP150Block = w.readDefaultBigInt(w.conf.genesis.Config.EIP150Block)
 
 		fmt.Println()
-		fmt.Printf("Which block should EIP155 come into effect? (default = %v)\n", w.conf.genesis.Config.EIP155Block)
-		w.conf.genesis.Config.EIP155Block = w.readDefaultBigInt(w.conf.genesis.Config.EIP155Block)
+		fmt.Printf("Which block should ATField come into effect? (default = %v)\n", w.conf.genesis.Config.ATFieldBlock)
+		w.conf.genesis.Config.ATFieldBlock = w.readDefaultBigInt(w.conf.genesis.Config.ATFieldBlock)
 
 		fmt.Println()
 		fmt.Printf("Which block should EIP158 come into effect? (default = %v)\n", w.conf.genesis.Config.EIP158Block)
