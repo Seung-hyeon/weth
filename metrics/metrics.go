@@ -23,7 +23,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/EthereumVega/EVA-00D/log"
+	"github.com/EthereumVega/weth/log"
 	"github.com/rcrowley/go-metrics"
 	"github.com/rcrowley/go-metrics/exp"
 )

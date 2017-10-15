@@ -22,12 +22,12 @@ import (
 	"math/big"
 	"testing"
 
-	"github.com/EthereumVega/EVA-00D/common"
-	"github.com/EthereumVega/EVA-00D/core"
-	"github.com/EthereumVega/EVA-00D/core/types"
-	"github.com/EthereumVega/EVA-00D/crypto"
-	"github.com/EthereumVega/EVA-00D/ethdb"
-	"github.com/EthereumVega/EVA-00D/params"
+	"github.com/EthereumVega/weth/common"
+	"github.com/EthereumVega/weth/core"
+	"github.com/EthereumVega/weth/core/types"
+	"github.com/EthereumVega/weth/crypto"
+	"github.com/EthereumVega/weth/ethdb"
+	"github.com/EthereumVega/weth/params"
 )
 
 type testerVote struct {

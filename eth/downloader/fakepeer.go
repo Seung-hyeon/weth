@@ -19,10 +19,10 @@ package downloader
 import (
 	"math/big"
 
-	"github.com/EthereumVega/EVA-00D/common"
-	"github.com/EthereumVega/EVA-00D/core"
-	"github.com/EthereumVega/EVA-00D/core/types"
-	"github.com/EthereumVega/EVA-00D/ethdb"
+	"github.com/EthereumVega/weth/common"
+	"github.com/EthereumVega/weth/core"
+	"github.com/EthereumVega/weth/core/types"
+	"github.com/EthereumVega/weth/ethdb"
 )
 
 // FakePeer is a mock downloader peer that operates on a local database instance

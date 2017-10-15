@@ -19,7 +19,7 @@ package vm
 import (
 	"math/big"
 
-	"github.com/EthereumVega/EVA-00D/common"
+	"github.com/EthereumVega/weth/common"
 )
 
 // ContractRef is a reference to the contract's backing object

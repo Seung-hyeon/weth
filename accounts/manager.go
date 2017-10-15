@@ -21,7 +21,7 @@ import (
 	"sort"
 	"sync"
 
-	"github.com/EthereumVega/EVA-00D/event"
+	"github.com/EthereumVega/weth/event"
 )
 
 // Manager is an overarching account manager that can communicate with various

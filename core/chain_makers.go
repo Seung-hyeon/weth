@@ -20,14 +20,14 @@ import (
 	"fmt"
 	"math/big"
 
-	"github.com/EthereumVega/EVA-00D/common"
-	"github.com/EthereumVega/EVA-00D/consensus/ethash"
-	"github.com/EthereumVega/EVA-00D/consensus/misc"
-	"github.com/EthereumVega/EVA-00D/core/state"
-	"github.com/EthereumVega/EVA-00D/core/types"
-	"github.com/EthereumVega/EVA-00D/core/vm"
-	"github.com/EthereumVega/EVA-00D/ethdb"
-	"github.com/EthereumVega/EVA-00D/params"
+	"github.com/EthereumVega/weth/common"
+	"github.com/EthereumVega/weth/consensus/ethash"
+	"github.com/EthereumVega/weth/consensus/misc"
+	"github.com/EthereumVega/weth/core/state"
+	"github.com/EthereumVega/weth/core/types"
+	"github.com/EthereumVega/weth/core/vm"
+	"github.com/EthereumVega/weth/ethdb"
+	"github.com/EthereumVega/weth/params"
 )
 
 // So we can deterministically seed different blockchains

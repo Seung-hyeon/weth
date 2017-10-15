@@ -25,9 +25,9 @@ import (
 	"sync"
 	"time"
 
-	"github.com/EthereumVega/EVA-00D/common"
-	"github.com/EthereumVega/EVA-00D/core/types"
-	"github.com/EthereumVega/EVA-00D/log"
+	"github.com/EthereumVega/weth/common"
+	"github.com/EthereumVega/weth/core/types"
+	"github.com/EthereumVega/weth/log"
 	"github.com/rcrowley/go-metrics"
 	"gopkg.in/karalabe/cookiejar.v2/collections/prque"
 )

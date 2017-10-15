@@ -23,8 +23,8 @@ import (
 	"reflect"
 	"testing"
 
-	"github.com/EthereumVega/EVA-00D/common"
-	"github.com/EthereumVega/EVA-00D/rlp"
+	"github.com/EthereumVega/weth/common"
+	"github.com/EthereumVega/weth/rlp"
 )
 
 // from bcValidBlockTest.json, "SimpleTx"

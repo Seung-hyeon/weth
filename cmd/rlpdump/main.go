@@ -26,7 +26,7 @@ import (
 	"os"
 	"strings"
 
-	"github.com/EthereumVega/EVA-00D/rlp"
+	"github.com/EthereumVega/weth/rlp"
 )
 
 var (

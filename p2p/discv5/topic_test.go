@@ -21,8 +21,8 @@ import (
 	"testing"
 	"time"
 
-	"github.com/EthereumVega/EVA-00D/common"
-	"github.com/EthereumVega/EVA-00D/common/mclock"
+	"github.com/EthereumVega/weth/common"
+	"github.com/EthereumVega/weth/common/mclock"
 )
 
 func TestTopicRadius(t *testing.T) {

@@ -22,11 +22,11 @@ import (
 	"math/big"
 	"strings"
 
-	"github.com/EthereumVega/EVA-00D/accounts/abi/bind"
-	"github.com/EthereumVega/EVA-00D/common"
-	"github.com/EthereumVega/EVA-00D/contracts/ens/contract"
-	"github.com/EthereumVega/EVA-00D/core/types"
-	"github.com/EthereumVega/EVA-00D/crypto"
+	"github.com/EthereumVega/weth/accounts/abi/bind"
+	"github.com/EthereumVega/weth/common"
+	"github.com/EthereumVega/weth/contracts/ens/contract"
+	"github.com/EthereumVega/weth/core/types"
+	"github.com/EthereumVega/weth/crypto"
 )
 
 var (

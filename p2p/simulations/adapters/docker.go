@@ -28,8 +28,8 @@ import (
 	"strings"
 
 	"github.com/docker/docker/pkg/reexec"
-	"github.com/EthereumVega/EVA-00D/node"
-	"github.com/EthereumVega/EVA-00D/p2p/discover"
+	"github.com/EthereumVega/weth/node"
+	"github.com/EthereumVega/weth/p2p/discover"
 )
 
 // DockerAdapter is a NodeAdapter which runs simulation nodes inside Docker

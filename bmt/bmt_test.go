@@ -28,7 +28,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/EthereumVega/EVA-00D/crypto/sha3"
+	"github.com/EthereumVega/weth/crypto/sha3"
 )
 
 const (

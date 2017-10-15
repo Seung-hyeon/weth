@@ -5,7 +5,7 @@ package whisperv5
 import (
 	"encoding/json"
 
-	"github.com/EthereumVega/EVA-00D/common/hexutil"
+	"github.com/EthereumVega/weth/common/hexutil"
 )
 
 var _ = (*messageOverride)(nil)

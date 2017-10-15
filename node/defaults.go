@@ -22,8 +22,8 @@ import (
 	"path/filepath"
 	"runtime"
 
-	"github.com/EthereumVega/EVA-00D/p2p"
-	"github.com/EthereumVega/EVA-00D/p2p/nat"
+	"github.com/EthereumVega/weth/p2p"
+	"github.com/EthereumVega/weth/p2p/nat"
 )
 
 const (

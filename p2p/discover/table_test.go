@@ -27,8 +27,8 @@ import (
 	"testing/quick"
 	"time"
 
-	"github.com/EthereumVega/EVA-00D/common"
-	"github.com/EthereumVega/EVA-00D/crypto"
+	"github.com/EthereumVega/weth/common"
+	"github.com/EthereumVega/weth/crypto"
 )
 
 func TestTable_pingReplace(t *testing.T) {

@@ -22,11 +22,11 @@ import (
 	"strings"
 	"time"
 
-	"github.com/EthereumVega/EVA-00D/common/hexutil"
-	"github.com/EthereumVega/EVA-00D/crypto"
-	"github.com/EthereumVega/EVA-00D/p2p"
-	"github.com/EthereumVega/EVA-00D/p2p/discover"
-	"github.com/EthereumVega/EVA-00D/rpc"
+	"github.com/EthereumVega/weth/common/hexutil"
+	"github.com/EthereumVega/weth/crypto"
+	"github.com/EthereumVega/weth/p2p"
+	"github.com/EthereumVega/weth/p2p/discover"
+	"github.com/EthereumVega/weth/rpc"
 	"github.com/rcrowley/go-metrics"
 )
 

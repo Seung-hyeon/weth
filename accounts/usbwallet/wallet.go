@@ -25,11 +25,11 @@ import (
 	"sync"
 	"time"
 
-	ethereum "github.com/EthereumVega/EVA-00D"
-	"github.com/EthereumVega/EVA-00D/accounts"
-	"github.com/EthereumVega/EVA-00D/common"
-	"github.com/EthereumVega/EVA-00D/core/types"
-	"github.com/EthereumVega/EVA-00D/log"
+	ethereum "github.com/EthereumVega/weth"
+	"github.com/EthereumVega/weth/accounts"
+	"github.com/EthereumVega/weth/common"
+	"github.com/EthereumVega/weth/core/types"
+	"github.com/EthereumVega/weth/log"
 	"github.com/karalabe/hid"
 )
 

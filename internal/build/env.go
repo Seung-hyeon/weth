@@ -81,7 +81,7 @@ func Env() Environment {
 
 // LocalEnv returns build environment metadata gathered from git.
 func LocalEnv() Environment {
-	env := applyEnvFlags(Environment{Name: "local", Repo: "EthereumVega/EVA-00D"})
+	env := applyEnvFlags(Environment{Name: "local", Repo: "EthereumVega/weth"})
 	if _, err := os.Stat(".git"); err != nil {
 		return env
 	}

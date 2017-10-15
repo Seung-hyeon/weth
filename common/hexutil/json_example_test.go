@@ -20,7 +20,7 @@ import (
 	"encoding/json"
 	"fmt"
 
-	"github.com/EthereumVega/EVA-00D/common/hexutil"
+	"github.com/EthereumVega/weth/common/hexutil"
 )
 
 type MyType [5]byte

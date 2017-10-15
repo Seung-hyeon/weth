@@ -21,11 +21,11 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/EthereumVega/EVA-00D/accounts/abi"
-	"github.com/EthereumVega/EVA-00D/common"
-	"github.com/EthereumVega/EVA-00D/core/state"
-	"github.com/EthereumVega/EVA-00D/core/vm"
-	"github.com/EthereumVega/EVA-00D/ethdb"
+	"github.com/EthereumVega/weth/accounts/abi"
+	"github.com/EthereumVega/weth/common"
+	"github.com/EthereumVega/weth/core/state"
+	"github.com/EthereumVega/weth/core/vm"
+	"github.com/EthereumVega/weth/ethdb"
 )
 
 func TestDefaults(t *testing.T) {

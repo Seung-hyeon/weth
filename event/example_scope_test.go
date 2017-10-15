@@ -20,7 +20,7 @@ import (
 	"fmt"
 	"sync"
 
-	"github.com/EthereumVega/EVA-00D/event"
+	"github.com/EthereumVega/weth/event"
 )
 
 // This example demonstrates how SubscriptionScope can be used to control the lifetime of

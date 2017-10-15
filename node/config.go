@@ -25,14 +25,14 @@ import (
 	"runtime"
 	"strings"
 
-	"github.com/EthereumVega/EVA-00D/accounts"
-	"github.com/EthereumVega/EVA-00D/accounts/keystore"
-	"github.com/EthereumVega/EVA-00D/accounts/usbwallet"
-	"github.com/EthereumVega/EVA-00D/common"
-	"github.com/EthereumVega/EVA-00D/crypto"
-	"github.com/EthereumVega/EVA-00D/log"
-	"github.com/EthereumVega/EVA-00D/p2p"
-	"github.com/EthereumVega/EVA-00D/p2p/discover"
+	"github.com/EthereumVega/weth/accounts"
+	"github.com/EthereumVega/weth/accounts/keystore"
+	"github.com/EthereumVega/weth/accounts/usbwallet"
+	"github.com/EthereumVega/weth/common"
+	"github.com/EthereumVega/weth/crypto"
+	"github.com/EthereumVega/weth/log"
+	"github.com/EthereumVega/weth/p2p"
+	"github.com/EthereumVega/weth/p2p/discover"
 )
 
 const (

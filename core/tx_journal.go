@@ -21,10 +21,10 @@ import (
 	"io"
 	"os"
 
-	"github.com/EthereumVega/EVA-00D/common"
-	"github.com/EthereumVega/EVA-00D/core/types"
-	"github.com/EthereumVega/EVA-00D/log"
-	"github.com/EthereumVega/EVA-00D/rlp"
+	"github.com/EthereumVega/weth/common"
+	"github.com/EthereumVega/weth/core/types"
+	"github.com/EthereumVega/weth/log"
+	"github.com/EthereumVega/weth/rlp"
 )
 
 // errNoActiveJournal is returned if a transaction is attempted to be inserted

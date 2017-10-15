@@ -25,7 +25,7 @@ import (
 	"sync"
 	"testing"
 
-	"github.com/EthereumVega/EVA-00D/ethdb"
+	"github.com/EthereumVega/weth/ethdb"
 )
 
 func newTestLDB() (*ethdb.LDBDatabase, func()) {

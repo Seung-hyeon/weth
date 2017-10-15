@@ -28,10 +28,10 @@ import (
 	"math/big"
 	"os"
 
-	"github.com/EthereumVega/EVA-00D/common"
-	"github.com/EthereumVega/EVA-00D/common/math"
-	"github.com/EthereumVega/EVA-00D/crypto/sha3"
-	"github.com/EthereumVega/EVA-00D/rlp"
+	"github.com/EthereumVega/weth/common"
+	"github.com/EthereumVega/weth/common/math"
+	"github.com/EthereumVega/weth/crypto/sha3"
+	"github.com/EthereumVega/weth/rlp"
 )
 
 var (

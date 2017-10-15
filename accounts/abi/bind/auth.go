@@ -22,10 +22,10 @@ import (
 	"io"
 	"io/ioutil"
 
-	"github.com/EthereumVega/EVA-00D/accounts/keystore"
-	"github.com/EthereumVega/EVA-00D/common"
-	"github.com/EthereumVega/EVA-00D/core/types"
-	"github.com/EthereumVega/EVA-00D/crypto"
+	"github.com/EthereumVega/weth/accounts/keystore"
+	"github.com/EthereumVega/weth/common"
+	"github.com/EthereumVega/weth/core/types"
+	"github.com/EthereumVega/weth/crypto"
 )
 
 // NewTransactor is a utility method to easily create a transaction signer from

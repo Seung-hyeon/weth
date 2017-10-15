@@ -19,7 +19,7 @@ package state
 import (
 	"sync"
 
-	"github.com/EthereumVega/EVA-00D/common"
+	"github.com/EthereumVega/weth/common"
 )
 
 type account struct {

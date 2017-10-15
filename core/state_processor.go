@@ -19,14 +19,14 @@ package core
 import (
 	"math/big"
 
-	"github.com/EthereumVega/EVA-00D/common"
-	"github.com/EthereumVega/EVA-00D/consensus"
-	"github.com/EthereumVega/EVA-00D/consensus/misc"
-	"github.com/EthereumVega/EVA-00D/core/state"
-	"github.com/EthereumVega/EVA-00D/core/types"
-	"github.com/EthereumVega/EVA-00D/core/vm"
-	"github.com/EthereumVega/EVA-00D/crypto"
-	"github.com/EthereumVega/EVA-00D/params"
+	"github.com/EthereumVega/weth/common"
+	"github.com/EthereumVega/weth/consensus"
+	"github.com/EthereumVega/weth/consensus/misc"
+	"github.com/EthereumVega/weth/core/state"
+	"github.com/EthereumVega/weth/core/types"
+	"github.com/EthereumVega/weth/core/vm"
+	"github.com/EthereumVega/weth/crypto"
+	"github.com/EthereumVega/weth/params"
 )
 
 // StateProcessor is a basic Processor, which takes care of transitioning

@@ -17,8 +17,8 @@
 package les
 
 import (
-	"github.com/EthereumVega/EVA-00D/metrics"
-	"github.com/EthereumVega/EVA-00D/p2p"
+	"github.com/EthereumVega/weth/metrics"
+	"github.com/EthereumVega/weth/p2p"
 )
 
 var (

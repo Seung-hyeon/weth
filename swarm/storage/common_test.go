@@ -24,7 +24,7 @@ import (
 	"sync"
 	"testing"
 
-	"github.com/EthereumVega/EVA-00D/log"
+	"github.com/EthereumVega/weth/log"
 )
 
 type brokenLimitedReader struct {

@@ -23,8 +23,8 @@ import (
 	"math/rand"
 	"reflect"
 
-	"github.com/EthereumVega/EVA-00D/common/hexutil"
-	"github.com/EthereumVega/EVA-00D/crypto/sha3"
+	"github.com/EthereumVega/weth/common/hexutil"
+	"github.com/EthereumVega/weth/crypto/sha3"
 )
 
 const (

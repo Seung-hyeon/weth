@@ -22,8 +22,8 @@ import (
 	"fmt"
 	"path/filepath"
 
-	"github.com/EthereumVega/EVA-00D/log"
-	"github.com/EthereumVega/EVA-00D/swarm/storage"
+	"github.com/EthereumVega/weth/log"
+	"github.com/EthereumVega/weth/swarm/storage"
 )
 
 // syncer parameters (global, not peer specific) default values

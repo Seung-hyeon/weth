@@ -19,7 +19,7 @@ package vm
 import (
 	"math/big"
 
-	"github.com/EthereumVega/EVA-00D/common/math"
+	"github.com/EthereumVega/weth/common/math"
 )
 
 func memorySha3(stack *Stack) *big.Int {

@@ -21,10 +21,10 @@ import (
 	"errors"
 	"fmt"
 
-	"github.com/EthereumVega/EVA-00D/common"
-	"github.com/EthereumVega/EVA-00D/crypto/sha3"
-	"github.com/EthereumVega/EVA-00D/log"
-	"github.com/EthereumVega/EVA-00D/rlp"
+	"github.com/EthereumVega/weth/common"
+	"github.com/EthereumVega/weth/crypto/sha3"
+	"github.com/EthereumVega/weth/log"
+	"github.com/EthereumVega/weth/rlp"
 )
 
 // Prove constructs a merkle proof for key. The result contains all

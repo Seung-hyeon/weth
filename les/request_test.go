@@ -21,11 +21,11 @@ import (
 	"testing"
 	"time"
 
-	"github.com/EthereumVega/EVA-00D/common"
-	"github.com/EthereumVega/EVA-00D/core"
-	"github.com/EthereumVega/EVA-00D/crypto"
-	"github.com/EthereumVega/EVA-00D/ethdb"
-	"github.com/EthereumVega/EVA-00D/light"
+	"github.com/EthereumVega/weth/common"
+	"github.com/EthereumVega/weth/core"
+	"github.com/EthereumVega/weth/crypto"
+	"github.com/EthereumVega/weth/ethdb"
+	"github.com/EthereumVega/weth/light"
 )
 
 var testBankSecureTrieKey = secAddr(testBankAddress)

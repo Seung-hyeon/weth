@@ -38,9 +38,9 @@ import (
 	"math/big"
 	"unsafe"
 
-	"github.com/EthereumVega/EVA-00D/core/state"
-	"github.com/EthereumVega/EVA-00D/crypto"
-	"github.com/EthereumVega/EVA-00D/params"
+	"github.com/EthereumVega/weth/core/state"
+	"github.com/EthereumVega/weth/crypto"
+	"github.com/EthereumVega/weth/params"
 )
 
 type JitVm struct {

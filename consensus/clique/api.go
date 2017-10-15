@@ -17,10 +17,10 @@
 package clique
 
 import (
-	"github.com/EthereumVega/EVA-00D/common"
-	"github.com/EthereumVega/EVA-00D/consensus"
-	"github.com/EthereumVega/EVA-00D/core/types"
-	"github.com/EthereumVega/EVA-00D/rpc"
+	"github.com/EthereumVega/weth/common"
+	"github.com/EthereumVega/weth/consensus"
+	"github.com/EthereumVega/weth/core/types"
+	"github.com/EthereumVega/weth/rpc"
 )
 
 // API is a user facing RPC API to allow controlling the signer and voting

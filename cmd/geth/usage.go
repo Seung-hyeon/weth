@@ -22,8 +22,8 @@ import (
 	"io"
 	"sort"
 
-	"github.com/EthereumVega/EVA-00D/cmd/utils"
-	"github.com/EthereumVega/EVA-00D/internal/debug"
+	"github.com/EthereumVega/weth/cmd/utils"
+	"github.com/EthereumVega/weth/internal/debug"
 	"gopkg.in/urfave/cli.v1"
 )
 

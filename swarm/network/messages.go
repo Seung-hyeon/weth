@@ -21,11 +21,11 @@ import (
 	"net"
 	"time"
 
-	"github.com/EthereumVega/EVA-00D/contracts/chequebook"
-	"github.com/EthereumVega/EVA-00D/p2p/discover"
-	"github.com/EthereumVega/EVA-00D/swarm/network/kademlia"
-	"github.com/EthereumVega/EVA-00D/swarm/services/swap"
-	"github.com/EthereumVega/EVA-00D/swarm/storage"
+	"github.com/EthereumVega/weth/contracts/chequebook"
+	"github.com/EthereumVega/weth/p2p/discover"
+	"github.com/EthereumVega/weth/swarm/network/kademlia"
+	"github.com/EthereumVega/weth/swarm/services/swap"
+	"github.com/EthereumVega/weth/swarm/storage"
 )
 
 /*

@@ -16,7 +16,7 @@
 
 package core
 
-import "github.com/EthereumVega/EVA-00D/common"
+import "github.com/EthereumVega/weth/common"
 
 // BadHashes represent a set of manually tracked bad hashes (usually hard forks)
 var BadHashes = map[common.Hash]bool{

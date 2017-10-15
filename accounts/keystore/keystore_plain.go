@@ -22,7 +22,7 @@ import (
 	"os"
 	"path/filepath"
 
-	"github.com/EthereumVega/EVA-00D/common"
+	"github.com/EthereumVega/weth/common"
 )
 
 type keyStorePlain struct {

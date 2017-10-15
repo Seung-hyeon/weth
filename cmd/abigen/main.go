@@ -24,8 +24,8 @@ import (
 	"os"
 	"strings"
 
-	"github.com/EthereumVega/EVA-00D/accounts/abi/bind"
-	"github.com/EthereumVega/EVA-00D/common/compiler"
+	"github.com/EthereumVega/weth/accounts/abi/bind"
+	"github.com/EthereumVega/weth/common/compiler"
 )
 
 var (

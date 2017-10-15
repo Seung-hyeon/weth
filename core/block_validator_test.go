@@ -21,11 +21,11 @@ import (
 	"testing"
 	"time"
 
-	"github.com/EthereumVega/EVA-00D/consensus/ethash"
-	"github.com/EthereumVega/EVA-00D/core/types"
-	"github.com/EthereumVega/EVA-00D/core/vm"
-	"github.com/EthereumVega/EVA-00D/ethdb"
-	"github.com/EthereumVega/EVA-00D/params"
+	"github.com/EthereumVega/weth/consensus/ethash"
+	"github.com/EthereumVega/weth/core/types"
+	"github.com/EthereumVega/weth/core/vm"
+	"github.com/EthereumVega/weth/ethdb"
+	"github.com/EthereumVega/weth/params"
 )
 
 // Tests that simple header verification works, for both good and bad blocks.

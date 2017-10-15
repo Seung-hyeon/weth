@@ -17,8 +17,8 @@
 package core
 
 import (
-	"github.com/EthereumVega/EVA-00D/common"
-	"github.com/EthereumVega/EVA-00D/core/types"
+	"github.com/EthereumVega/weth/common"
+	"github.com/EthereumVega/weth/core/types"
 )
 
 // TxPreEvent is posted when a transaction enters the transaction pool.

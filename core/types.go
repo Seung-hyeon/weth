@@ -19,9 +19,9 @@ package core
 import (
 	"math/big"
 
-	"github.com/EthereumVega/EVA-00D/core/state"
-	"github.com/EthereumVega/EVA-00D/core/types"
-	"github.com/EthereumVega/EVA-00D/core/vm"
+	"github.com/EthereumVega/weth/core/state"
+	"github.com/EthereumVega/weth/core/types"
+	"github.com/EthereumVega/weth/core/vm"
 )
 
 // Validator is an interface which defines the standard for block validation. It

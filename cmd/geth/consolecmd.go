@@ -21,10 +21,10 @@ import (
 	"os/signal"
 	"strings"
 
-	"github.com/EthereumVega/EVA-00D/cmd/utils"
-	"github.com/EthereumVega/EVA-00D/console"
-	"github.com/EthereumVega/EVA-00D/node"
-	"github.com/EthereumVega/EVA-00D/rpc"
+	"github.com/EthereumVega/weth/cmd/utils"
+	"github.com/EthereumVega/weth/console"
+	"github.com/EthereumVega/weth/node"
+	"github.com/EthereumVega/weth/rpc"
 	"gopkg.in/urfave/cli.v1"
 )
 
@@ -40,7 +40,7 @@ var (
 		Description: `
 The Weth console is an interactive shell for the JavaScript runtime environment
 which exposes a node admin interface as well as the Ðapp JavaScript API.
-See https://github.com/EthereumVega/EVA-00D/wiki/Javascipt-Console.`,
+See https://github.com/EthereumVega/weth/wiki/Javascipt-Console.`,
 	}
 
 	attachCommand = cli.Command{
@@ -53,7 +53,7 @@ See https://github.com/EthereumVega/EVA-00D/wiki/Javascipt-Console.`,
 		Description: `
 The Weth console is an interactive shell for the JavaScript runtime environment
 which exposes a node admin interface as well as the Ðapp JavaScript API.
-See https://github.com/EthereumVega/EVA-00D/wiki/Javascipt-Console.
+See https://github.com/EthereumVega/weth/wiki/Javascipt-Console.
 This command allows to open a console on a running weth node.`,
 	}
 
@@ -66,7 +66,7 @@ This command allows to open a console on a running weth node.`,
 		Category:  "CONSOLE COMMANDS",
 		Description: `
 The JavaScript VM exposes a node admin interface as well as the Ðapp
-JavaScript API. See https://github.com/EthereumVega/EVA-00D/wiki/Javascipt-Console`,
+JavaScript API. See https://github.com/EthereumVega/weth/wiki/Javascipt-Console`,
 	}
 )
 

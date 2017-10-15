@@ -21,7 +21,7 @@ package weth
 import (
 	"errors"
 
-	"github.com/EthereumVega/EVA-00D/p2p"
+	"github.com/EthereumVega/weth/p2p"
 )
 
 // NodeInfo represents pi short summary of the information known about the host.

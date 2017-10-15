@@ -23,10 +23,10 @@ import (
 	"path/filepath"
 	"testing"
 
-	"github.com/EthereumVega/EVA-00D/common"
-	"github.com/EthereumVega/EVA-00D/core"
-	"github.com/EthereumVega/EVA-00D/ethdb"
-	"github.com/EthereumVega/EVA-00D/params"
+	"github.com/EthereumVega/weth/common"
+	"github.com/EthereumVega/weth/core"
+	"github.com/EthereumVega/weth/ethdb"
+	"github.com/EthereumVega/weth/params"
 )
 
 // Genesis block for nodes which don't care about the DAO fork (i.e. not configured)

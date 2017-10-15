@@ -24,9 +24,9 @@ import (
 	"net"
 	"time"
 
-	"github.com/EthereumVega/EVA-00D/log"
-	"github.com/EthereumVega/EVA-00D/p2p/discover"
-	"github.com/EthereumVega/EVA-00D/p2p/netutil"
+	"github.com/EthereumVega/weth/log"
+	"github.com/EthereumVega/weth/p2p/discover"
+	"github.com/EthereumVega/weth/p2p/netutil"
 )
 
 const (

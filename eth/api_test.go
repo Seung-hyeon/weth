@@ -21,9 +21,9 @@ import (
 	"testing"
 
 	"github.com/davecgh/go-spew/spew"
-	"github.com/EthereumVega/EVA-00D/common"
-	"github.com/EthereumVega/EVA-00D/core/state"
-	"github.com/EthereumVega/EVA-00D/ethdb"
+	"github.com/EthereumVega/weth/common"
+	"github.com/EthereumVega/weth/core/state"
+	"github.com/EthereumVega/weth/ethdb"
 )
 
 var dumper = spew.ConfigState{Indent: "    "}

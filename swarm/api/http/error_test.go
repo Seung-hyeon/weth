@@ -24,7 +24,7 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/EthereumVega/EVA-00D/swarm/testutil"
+	"github.com/EthereumVega/weth/swarm/testutil"
 )
 
 func TestError(t *testing.T) {

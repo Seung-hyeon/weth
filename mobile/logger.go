@@ -19,7 +19,7 @@ package weth
 import (
 	"os"
 
-	"github.com/EthereumVega/EVA-00D/log"
+	"github.com/EthereumVega/weth/log"
 )
 
 // SetVerbosity sets the global verbosity level (between 0 and 6 - see logger/verbosity.go).

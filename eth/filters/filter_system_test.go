@@ -25,14 +25,14 @@ import (
 	"testing"
 	"time"
 
-	"github.com/EthereumVega/EVA-00D/common"
-	"github.com/EthereumVega/EVA-00D/core"
-	"github.com/EthereumVega/EVA-00D/core/bloombits"
-	"github.com/EthereumVega/EVA-00D/core/types"
-	"github.com/EthereumVega/EVA-00D/ethdb"
-	"github.com/EthereumVega/EVA-00D/event"
-	"github.com/EthereumVega/EVA-00D/params"
-	"github.com/EthereumVega/EVA-00D/rpc"
+	"github.com/EthereumVega/weth/common"
+	"github.com/EthereumVega/weth/core"
+	"github.com/EthereumVega/weth/core/bloombits"
+	"github.com/EthereumVega/weth/core/types"
+	"github.com/EthereumVega/weth/ethdb"
+	"github.com/EthereumVega/weth/event"
+	"github.com/EthereumVega/weth/params"
+	"github.com/EthereumVega/weth/rpc"
 )
 
 type testBackend struct {

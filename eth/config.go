@@ -23,12 +23,12 @@ import (
 	"path/filepath"
 	"runtime"
 
-	"github.com/EthereumVega/EVA-00D/common"
-	"github.com/EthereumVega/EVA-00D/common/hexutil"
-	"github.com/EthereumVega/EVA-00D/core"
-	"github.com/EthereumVega/EVA-00D/eth/downloader"
-	"github.com/EthereumVega/EVA-00D/eth/gasprice"
-	"github.com/EthereumVega/EVA-00D/params"
+	"github.com/EthereumVega/weth/common"
+	"github.com/EthereumVega/weth/common/hexutil"
+	"github.com/EthereumVega/weth/core"
+	"github.com/EthereumVega/weth/eth/downloader"
+	"github.com/EthereumVega/weth/eth/gasprice"
+	"github.com/EthereumVega/weth/params"
 )
 
 // DefaultConfig contains default settings for use on the Ethereum main net.

@@ -24,7 +24,7 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/EthereumVega/EVA-00D/common"
+	"github.com/EthereumVega/weth/common"
 )
 
 // Hash represents the 32 byte Keccak256 hash of arbitrary data.

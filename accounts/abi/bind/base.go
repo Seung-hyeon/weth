@@ -22,11 +22,11 @@ import (
 	"fmt"
 	"math/big"
 
-	"github.com/EthereumVega/EVA-00D"
-	"github.com/EthereumVega/EVA-00D/accounts/abi"
-	"github.com/EthereumVega/EVA-00D/common"
-	"github.com/EthereumVega/EVA-00D/core/types"
-	"github.com/EthereumVega/EVA-00D/crypto"
+	"github.com/EthereumVega/weth"
+	"github.com/EthereumVega/weth/accounts/abi"
+	"github.com/EthereumVega/weth/common"
+	"github.com/EthereumVega/weth/core/types"
+	"github.com/EthereumVega/weth/crypto"
 )
 
 // SignerFn is a signer function callback when a contract requires a method to

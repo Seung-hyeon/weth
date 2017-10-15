@@ -21,7 +21,7 @@ package whisperv2
 import (
 	"crypto/ecdsa"
 
-	"github.com/EthereumVega/EVA-00D/event/filter"
+	"github.com/EthereumVega/weth/event/filter"
 )
 
 // Filter is used to subscribe to specific types of whisper messages.

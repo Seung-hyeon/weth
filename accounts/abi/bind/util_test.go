@@ -22,12 +22,12 @@ import (
 	"testing"
 	"time"
 
-	"github.com/EthereumVega/EVA-00D/accounts/abi/bind"
-	"github.com/EthereumVega/EVA-00D/accounts/abi/bind/backends"
-	"github.com/EthereumVega/EVA-00D/common"
-	"github.com/EthereumVega/EVA-00D/core"
-	"github.com/EthereumVega/EVA-00D/core/types"
-	"github.com/EthereumVega/EVA-00D/crypto"
+	"github.com/EthereumVega/weth/accounts/abi/bind"
+	"github.com/EthereumVega/weth/accounts/abi/bind/backends"
+	"github.com/EthereumVega/weth/common"
+	"github.com/EthereumVega/weth/core"
+	"github.com/EthereumVega/weth/core/types"
+	"github.com/EthereumVega/weth/crypto"
 )
 
 var testKey, _ = crypto.HexToECDSA("b71c71a67e1177ad4e901695e1b4b9ee17ae16c6668d313eac2f96dbcda3f291")

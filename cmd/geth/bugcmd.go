@@ -26,10 +26,10 @@ import (
 	"runtime"
 	"strings"
 
-	"github.com/EthereumVega/EVA-00D/cmd/internal/browser"
-	"github.com/EthereumVega/EVA-00D/params"
+	"github.com/EthereumVega/weth/cmd/internal/browser"
+	"github.com/EthereumVega/weth/params"
 
-	"github.com/EthereumVega/EVA-00D/cmd/utils"
+	"github.com/EthereumVega/weth/cmd/utils"
 	cli "gopkg.in/urfave/cli.v1"
 )
 
@@ -41,7 +41,7 @@ var bugCommand = cli.Command{
 	Category:  "MISCELLANEOUS COMMANDS",
 }
 
-const issueUrl = "https://github.com/EthereumVega/EVA-00D/issues/new"
+const issueUrl = "https://github.com/EthereumVega/weth/issues/new"
 
 // reportBug reports a bug by opening a new URL to the go-ethereum GH issue
 // tracker and setting default values as the issue body.

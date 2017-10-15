@@ -1,5 +1,5 @@
 language: go
-go_import_path: github.com/EthereumVega/EVA-00D
+go_import_path: github.com/EthereumVega/weth
 sudo: false
 matrix:
   include:

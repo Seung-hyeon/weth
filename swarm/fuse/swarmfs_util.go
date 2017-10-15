@@ -24,7 +24,7 @@ import (
 	"os/exec"
 	"runtime"
 
-	"github.com/EthereumVega/EVA-00D/log"
+	"github.com/EthereumVega/weth/log"
 )
 
 func externalUnmount(mountPoint string) error {

@@ -22,9 +22,9 @@ import (
 	"os"
 	"path/filepath"
 
-	"github.com/EthereumVega/EVA-00D/cmd/utils"
-	"github.com/EthereumVega/EVA-00D/log"
-	"github.com/EthereumVega/EVA-00D/swarm/storage"
+	"github.com/EthereumVega/weth/cmd/utils"
+	"github.com/EthereumVega/weth/log"
+	"github.com/EthereumVega/weth/swarm/storage"
 	"gopkg.in/urfave/cli.v1"
 )
 

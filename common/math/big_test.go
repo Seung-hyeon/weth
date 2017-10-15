@@ -22,7 +22,7 @@ import (
 	"math/big"
 	"testing"
 
-	"github.com/EthereumVega/EVA-00D/common"
+	"github.com/EthereumVega/weth/common"
 )
 
 func TestHexOrDecimal256(t *testing.T) {

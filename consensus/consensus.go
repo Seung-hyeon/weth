@@ -18,11 +18,11 @@
 package consensus
 
 import (
-	"github.com/EthereumVega/EVA-00D/common"
-	"github.com/EthereumVega/EVA-00D/core/state"
-	"github.com/EthereumVega/EVA-00D/core/types"
-	"github.com/EthereumVega/EVA-00D/params"
-	"github.com/EthereumVega/EVA-00D/rpc"
+	"github.com/EthereumVega/weth/common"
+	"github.com/EthereumVega/weth/core/state"
+	"github.com/EthereumVega/weth/core/types"
+	"github.com/EthereumVega/weth/params"
+	"github.com/EthereumVega/weth/rpc"
 )
 
 // ChainReader defines a small collection of methods needed to access the local

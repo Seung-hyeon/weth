@@ -27,9 +27,9 @@ import (
 	"sync/atomic"
 	"time"
 
-	"github.com/EthereumVega/EVA-00D/event"
-	"github.com/EthereumVega/EVA-00D/p2p/discover"
-	"github.com/EthereumVega/EVA-00D/rlp"
+	"github.com/EthereumVega/weth/event"
+	"github.com/EthereumVega/weth/p2p/discover"
+	"github.com/EthereumVega/weth/rlp"
 )
 
 // Msg defines the structure of a p2p message.

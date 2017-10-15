@@ -20,7 +20,7 @@ import (
 	"fmt"
 	"sort"
 
-	"github.com/EthereumVega/EVA-00D/log"
+	"github.com/EthereumVega/weth/log"
 )
 
 // deployEthstats queries the user for various input on deploying an ethstats

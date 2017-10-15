@@ -22,8 +22,8 @@ import (
 	"errors"
 	"math/big"
 
-	"github.com/EthereumVega/EVA-00D/common"
-	"github.com/EthereumVega/EVA-00D/core/types"
+	"github.com/EthereumVega/weth/common"
+	"github.com/EthereumVega/weth/core/types"
 )
 
 // NotFound is returned by API methods if the requested item does not exist.

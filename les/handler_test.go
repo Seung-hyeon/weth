@@ -20,15 +20,15 @@ import (
 	"math/rand"
 	"testing"
 
-	"github.com/EthereumVega/EVA-00D/common"
-	"github.com/EthereumVega/EVA-00D/core"
-	"github.com/EthereumVega/EVA-00D/core/types"
-	"github.com/EthereumVega/EVA-00D/crypto"
-	"github.com/EthereumVega/EVA-00D/eth/downloader"
-	"github.com/EthereumVega/EVA-00D/ethdb"
-	"github.com/EthereumVega/EVA-00D/p2p"
-	"github.com/EthereumVega/EVA-00D/rlp"
-	"github.com/EthereumVega/EVA-00D/trie"
+	"github.com/EthereumVega/weth/common"
+	"github.com/EthereumVega/weth/core"
+	"github.com/EthereumVega/weth/core/types"
+	"github.com/EthereumVega/weth/crypto"
+	"github.com/EthereumVega/weth/eth/downloader"
+	"github.com/EthereumVega/weth/ethdb"
+	"github.com/EthereumVega/weth/p2p"
+	"github.com/EthereumVega/weth/rlp"
+	"github.com/EthereumVega/weth/trie"
 )
 
 func expectResponse(r p2p.MsgReader, msgcode, reqID, bv uint64, data interface{}) error {

@@ -20,12 +20,12 @@ import (
 	"fmt"
 	"io/ioutil"
 
-	"github.com/EthereumVega/EVA-00D/accounts"
-	"github.com/EthereumVega/EVA-00D/accounts/keystore"
-	"github.com/EthereumVega/EVA-00D/cmd/utils"
-	"github.com/EthereumVega/EVA-00D/console"
-	"github.com/EthereumVega/EVA-00D/crypto"
-	"github.com/EthereumVega/EVA-00D/log"
+	"github.com/EthereumVega/weth/accounts"
+	"github.com/EthereumVega/weth/accounts/keystore"
+	"github.com/EthereumVega/weth/cmd/utils"
+	"github.com/EthereumVega/weth/console"
+	"github.com/EthereumVega/weth/crypto"
+	"github.com/EthereumVega/weth/log"
 	"gopkg.in/urfave/cli.v1"
 )
 

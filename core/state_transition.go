@@ -20,11 +20,11 @@ import (
 	"errors"
 	"math/big"
 
-	"github.com/EthereumVega/EVA-00D/common"
-	"github.com/EthereumVega/EVA-00D/common/math"
-	"github.com/EthereumVega/EVA-00D/core/vm"
-	"github.com/EthereumVega/EVA-00D/log"
-	"github.com/EthereumVega/EVA-00D/params"
+	"github.com/EthereumVega/weth/common"
+	"github.com/EthereumVega/weth/common/math"
+	"github.com/EthereumVega/weth/core/vm"
+	"github.com/EthereumVega/weth/log"
+	"github.com/EthereumVega/weth/params"
 )
 
 var (

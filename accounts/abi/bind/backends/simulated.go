@@ -24,17 +24,17 @@ import (
 	"sync"
 	"time"
 
-	"github.com/EthereumVega/EVA-00D"
-	"github.com/EthereumVega/EVA-00D/accounts/abi/bind"
-	"github.com/EthereumVega/EVA-00D/common"
-	"github.com/EthereumVega/EVA-00D/common/math"
-	"github.com/EthereumVega/EVA-00D/consensus/ethash"
-	"github.com/EthereumVega/EVA-00D/core"
-	"github.com/EthereumVega/EVA-00D/core/state"
-	"github.com/EthereumVega/EVA-00D/core/types"
-	"github.com/EthereumVega/EVA-00D/core/vm"
-	"github.com/EthereumVega/EVA-00D/ethdb"
-	"github.com/EthereumVega/EVA-00D/params"
+	"github.com/EthereumVega/weth"
+	"github.com/EthereumVega/weth/accounts/abi/bind"
+	"github.com/EthereumVega/weth/common"
+	"github.com/EthereumVega/weth/common/math"
+	"github.com/EthereumVega/weth/consensus/ethash"
+	"github.com/EthereumVega/weth/core"
+	"github.com/EthereumVega/weth/core/state"
+	"github.com/EthereumVega/weth/core/types"
+	"github.com/EthereumVega/weth/core/vm"
+	"github.com/EthereumVega/weth/ethdb"
+	"github.com/EthereumVega/weth/params"
 )
 
 // This nil assignment ensures compile time that SimulatedBackend implements bind.ContractBackend.

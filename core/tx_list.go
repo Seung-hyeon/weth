@@ -22,9 +22,9 @@ import (
 	"math/big"
 	"sort"
 
-	"github.com/EthereumVega/EVA-00D/common"
-	"github.com/EthereumVega/EVA-00D/core/types"
-	"github.com/EthereumVega/EVA-00D/log"
+	"github.com/EthereumVega/weth/common"
+	"github.com/EthereumVega/weth/core/types"
+	"github.com/EthereumVega/weth/log"
 )
 
 // nonceHeap is a heap.Interface implementation over 64bit unsigned integers for

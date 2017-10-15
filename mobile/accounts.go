@@ -23,10 +23,10 @@ import (
 	"errors"
 	"time"
 
-	"github.com/EthereumVega/EVA-00D/accounts"
-	"github.com/EthereumVega/EVA-00D/accounts/keystore"
-	"github.com/EthereumVega/EVA-00D/common"
-	"github.com/EthereumVega/EVA-00D/crypto"
+	"github.com/EthereumVega/weth/accounts"
+	"github.com/EthereumVega/weth/accounts/keystore"
+	"github.com/EthereumVega/weth/common"
+	"github.com/EthereumVega/weth/crypto"
 )
 
 const (

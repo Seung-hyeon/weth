@@ -22,7 +22,7 @@ package weth
 import (
 	"errors"
 
-	"github.com/EthereumVega/EVA-00D/p2p/discv5"
+	"github.com/EthereumVega/weth/p2p/discv5"
 )
 
 // Enode represents a host on the network.

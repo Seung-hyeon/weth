@@ -22,7 +22,7 @@ import (
 	"io/ioutil"
 	"strings"
 
-	"github.com/EthereumVega/EVA-00D/core/asm"
+	"github.com/EthereumVega/weth/core/asm"
 	cli "gopkg.in/urfave/cli.v1"
 )
 

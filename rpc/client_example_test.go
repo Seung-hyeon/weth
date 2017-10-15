@@ -22,7 +22,7 @@ import (
 	"math/big"
 	"time"
 
-	"github.com/EthereumVega/EVA-00D/rpc"
+	"github.com/EthereumVega/weth/rpc"
 )
 
 // In this example, our client whishes to track the latest 'block number'

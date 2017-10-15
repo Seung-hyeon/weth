@@ -42,7 +42,7 @@ import (
 	"fmt"
 	"hash"
 
-	ethcrypto "github.com/EthereumVega/EVA-00D/crypto"
+	ethcrypto "github.com/EthereumVega/weth/crypto"
 )
 
 var (

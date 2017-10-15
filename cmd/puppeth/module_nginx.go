@@ -23,7 +23,7 @@ import (
 	"math/rand"
 	"path/filepath"
 
-	"github.com/EthereumVega/EVA-00D/log"
+	"github.com/EthereumVega/weth/log"
 )
 
 // nginxDockerfile is theis the Dockerfile required to build an nginx reverse-

@@ -22,9 +22,9 @@ import (
 	"io"
 	"math/big"
 
-	"github.com/EthereumVega/EVA-00D/common"
-	"github.com/EthereumVega/EVA-00D/common/hexutil"
-	"github.com/EthereumVega/EVA-00D/rlp"
+	"github.com/EthereumVega/weth/common"
+	"github.com/EthereumVega/weth/common/hexutil"
+	"github.com/EthereumVega/weth/rlp"
 )
 
 //go:generate gencodec -type Receipt -field-override receiptMarshaling -out gen_receipt_json.go

@@ -19,7 +19,7 @@ package main
 import (
 	"fmt"
 
-	"github.com/EthereumVega/EVA-00D/log"
+	"github.com/EthereumVega/weth/log"
 )
 
 // deployDashboard queries the user for various input on deploying a web-service

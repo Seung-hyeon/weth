@@ -21,7 +21,7 @@ import (
 	"math/rand"
 	"testing"
 
-	"github.com/EthereumVega/EVA-00D/core/types"
+	"github.com/EthereumVega/weth/core/types"
 )
 
 // Tests that batched bloom bits are correctly rotated from the input bloom

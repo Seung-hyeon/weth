@@ -19,7 +19,7 @@ package tests
 import (
 	"testing"
 
-	"github.com/EthereumVega/EVA-00D/core/vm"
+	"github.com/EthereumVega/weth/core/vm"
 )
 
 func TestVM(t *testing.T) {

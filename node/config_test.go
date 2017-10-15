@@ -24,8 +24,8 @@ import (
 	"runtime"
 	"testing"
 
-	"github.com/EthereumVega/EVA-00D/crypto"
-	"github.com/EthereumVega/EVA-00D/p2p"
+	"github.com/EthereumVega/weth/crypto"
+	"github.com/EthereumVega/weth/p2p"
 )
 
 // Tests that datadirs can be successfully created, be them manually configured

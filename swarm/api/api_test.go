@@ -24,9 +24,9 @@ import (
 	"os"
 	"testing"
 
-	"github.com/EthereumVega/EVA-00D/common"
-	"github.com/EthereumVega/EVA-00D/log"
-	"github.com/EthereumVega/EVA-00D/swarm/storage"
+	"github.com/EthereumVega/weth/common"
+	"github.com/EthereumVega/weth/log"
+	"github.com/EthereumVega/weth/swarm/storage"
 )
 
 func testApi(t *testing.T, f func(*Api)) {

@@ -24,12 +24,12 @@ import (
 	"sync"
 	"time"
 
-	"github.com/EthereumVega/EVA-00D/common"
-	"github.com/EthereumVega/EVA-00D/core/types"
-	"github.com/EthereumVega/EVA-00D/eth"
-	"github.com/EthereumVega/EVA-00D/les/flowcontrol"
-	"github.com/EthereumVega/EVA-00D/p2p"
-	"github.com/EthereumVega/EVA-00D/rlp"
+	"github.com/EthereumVega/weth/common"
+	"github.com/EthereumVega/weth/core/types"
+	"github.com/EthereumVega/weth/eth"
+	"github.com/EthereumVega/weth/les/flowcontrol"
+	"github.com/EthereumVega/weth/p2p"
+	"github.com/EthereumVega/weth/rlp"
 )
 
 var (

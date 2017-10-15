@@ -20,8 +20,8 @@ import (
 	"bytes"
 	"testing"
 
-	"github.com/EthereumVega/EVA-00D/common"
-	"github.com/EthereumVega/EVA-00D/ethdb"
+	"github.com/EthereumVega/weth/common"
+	"github.com/EthereumVega/weth/ethdb"
 )
 
 // makeTestTrie create a sample test trie to test node-wise reconstruction.

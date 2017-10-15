@@ -21,7 +21,7 @@ import (
 	"encoding/hex"
 	"fmt"
 
-	"github.com/EthereumVega/EVA-00D/core/vm"
+	"github.com/EthereumVega/weth/core/vm"
 )
 
 // Iterator for disassembled EVM instructions

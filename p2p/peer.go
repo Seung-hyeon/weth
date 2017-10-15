@@ -24,11 +24,11 @@ import (
 	"sync"
 	"time"
 
-	"github.com/EthereumVega/EVA-00D/common/mclock"
-	"github.com/EthereumVega/EVA-00D/event"
-	"github.com/EthereumVega/EVA-00D/log"
-	"github.com/EthereumVega/EVA-00D/p2p/discover"
-	"github.com/EthereumVega/EVA-00D/rlp"
+	"github.com/EthereumVega/weth/common/mclock"
+	"github.com/EthereumVega/weth/event"
+	"github.com/EthereumVega/weth/log"
+	"github.com/EthereumVega/weth/p2p/discover"
+	"github.com/EthereumVega/weth/rlp"
 )
 
 const (

@@ -19,7 +19,7 @@ package params
 import (
 	"math/big"
 
-	"github.com/EthereumVega/EVA-00D/common"
+	"github.com/EthereumVega/weth/common"
 )
 
 // DAOForkBlockExtra is the block header extra-data field to set for the DAO fork

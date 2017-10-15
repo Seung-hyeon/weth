@@ -21,7 +21,7 @@ import (
 	"fmt"
 	"net"
 
-	"github.com/EthereumVega/EVA-00D/log"
+	"github.com/EthereumVega/weth/log"
 )
 
 // CreateIPCListener creates an listener, on Unix platforms this is a unix socket, on

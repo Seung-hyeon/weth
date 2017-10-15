@@ -24,12 +24,12 @@ import (
 	"os"
 	"path/filepath"
 
-	"github.com/EthereumVega/EVA-00D/common"
-	"github.com/EthereumVega/EVA-00D/contracts/ens"
-	"github.com/EthereumVega/EVA-00D/crypto"
-	"github.com/EthereumVega/EVA-00D/swarm/network"
-	"github.com/EthereumVega/EVA-00D/swarm/services/swap"
-	"github.com/EthereumVega/EVA-00D/swarm/storage"
+	"github.com/EthereumVega/weth/common"
+	"github.com/EthereumVega/weth/contracts/ens"
+	"github.com/EthereumVega/weth/crypto"
+	"github.com/EthereumVega/weth/swarm/network"
+	"github.com/EthereumVega/weth/swarm/services/swap"
+	"github.com/EthereumVega/weth/swarm/storage"
 )
 
 const (

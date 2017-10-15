@@ -21,8 +21,8 @@ import (
 
 	"sync/atomic"
 
-	"github.com/EthereumVega/EVA-00D/consensus"
-	"github.com/EthereumVega/EVA-00D/log"
+	"github.com/EthereumVega/weth/consensus"
+	"github.com/EthereumVega/weth/log"
 )
 
 type CpuAgent struct {

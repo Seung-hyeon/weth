@@ -19,9 +19,9 @@ package vm
 import (
 	"math/big"
 
-	"github.com/EthereumVega/EVA-00D/common"
-	"github.com/EthereumVega/EVA-00D/common/math"
-	"github.com/EthereumVega/EVA-00D/params"
+	"github.com/EthereumVega/weth/common"
+	"github.com/EthereumVega/weth/common/math"
+	"github.com/EthereumVega/weth/params"
 )
 
 // memoryGasCosts calculates the quadratic gas for memory expansion. It does so

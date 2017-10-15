@@ -30,8 +30,8 @@ import (
 	"testing"
 	"time"
 
-	"github.com/EthereumVega/EVA-00D/accounts/keystore"
-	"github.com/EthereumVega/EVA-00D/core/types"
+	"github.com/EthereumVega/weth/accounts/keystore"
+	"github.com/EthereumVega/weth/core/types"
 )
 
 // Tests that the account management snippets work correctly.

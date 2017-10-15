@@ -25,11 +25,11 @@ import (
 	"os"
 
 	"github.com/docker/docker/pkg/reexec"
-	"github.com/EthereumVega/EVA-00D/crypto"
-	"github.com/EthereumVega/EVA-00D/node"
-	"github.com/EthereumVega/EVA-00D/p2p"
-	"github.com/EthereumVega/EVA-00D/p2p/discover"
-	"github.com/EthereumVega/EVA-00D/rpc"
+	"github.com/EthereumVega/weth/crypto"
+	"github.com/EthereumVega/weth/node"
+	"github.com/EthereumVega/weth/p2p"
+	"github.com/EthereumVega/weth/p2p/discover"
+	"github.com/EthereumVega/weth/rpc"
 )
 
 // Node represents a node in a simulation network which is created by a

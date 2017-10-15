@@ -20,9 +20,9 @@ import (
 	"fmt"
 	"log"
 
-	"github.com/EthereumVega/EVA-00D/node"
-	"github.com/EthereumVega/EVA-00D/p2p"
-	"github.com/EthereumVega/EVA-00D/rpc"
+	"github.com/EthereumVega/weth/node"
+	"github.com/EthereumVega/weth/p2p"
+	"github.com/EthereumVega/weth/rpc"
 )
 
 // SampleService is a trivial network service that can be attached to a node for

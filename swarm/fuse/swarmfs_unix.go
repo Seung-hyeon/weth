@@ -29,9 +29,9 @@ import (
 
 	"bazil.org/fuse"
 	"bazil.org/fuse/fs"
-	"github.com/EthereumVega/EVA-00D/common"
-	"github.com/EthereumVega/EVA-00D/log"
-	"github.com/EthereumVega/EVA-00D/swarm/api"
+	"github.com/EthereumVega/weth/common"
+	"github.com/EthereumVega/weth/log"
+	"github.com/EthereumVega/weth/swarm/api"
 )
 
 var (

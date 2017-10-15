@@ -21,9 +21,9 @@ import (
 	"hash"
 	"sync"
 
-	"github.com/EthereumVega/EVA-00D/common"
-	"github.com/EthereumVega/EVA-00D/crypto/sha3"
-	"github.com/EthereumVega/EVA-00D/rlp"
+	"github.com/EthereumVega/weth/common"
+	"github.com/EthereumVega/weth/crypto/sha3"
+	"github.com/EthereumVega/weth/rlp"
 )
 
 type hasher struct {

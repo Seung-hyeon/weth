@@ -19,7 +19,7 @@
 package fetcher
 
 import (
-	"github.com/EthereumVega/EVA-00D/metrics"
+	"github.com/EthereumVega/weth/metrics"
 )
 
 var (

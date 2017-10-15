@@ -30,9 +30,9 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/EthereumVega/EVA-00D/common"
-	"github.com/EthereumVega/EVA-00D/crypto"
-	"github.com/EthereumVega/EVA-00D/crypto/secp256k1"
+	"github.com/EthereumVega/weth/common"
+	"github.com/EthereumVega/weth/crypto"
+	"github.com/EthereumVega/weth/crypto/secp256k1"
 )
 
 const NodeIDBits = 512

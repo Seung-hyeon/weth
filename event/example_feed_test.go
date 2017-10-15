@@ -19,7 +19,7 @@ package event_test
 import (
 	"fmt"
 
-	"github.com/EthereumVega/EVA-00D/event"
+	"github.com/EthereumVega/weth/event"
 )
 
 func ExampleFeed_acknowledgedEvents() {

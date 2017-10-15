@@ -27,9 +27,9 @@ import (
 	"sort"
 	"strings"
 
-	"github.com/EthereumVega/EVA-00D/internal/jsre"
-	"github.com/EthereumVega/EVA-00D/internal/web3ext"
-	"github.com/EthereumVega/EVA-00D/rpc"
+	"github.com/EthereumVega/weth/internal/jsre"
+	"github.com/EthereumVega/weth/internal/web3ext"
+	"github.com/EthereumVega/weth/rpc"
 	"github.com/mattn/go-colorable"
 	"github.com/peterh/liner"
 	"github.com/robertkrimen/otto"

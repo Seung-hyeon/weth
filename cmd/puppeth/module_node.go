@@ -25,7 +25,7 @@ import (
 	"strings"
 	"text/template"
 
-	"github.com/EthereumVega/EVA-00D/log"
+	"github.com/EthereumVega/weth/log"
 )
 
 // nodeDockerfile is the Dockerfile required to run an Ethereum node.

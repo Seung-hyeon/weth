@@ -36,11 +36,11 @@ import (
 	"time"
 
 	"github.com/docker/docker/pkg/reexec"
-	"github.com/EthereumVega/EVA-00D/log"
-	"github.com/EthereumVega/EVA-00D/node"
-	"github.com/EthereumVega/EVA-00D/p2p"
-	"github.com/EthereumVega/EVA-00D/p2p/discover"
-	"github.com/EthereumVega/EVA-00D/rpc"
+	"github.com/EthereumVega/weth/log"
+	"github.com/EthereumVega/weth/node"
+	"github.com/EthereumVega/weth/p2p"
+	"github.com/EthereumVega/weth/p2p/discover"
+	"github.com/EthereumVega/weth/rpc"
 	"golang.org/x/net/websocket"
 )
 

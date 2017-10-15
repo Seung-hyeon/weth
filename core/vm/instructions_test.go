@@ -4,8 +4,8 @@ import (
 	"math/big"
 	"testing"
 
-	"github.com/EthereumVega/EVA-00D/common"
-	"github.com/EthereumVega/EVA-00D/params"
+	"github.com/EthereumVega/weth/common"
+	"github.com/EthereumVega/weth/params"
 )
 
 func TestByteOp(t *testing.T) {

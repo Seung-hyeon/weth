@@ -20,7 +20,7 @@ import (
 	"errors"
 	"math/big"
 
-	"github.com/EthereumVega/EVA-00D/common"
+	"github.com/EthereumVega/weth/common"
 )
 
 const Version = "1.0"

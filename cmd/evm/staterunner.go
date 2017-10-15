@@ -23,10 +23,10 @@ import (
 	"io/ioutil"
 	"os"
 
-	"github.com/EthereumVega/EVA-00D/core/state"
-	"github.com/EthereumVega/EVA-00D/core/vm"
-	"github.com/EthereumVega/EVA-00D/log"
-	"github.com/EthereumVega/EVA-00D/tests"
+	"github.com/EthereumVega/weth/core/state"
+	"github.com/EthereumVega/weth/core/vm"
+	"github.com/EthereumVega/weth/log"
+	"github.com/EthereumVega/weth/tests"
 
 	cli "gopkg.in/urfave/cli.v1"
 )

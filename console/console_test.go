@@ -26,11 +26,11 @@ import (
 	"testing"
 	"time"
 
-	"github.com/EthereumVega/EVA-00D/common"
-	"github.com/EthereumVega/EVA-00D/core"
-	"github.com/EthereumVega/EVA-00D/eth"
-	"github.com/EthereumVega/EVA-00D/internal/jsre"
-	"github.com/EthereumVega/EVA-00D/node"
+	"github.com/EthereumVega/weth/common"
+	"github.com/EthereumVega/weth/core"
+	"github.com/EthereumVega/weth/eth"
+	"github.com/EthereumVega/weth/internal/jsre"
+	"github.com/EthereumVega/weth/node"
 )
 
 const (

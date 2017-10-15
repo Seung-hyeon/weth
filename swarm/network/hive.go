@@ -22,12 +22,12 @@ import (
 	"path/filepath"
 	"time"
 
-	"github.com/EthereumVega/EVA-00D/common"
-	"github.com/EthereumVega/EVA-00D/log"
-	"github.com/EthereumVega/EVA-00D/p2p/discover"
-	"github.com/EthereumVega/EVA-00D/p2p/netutil"
-	"github.com/EthereumVega/EVA-00D/swarm/network/kademlia"
-	"github.com/EthereumVega/EVA-00D/swarm/storage"
+	"github.com/EthereumVega/weth/common"
+	"github.com/EthereumVega/weth/log"
+	"github.com/EthereumVega/weth/p2p/discover"
+	"github.com/EthereumVega/weth/p2p/netutil"
+	"github.com/EthereumVega/weth/swarm/network/kademlia"
+	"github.com/EthereumVega/weth/swarm/storage"
 )
 
 // Hive is the logistic manager of the swarm

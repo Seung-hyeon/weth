@@ -21,11 +21,11 @@ import (
 	"math/big"
 	"testing"
 
-	"github.com/EthereumVega/EVA-00D/common"
-	"github.com/EthereumVega/EVA-00D/core/types"
-	"github.com/EthereumVega/EVA-00D/crypto/sha3"
-	"github.com/EthereumVega/EVA-00D/ethdb"
-	"github.com/EthereumVega/EVA-00D/rlp"
+	"github.com/EthereumVega/weth/common"
+	"github.com/EthereumVega/weth/core/types"
+	"github.com/EthereumVega/weth/crypto/sha3"
+	"github.com/EthereumVega/weth/ethdb"
+	"github.com/EthereumVega/weth/rlp"
 )
 
 // Tests block header storage and retrieval operations.

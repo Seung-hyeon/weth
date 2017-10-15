@@ -21,12 +21,12 @@ import (
 	"encoding/binary"
 	"fmt"
 
-	"github.com/EthereumVega/EVA-00D/cmd/utils"
-	"github.com/EthereumVega/EVA-00D/common"
-	"github.com/EthereumVega/EVA-00D/crypto"
-	"github.com/EthereumVega/EVA-00D/log"
-	"github.com/EthereumVega/EVA-00D/rlp"
-	whisper "github.com/EthereumVega/EVA-00D/whisper/whisperv5"
+	"github.com/EthereumVega/weth/cmd/utils"
+	"github.com/EthereumVega/weth/common"
+	"github.com/EthereumVega/weth/crypto"
+	"github.com/EthereumVega/weth/log"
+	"github.com/EthereumVega/weth/rlp"
+	whisper "github.com/EthereumVega/weth/whisper/whisperv5"
 	"github.com/syndtr/goleveldb/leveldb"
 	"github.com/syndtr/goleveldb/leveldb/util"
 )

@@ -24,12 +24,12 @@ import (
 	"fmt"
 	"math/big"
 
-	"github.com/EthereumVega/EVA-00D"
-	"github.com/EthereumVega/EVA-00D/common"
-	"github.com/EthereumVega/EVA-00D/common/hexutil"
-	"github.com/EthereumVega/EVA-00D/core/types"
-	"github.com/EthereumVega/EVA-00D/rlp"
-	"github.com/EthereumVega/EVA-00D/rpc"
+	"github.com/EthereumVega/weth"
+	"github.com/EthereumVega/weth/common"
+	"github.com/EthereumVega/weth/common/hexutil"
+	"github.com/EthereumVega/weth/core/types"
+	"github.com/EthereumVega/weth/rlp"
+	"github.com/EthereumVega/weth/rpc"
 )
 
 // Client defines typed wrappers for the Ethereum RPC API.

@@ -25,8 +25,8 @@ import (
 	"sync/atomic"
 	"time"
 
-	"github.com/EthereumVega/EVA-00D/common/bitutil"
-	"github.com/EthereumVega/EVA-00D/crypto"
+	"github.com/EthereumVega/weth/common/bitutil"
+	"github.com/EthereumVega/weth/crypto"
 )
 
 // bloomIndexes represents the bit indexes inside the bloom filter that belong

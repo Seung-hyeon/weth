@@ -21,11 +21,11 @@ import (
 	"math/big"
 	"testing"
 
-	"github.com/EthereumVega/EVA-00D/accounts/abi/bind"
-	"github.com/EthereumVega/EVA-00D/accounts/abi/bind/backends"
-	"github.com/EthereumVega/EVA-00D/common"
-	"github.com/EthereumVega/EVA-00D/core"
-	"github.com/EthereumVega/EVA-00D/crypto"
+	"github.com/EthereumVega/weth/accounts/abi/bind"
+	"github.com/EthereumVega/weth/accounts/abi/bind/backends"
+	"github.com/EthereumVega/weth/common"
+	"github.com/EthereumVega/weth/core"
+	"github.com/EthereumVega/weth/crypto"
 )
 
 // setupReleaseTest creates a blockchain simulator and deploys a version oracle

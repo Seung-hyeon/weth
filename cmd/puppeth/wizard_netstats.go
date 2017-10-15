@@ -22,8 +22,8 @@ import (
 	"os"
 	"strings"
 
-	"github.com/EthereumVega/EVA-00D/core"
-	"github.com/EthereumVega/EVA-00D/log"
+	"github.com/EthereumVega/weth/core"
+	"github.com/EthereumVega/weth/log"
 	"github.com/olekukonko/tablewriter"
 )
 

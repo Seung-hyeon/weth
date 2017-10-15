@@ -20,7 +20,7 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/EthereumVega/EVA-00D/log"
+	"github.com/EthereumVega/weth/log"
 )
 
 // manageServers displays a list of servers the user can disconnect from, and an

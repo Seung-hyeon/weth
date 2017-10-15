@@ -24,8 +24,8 @@ import (
 	"os"
 	"runtime"
 
-	"github.com/EthereumVega/EVA-00D/log"
-	"github.com/EthereumVega/EVA-00D/log/term"
+	"github.com/EthereumVega/weth/log"
+	"github.com/EthereumVega/weth/log/term"
 	colorable "github.com/mattn/go-colorable"
 	"gopkg.in/urfave/cli.v1"
 )

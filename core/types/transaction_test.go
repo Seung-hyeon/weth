@@ -23,9 +23,9 @@ import (
 	"math/big"
 	"testing"
 
-	"github.com/EthereumVega/EVA-00D/common"
-	"github.com/EthereumVega/EVA-00D/crypto"
-	"github.com/EthereumVega/EVA-00D/rlp"
+	"github.com/EthereumVega/weth/common"
+	"github.com/EthereumVega/weth/crypto"
+	"github.com/EthereumVega/weth/rlp"
 )
 
 // The values in those tests are from the Transaction Tests

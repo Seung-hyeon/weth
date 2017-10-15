@@ -25,9 +25,9 @@ import (
 	"strings"
 	"time"
 
-	"github.com/EthereumVega/EVA-00D/cmd/utils"
-	"github.com/EthereumVega/EVA-00D/node"
-	"github.com/EthereumVega/EVA-00D/rpc"
+	"github.com/EthereumVega/weth/cmd/utils"
+	"github.com/EthereumVega/weth/node"
+	"github.com/EthereumVega/weth/rpc"
 	"github.com/gizak/termui"
 	"gopkg.in/urfave/cli.v1"
 )

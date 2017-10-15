@@ -22,7 +22,7 @@ import (
 	"reflect"
 	"testing"
 
-	"github.com/EthereumVega/EVA-00D/core/vm"
+	"github.com/EthereumVega/weth/core/vm"
 )
 
 func TestState(t *testing.T) {

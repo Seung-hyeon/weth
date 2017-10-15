@@ -23,7 +23,7 @@ import (
 	"reflect"
 	"strings"
 
-	"github.com/EthereumVega/EVA-00D/common"
+	"github.com/EthereumVega/weth/common"
 )
 
 // The ABI holds information about a contract's context and available

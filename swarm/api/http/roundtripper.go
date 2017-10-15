@@ -20,17 +20,17 @@ import (
 	"fmt"
 	"net/http"
 
-	"github.com/EthereumVega/EVA-00D/log"
+	"github.com/EthereumVega/weth/log"
 )
 
 /*
 http roundtripper to register for bzz url scheme
-see https://github.com/EthereumVega/EVA-00D/issues/2040
+see https://github.com/EthereumVega/weth/issues/2040
 Usage:
 
 import (
- "github.com/EthereumVega/EVA-00D/common/httpclient"
- "github.com/EthereumVega/EVA-00D/swarm/api/http"
+ "github.com/EthereumVega/weth/common/httpclient"
+ "github.com/EthereumVega/weth/swarm/api/http"
 )
 client := httpclient.New()
 // for (private) swarm proxy running locally

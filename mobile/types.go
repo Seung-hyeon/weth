@@ -23,9 +23,9 @@ import (
 	"errors"
 	"fmt"
 
-	"github.com/EthereumVega/EVA-00D/common"
-	"github.com/EthereumVega/EVA-00D/core/types"
-	"github.com/EthereumVega/EVA-00D/rlp"
+	"github.com/EthereumVega/weth/common"
+	"github.com/EthereumVega/weth/core/types"
+	"github.com/EthereumVega/weth/rlp"
 )
 
 // A Nonce is a 64-bit hash which proves (combined with the mix-hash) that

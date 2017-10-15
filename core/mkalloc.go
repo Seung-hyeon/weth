@@ -34,8 +34,8 @@ import (
 	"sort"
 	"strconv"
 
-	"github.com/EthereumVega/EVA-00D/core"
-	"github.com/EthereumVega/EVA-00D/rlp"
+	"github.com/EthereumVega/weth/core"
+	"github.com/EthereumVega/weth/rlp"
 )
 
 type allocItem struct{ Addr, Balance *big.Int }

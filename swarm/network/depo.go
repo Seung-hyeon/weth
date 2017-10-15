@@ -22,8 +22,8 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/EthereumVega/EVA-00D/log"
-	"github.com/EthereumVega/EVA-00D/swarm/storage"
+	"github.com/EthereumVega/weth/log"
+	"github.com/EthereumVega/weth/swarm/storage"
 )
 
 // Handler for storage/retrieval related protocol requests

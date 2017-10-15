@@ -25,8 +25,8 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/EthereumVega/EVA-00D/common"
-	"github.com/EthereumVega/EVA-00D/crypto"
+	"github.com/EthereumVega/weth/common"
+	"github.com/EthereumVega/weth/crypto"
 )
 
 // formatSilceOutput add padding to the value and adds a size

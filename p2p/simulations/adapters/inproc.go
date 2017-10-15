@@ -23,11 +23,11 @@ import (
 	"net"
 	"sync"
 
-	"github.com/EthereumVega/EVA-00D/event"
-	"github.com/EthereumVega/EVA-00D/node"
-	"github.com/EthereumVega/EVA-00D/p2p"
-	"github.com/EthereumVega/EVA-00D/p2p/discover"
-	"github.com/EthereumVega/EVA-00D/rpc"
+	"github.com/EthereumVega/weth/event"
+	"github.com/EthereumVega/weth/node"
+	"github.com/EthereumVega/weth/p2p"
+	"github.com/EthereumVega/weth/p2p/discover"
+	"github.com/EthereumVega/weth/rpc"
 )
 
 // SimAdapter is a NodeAdapter which creates in-memory simulation nodes and

@@ -23,15 +23,15 @@ import (
 	"errors"
 	"fmt"
 
-	"github.com/EthereumVega/EVA-00D/common"
-	"github.com/EthereumVega/EVA-00D/core"
-	"github.com/EthereumVega/EVA-00D/core/types"
-	"github.com/EthereumVega/EVA-00D/crypto"
-	"github.com/EthereumVega/EVA-00D/ethdb"
-	"github.com/EthereumVega/EVA-00D/light"
-	"github.com/EthereumVega/EVA-00D/log"
-	"github.com/EthereumVega/EVA-00D/rlp"
-	"github.com/EthereumVega/EVA-00D/trie"
+	"github.com/EthereumVega/weth/common"
+	"github.com/EthereumVega/weth/core"
+	"github.com/EthereumVega/weth/core/types"
+	"github.com/EthereumVega/weth/crypto"
+	"github.com/EthereumVega/weth/ethdb"
+	"github.com/EthereumVega/weth/light"
+	"github.com/EthereumVega/weth/log"
+	"github.com/EthereumVega/weth/rlp"
+	"github.com/EthereumVega/weth/trie"
 )
 
 var (

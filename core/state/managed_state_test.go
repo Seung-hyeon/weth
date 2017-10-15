@@ -19,8 +19,8 @@ package state
 import (
 	"testing"
 
-	"github.com/EthereumVega/EVA-00D/common"
-	"github.com/EthereumVega/EVA-00D/ethdb"
+	"github.com/EthereumVega/weth/common"
+	"github.com/EthereumVega/weth/ethdb"
 )
 
 var addr = common.BytesToAddress([]byte("test"))

@@ -27,16 +27,16 @@ import (
 
 	goruntime "runtime"
 
-	"github.com/EthereumVega/EVA-00D/cmd/evm/internal/compiler"
-	"github.com/EthereumVega/EVA-00D/cmd/utils"
-	"github.com/EthereumVega/EVA-00D/common"
-	"github.com/EthereumVega/EVA-00D/core"
-	"github.com/EthereumVega/EVA-00D/core/state"
-	"github.com/EthereumVega/EVA-00D/core/vm"
-	"github.com/EthereumVega/EVA-00D/core/vm/runtime"
-	"github.com/EthereumVega/EVA-00D/ethdb"
-	"github.com/EthereumVega/EVA-00D/log"
-	"github.com/EthereumVega/EVA-00D/params"
+	"github.com/EthereumVega/weth/cmd/evm/internal/compiler"
+	"github.com/EthereumVega/weth/cmd/utils"
+	"github.com/EthereumVega/weth/common"
+	"github.com/EthereumVega/weth/core"
+	"github.com/EthereumVega/weth/core/state"
+	"github.com/EthereumVega/weth/core/vm"
+	"github.com/EthereumVega/weth/core/vm/runtime"
+	"github.com/EthereumVega/weth/ethdb"
+	"github.com/EthereumVega/weth/log"
+	"github.com/EthereumVega/weth/params"
 	cli "gopkg.in/urfave/cli.v1"
 )
 

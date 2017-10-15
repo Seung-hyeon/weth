@@ -20,9 +20,9 @@ import (
 	"bytes"
 	"fmt"
 
-	"github.com/EthereumVega/EVA-00D/common"
-	"github.com/EthereumVega/EVA-00D/rlp"
-	"github.com/EthereumVega/EVA-00D/trie"
+	"github.com/EthereumVega/weth/common"
+	"github.com/EthereumVega/weth/rlp"
+	"github.com/EthereumVega/weth/trie"
 )
 
 // NodeIterator is an iterator to traverse the entire state trie post-order,

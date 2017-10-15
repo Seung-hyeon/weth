@@ -22,13 +22,13 @@ import (
 	"sync"
 	"time"
 
-	"github.com/EthereumVega/EVA-00D/common"
-	"github.com/EthereumVega/EVA-00D/common/mclock"
-	"github.com/EthereumVega/EVA-00D/consensus"
-	"github.com/EthereumVega/EVA-00D/core"
-	"github.com/EthereumVega/EVA-00D/core/types"
-	"github.com/EthereumVega/EVA-00D/light"
-	"github.com/EthereumVega/EVA-00D/log"
+	"github.com/EthereumVega/weth/common"
+	"github.com/EthereumVega/weth/common/mclock"
+	"github.com/EthereumVega/weth/consensus"
+	"github.com/EthereumVega/weth/core"
+	"github.com/EthereumVega/weth/core/types"
+	"github.com/EthereumVega/weth/light"
+	"github.com/EthereumVega/weth/log"
 )
 
 const (

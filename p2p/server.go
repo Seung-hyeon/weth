@@ -25,14 +25,14 @@ import (
 	"sync"
 	"time"
 
-	"github.com/EthereumVega/EVA-00D/common"
-	"github.com/EthereumVega/EVA-00D/common/mclock"
-	"github.com/EthereumVega/EVA-00D/event"
-	"github.com/EthereumVega/EVA-00D/log"
-	"github.com/EthereumVega/EVA-00D/p2p/discover"
-	"github.com/EthereumVega/EVA-00D/p2p/discv5"
-	"github.com/EthereumVega/EVA-00D/p2p/nat"
-	"github.com/EthereumVega/EVA-00D/p2p/netutil"
+	"github.com/EthereumVega/weth/common"
+	"github.com/EthereumVega/weth/common/mclock"
+	"github.com/EthereumVega/weth/event"
+	"github.com/EthereumVega/weth/log"
+	"github.com/EthereumVega/weth/p2p/discover"
+	"github.com/EthereumVega/weth/p2p/discv5"
+	"github.com/EthereumVega/weth/p2p/nat"
+	"github.com/EthereumVega/weth/p2p/netutil"
 )
 
 const (

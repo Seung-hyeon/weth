@@ -29,7 +29,7 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/EthereumVega/EVA-00D/params"
+	"github.com/EthereumVega/weth/params"
 )
 
 var (

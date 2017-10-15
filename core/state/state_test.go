@@ -21,9 +21,9 @@ import (
 	"math/big"
 	"testing"
 
-	"github.com/EthereumVega/EVA-00D/common"
-	"github.com/EthereumVega/EVA-00D/crypto"
-	"github.com/EthereumVega/EVA-00D/ethdb"
+	"github.com/EthereumVega/weth/common"
+	"github.com/EthereumVega/weth/crypto"
+	"github.com/EthereumVega/weth/ethdb"
 	checker "gopkg.in/check.v1"
 )
 

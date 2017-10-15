@@ -22,10 +22,10 @@ import (
 	"io"
 	"math/big"
 
-	"github.com/EthereumVega/EVA-00D/common"
-	"github.com/EthereumVega/EVA-00D/crypto"
-	"github.com/EthereumVega/EVA-00D/rlp"
-	"github.com/EthereumVega/EVA-00D/trie"
+	"github.com/EthereumVega/weth/common"
+	"github.com/EthereumVega/weth/crypto"
+	"github.com/EthereumVega/weth/rlp"
+	"github.com/EthereumVega/weth/trie"
 )
 
 var emptyCodeHash = crypto.Keccak256(nil)

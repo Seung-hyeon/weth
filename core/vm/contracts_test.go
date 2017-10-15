@@ -5,7 +5,7 @@ import (
 	"math/big"
 	"testing"
 
-	"github.com/EthereumVega/EVA-00D/common"
+	"github.com/EthereumVega/weth/common"
 )
 
 // precompiledTest defines the input/output pairs for precompiled contract tests.

@@ -20,9 +20,9 @@ import (
 	"context"
 	"sync"
 
-	ethereum "github.com/EthereumVega/EVA-00D"
-	"github.com/EthereumVega/EVA-00D/event"
-	"github.com/EthereumVega/EVA-00D/rpc"
+	ethereum "github.com/EthereumVega/weth"
+	"github.com/EthereumVega/weth/event"
+	"github.com/EthereumVega/weth/rpc"
 )
 
 // PublicDownloaderAPI provides an API which gives information about the current synchronisation status.

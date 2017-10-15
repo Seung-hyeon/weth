@@ -22,7 +22,7 @@ import (
 	"errors"
 	"math/big"
 
-	"github.com/EthereumVega/EVA-00D/common"
+	"github.com/EthereumVega/weth/common"
 )
 
 // A BigInt represents a signed multi-precision integer.

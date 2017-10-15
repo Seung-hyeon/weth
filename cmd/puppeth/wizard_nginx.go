@@ -19,7 +19,7 @@ package main
 import (
 	"fmt"
 
-	"github.com/EthereumVega/EVA-00D/log"
+	"github.com/EthereumVega/weth/log"
 )
 
 // ensureVirtualHost checks whether a reverse-proxy is running on the specified

@@ -19,7 +19,7 @@ package vm
 import (
 	"math/big"
 
-	"github.com/EthereumVega/EVA-00D/params"
+	"github.com/EthereumVega/weth/params"
 )
 
 const (

@@ -54,7 +54,7 @@ func TestBloom(t *testing.T) {
 import (
 	"testing"
 
-	"github.com/EthereumVega/EVA-00D/core/state"
+	"github.com/EthereumVega/weth/core/state"
 )
 
 func TestBloom9(t *testing.T) {

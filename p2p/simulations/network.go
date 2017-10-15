@@ -23,11 +23,11 @@ import (
 	"fmt"
 	"sync"
 
-	"github.com/EthereumVega/EVA-00D/event"
-	"github.com/EthereumVega/EVA-00D/log"
-	"github.com/EthereumVega/EVA-00D/p2p"
-	"github.com/EthereumVega/EVA-00D/p2p/discover"
-	"github.com/EthereumVega/EVA-00D/p2p/simulations/adapters"
+	"github.com/EthereumVega/weth/event"
+	"github.com/EthereumVega/weth/log"
+	"github.com/EthereumVega/weth/p2p"
+	"github.com/EthereumVega/weth/p2p/discover"
+	"github.com/EthereumVega/weth/p2p/simulations/adapters"
 )
 
 // NetworkConfig defines configuration options for starting a Network

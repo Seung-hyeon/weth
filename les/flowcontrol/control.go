@@ -21,7 +21,7 @@ import (
 	"sync"
 	"time"
 
-	"github.com/EthereumVega/EVA-00D/common/mclock"
+	"github.com/EthereumVega/weth/common/mclock"
 )
 
 const fcTimeConst = time.Millisecond

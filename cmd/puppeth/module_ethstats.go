@@ -24,7 +24,7 @@ import (
 	"strings"
 	"text/template"
 
-	"github.com/EthereumVega/EVA-00D/log"
+	"github.com/EthereumVega/weth/log"
 )
 
 // ethstatsDockerfile is the Dockerfile required to build an ethstats backend

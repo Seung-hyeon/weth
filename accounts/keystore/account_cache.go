@@ -28,9 +28,9 @@ import (
 	"sync"
 	"time"
 
-	"github.com/EthereumVega/EVA-00D/accounts"
-	"github.com/EthereumVega/EVA-00D/common"
-	"github.com/EthereumVega/EVA-00D/log"
+	"github.com/EthereumVega/weth/accounts"
+	"github.com/EthereumVega/weth/common"
+	"github.com/EthereumVega/weth/log"
 	"gopkg.in/fatih/set.v0"
 )
 

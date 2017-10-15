@@ -5,11 +5,11 @@ package eth
 import (
 	"math/big"
 
-	"github.com/EthereumVega/EVA-00D/common"
-	"github.com/EthereumVega/EVA-00D/common/hexutil"
-	"github.com/EthereumVega/EVA-00D/core"
-	"github.com/EthereumVega/EVA-00D/eth/downloader"
-	"github.com/EthereumVega/EVA-00D/eth/gasprice"
+	"github.com/EthereumVega/weth/common"
+	"github.com/EthereumVega/weth/common/hexutil"
+	"github.com/EthereumVega/weth/core"
+	"github.com/EthereumVega/weth/eth/downloader"
+	"github.com/EthereumVega/weth/eth/gasprice"
 )
 
 func (c Config) MarshalTOML() (interface{}, error) {

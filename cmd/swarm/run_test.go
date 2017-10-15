@@ -27,12 +27,12 @@ import (
 	"time"
 
 	"github.com/docker/docker/pkg/reexec"
-	"github.com/EthereumVega/EVA-00D/accounts/keystore"
-	"github.com/EthereumVega/EVA-00D/internal/cmdtest"
-	"github.com/EthereumVega/EVA-00D/node"
-	"github.com/EthereumVega/EVA-00D/p2p"
-	"github.com/EthereumVega/EVA-00D/rpc"
-	"github.com/EthereumVega/EVA-00D/swarm"
+	"github.com/EthereumVega/weth/accounts/keystore"
+	"github.com/EthereumVega/weth/internal/cmdtest"
+	"github.com/EthereumVega/weth/node"
+	"github.com/EthereumVega/weth/p2p"
+	"github.com/EthereumVega/weth/rpc"
+	"github.com/EthereumVega/weth/swarm"
 )
 
 func init() {

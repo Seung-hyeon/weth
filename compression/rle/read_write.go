@@ -21,7 +21,7 @@ import (
 	"bytes"
 	"errors"
 
-	"github.com/EthereumVega/EVA-00D/crypto"
+	"github.com/EthereumVega/weth/crypto"
 )
 
 const (

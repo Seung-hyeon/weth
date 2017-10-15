@@ -22,7 +22,7 @@ import (
 	"math/big"
 	"os"
 
-	"github.com/EthereumVega/EVA-00D/cmd/utils"
+	"github.com/EthereumVega/weth/cmd/utils"
 	"gopkg.in/urfave/cli.v1"
 )
 

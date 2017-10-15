@@ -21,7 +21,7 @@ import (
 	"reflect"
 	"strings"
 
-	"github.com/EthereumVega/EVA-00D/crypto"
+	"github.com/EthereumVega/weth/crypto"
 )
 
 // Callable method given a `Name` and whether the method is a constant.

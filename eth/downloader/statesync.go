@@ -23,12 +23,12 @@ import (
 	"sync/atomic"
 	"time"
 
-	"github.com/EthereumVega/EVA-00D/common"
-	"github.com/EthereumVega/EVA-00D/core/state"
-	"github.com/EthereumVega/EVA-00D/crypto/sha3"
-	"github.com/EthereumVega/EVA-00D/ethdb"
-	"github.com/EthereumVega/EVA-00D/log"
-	"github.com/EthereumVega/EVA-00D/trie"
+	"github.com/EthereumVega/weth/common"
+	"github.com/EthereumVega/weth/core/state"
+	"github.com/EthereumVega/weth/crypto/sha3"
+	"github.com/EthereumVega/weth/ethdb"
+	"github.com/EthereumVega/weth/log"
+	"github.com/EthereumVega/weth/trie"
 )
 
 // stateReq represents a batch of state fetch requests groupped towether into

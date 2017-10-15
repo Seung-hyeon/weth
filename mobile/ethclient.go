@@ -21,8 +21,8 @@ package weth
 import (
 	"math/big"
 
-	"github.com/EthereumVega/EVA-00D/core/types"
-	"github.com/EthereumVega/EVA-00D/ethclient"
+	"github.com/EthereumVega/weth/core/types"
+	"github.com/EthereumVega/weth/ethclient"
 )
 
 // EthereumClient provides access to the Ethereum APIs.

@@ -24,17 +24,17 @@ import (
 	"fmt"
 	"path/filepath"
 
-	"github.com/EthereumVega/EVA-00D/core"
-	"github.com/EthereumVega/EVA-00D/eth"
-	"github.com/EthereumVega/EVA-00D/eth/downloader"
-	"github.com/EthereumVega/EVA-00D/ethclient"
-	"github.com/EthereumVega/EVA-00D/ethstats"
-	"github.com/EthereumVega/EVA-00D/les"
-	"github.com/EthereumVega/EVA-00D/node"
-	"github.com/EthereumVega/EVA-00D/p2p"
-	"github.com/EthereumVega/EVA-00D/p2p/nat"
-	"github.com/EthereumVega/EVA-00D/params"
-	whisper "github.com/EthereumVega/EVA-00D/whisper/whisperv5"
+	"github.com/EthereumVega/weth/core"
+	"github.com/EthereumVega/weth/eth"
+	"github.com/EthereumVega/weth/eth/downloader"
+	"github.com/EthereumVega/weth/ethclient"
+	"github.com/EthereumVega/weth/ethstats"
+	"github.com/EthereumVega/weth/les"
+	"github.com/EthereumVega/weth/node"
+	"github.com/EthereumVega/weth/p2p"
+	"github.com/EthereumVega/weth/p2p/nat"
+	"github.com/EthereumVega/weth/params"
+	whisper "github.com/EthereumVega/weth/whisper/whisperv5"
 )
 
 // NodeConfig represents the collection of configuration values to fine tune the Weth

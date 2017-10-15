@@ -17,7 +17,7 @@
 package api
 
 import (
-	"github.com/EthereumVega/EVA-00D/swarm/network"
+	"github.com/EthereumVega/weth/swarm/network"
 )
 
 type Control struct {

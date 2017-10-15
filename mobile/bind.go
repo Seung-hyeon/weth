@@ -22,10 +22,10 @@ import (
 	"math/big"
 	"strings"
 
-	"github.com/EthereumVega/EVA-00D/accounts/abi"
-	"github.com/EthereumVega/EVA-00D/accounts/abi/bind"
-	"github.com/EthereumVega/EVA-00D/common"
-	"github.com/EthereumVega/EVA-00D/core/types"
+	"github.com/EthereumVega/weth/accounts/abi"
+	"github.com/EthereumVega/weth/accounts/abi/bind"
+	"github.com/EthereumVega/weth/common"
+	"github.com/EthereumVega/weth/core/types"
 )
 
 // Signer is an interaface defining the callback when a contract requires a

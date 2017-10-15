@@ -27,7 +27,7 @@ import (
 	"path"
 	"strings"
 
-	"github.com/EthereumVega/EVA-00D/common/math"
+	"github.com/EthereumVega/weth/common/math"
 	"gopkg.in/urfave/cli.v1"
 )
 

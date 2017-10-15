@@ -21,7 +21,7 @@ import (
 	"reflect"
 	"testing"
 
-	"github.com/EthereumVega/EVA-00D/common"
+	"github.com/EthereumVega/weth/common"
 )
 
 func (Address) Generate(rand *rand.Rand, size int) reflect.Value {

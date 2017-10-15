@@ -22,8 +22,8 @@ import (
 	"errors"
 	"math/big"
 
-	ethereum "github.com/EthereumVega/EVA-00D"
-	"github.com/EthereumVega/EVA-00D/common"
+	ethereum "github.com/EthereumVega/weth"
+	"github.com/EthereumVega/weth/common"
 )
 
 // Subscription represents an event subscription where events are

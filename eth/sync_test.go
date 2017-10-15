@@ -21,9 +21,9 @@ import (
 	"testing"
 	"time"
 
-	"github.com/EthereumVega/EVA-00D/eth/downloader"
-	"github.com/EthereumVega/EVA-00D/p2p"
-	"github.com/EthereumVega/EVA-00D/p2p/discover"
+	"github.com/EthereumVega/weth/eth/downloader"
+	"github.com/EthereumVega/weth/p2p"
+	"github.com/EthereumVega/weth/p2p/discover"
 )
 
 // Tests that fast sync gets disabled as soon as a real block is successfully

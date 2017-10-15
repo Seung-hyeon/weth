@@ -23,9 +23,9 @@ import (
 	"path/filepath"
 	"testing"
 
-	"github.com/EthereumVega/EVA-00D/common/math"
-	"github.com/EthereumVega/EVA-00D/core/types"
-	"github.com/EthereumVega/EVA-00D/params"
+	"github.com/EthereumVega/weth/common/math"
+	"github.com/EthereumVega/weth/core/types"
+	"github.com/EthereumVega/weth/params"
 )
 
 type diffTest struct {

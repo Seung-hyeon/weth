@@ -20,7 +20,7 @@ import (
 	"errors"
 	"fmt"
 
-	"github.com/EthereumVega/EVA-00D/common"
+	"github.com/EthereumVega/weth/common"
 	"gopkg.in/karalabe/cookiejar.v2/collections/prque"
 )
 

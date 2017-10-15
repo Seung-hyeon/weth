@@ -22,7 +22,7 @@ package storage
 import (
 	"fmt"
 
-	"github.com/EthereumVega/EVA-00D/compression/rle"
+	"github.com/EthereumVega/weth/compression/rle"
 	"github.com/syndtr/goleveldb/leveldb"
 	"github.com/syndtr/goleveldb/leveldb/iterator"
 	"github.com/syndtr/goleveldb/leveldb/opt"

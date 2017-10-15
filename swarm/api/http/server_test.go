@@ -26,11 +26,11 @@ import (
 	"sync"
 	"testing"
 
-	"github.com/EthereumVega/EVA-00D/common"
-	"github.com/EthereumVega/EVA-00D/swarm/api"
-	swarm "github.com/EthereumVega/EVA-00D/swarm/api/client"
-	"github.com/EthereumVega/EVA-00D/swarm/storage"
-	"github.com/EthereumVega/EVA-00D/swarm/testutil"
+	"github.com/EthereumVega/weth/common"
+	"github.com/EthereumVega/weth/swarm/api"
+	swarm "github.com/EthereumVega/weth/swarm/api/client"
+	"github.com/EthereumVega/weth/swarm/storage"
+	"github.com/EthereumVega/weth/swarm/testutil"
 )
 
 func TestBzzrGetPath(t *testing.T) {

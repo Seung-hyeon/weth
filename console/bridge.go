@@ -23,9 +23,9 @@ import (
 	"strings"
 	"time"
 
-	"github.com/EthereumVega/EVA-00D/accounts/usbwallet"
-	"github.com/EthereumVega/EVA-00D/log"
-	"github.com/EthereumVega/EVA-00D/rpc"
+	"github.com/EthereumVega/weth/accounts/usbwallet"
+	"github.com/EthereumVega/weth/log"
+	"github.com/EthereumVega/weth/rpc"
 	"github.com/robertkrimen/otto"
 )
 

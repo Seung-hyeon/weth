@@ -22,9 +22,9 @@ import (
 	"sync"
 	"time"
 
-	"github.com/EthereumVega/EVA-00D/accounts"
-	"github.com/EthereumVega/EVA-00D/event"
-	"github.com/EthereumVega/EVA-00D/log"
+	"github.com/EthereumVega/weth/accounts"
+	"github.com/EthereumVega/weth/event"
+	"github.com/EthereumVega/weth/log"
 	"github.com/karalabe/hid"
 )
 

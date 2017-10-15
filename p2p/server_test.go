@@ -25,9 +25,9 @@ import (
 	"testing"
 	"time"
 
-	"github.com/EthereumVega/EVA-00D/crypto"
-	"github.com/EthereumVega/EVA-00D/crypto/sha3"
-	"github.com/EthereumVega/EVA-00D/p2p/discover"
+	"github.com/EthereumVega/weth/crypto"
+	"github.com/EthereumVega/weth/crypto/sha3"
+	"github.com/EthereumVega/weth/p2p/discover"
 )
 
 func init() {

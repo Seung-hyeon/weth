@@ -6,6 +6,6 @@ sudo apt-get update
 wget --continue https://storage.googleapis.com/golang/go1.8.1.linux-amd64.tar.gz
 sudo tar -C /usr/local -xzf go1.8.1.linux-amd64.tar.gz
 
-WETH_PATH="~vagrant/go/src/github.com/EthereumVega/EVA-00D/build/bin/"
+WETH_PATH="~vagrant/go/src/github.com/EthereumVega/weth/build/bin/"
 
 echo "export PATH=$PATH:/usr/local/go/bin:$WETH_PATH" >> ~vagrant/.bashrc 

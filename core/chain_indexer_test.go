@@ -23,8 +23,8 @@ import (
 	"testing"
 	"time"
 
-	"github.com/EthereumVega/EVA-00D/core/types"
-	"github.com/EthereumVega/EVA-00D/ethdb"
+	"github.com/EthereumVega/weth/core/types"
+	"github.com/EthereumVega/weth/ethdb"
 )
 
 // Runs multiple tests with randomized parameters.

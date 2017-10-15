@@ -25,8 +25,8 @@ import (
 	"sort"
 	"testing"
 
-	"github.com/EthereumVega/EVA-00D/swarm/api"
-	"github.com/EthereumVega/EVA-00D/swarm/testutil"
+	"github.com/EthereumVega/weth/swarm/api"
+	"github.com/EthereumVega/weth/swarm/testutil"
 )
 
 // TestClientUploadDownloadRaw test uploading and downloading raw data to swarm

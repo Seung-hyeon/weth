@@ -19,7 +19,7 @@ package bloombits
 import (
 	"errors"
 
-	"github.com/EthereumVega/EVA-00D/core/types"
+	"github.com/EthereumVega/weth/core/types"
 )
 
 // errSectionOutOfBounds is returned if the user tried to add more bloom filters

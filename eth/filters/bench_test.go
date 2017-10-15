@@ -23,14 +23,14 @@ import (
 	"testing"
 	"time"
 
-	"github.com/EthereumVega/EVA-00D/common"
-	"github.com/EthereumVega/EVA-00D/common/bitutil"
-	"github.com/EthereumVega/EVA-00D/core"
-	"github.com/EthereumVega/EVA-00D/core/bloombits"
-	"github.com/EthereumVega/EVA-00D/core/types"
-	"github.com/EthereumVega/EVA-00D/ethdb"
-	"github.com/EthereumVega/EVA-00D/event"
-	"github.com/EthereumVega/EVA-00D/node"
+	"github.com/EthereumVega/weth/common"
+	"github.com/EthereumVega/weth/common/bitutil"
+	"github.com/EthereumVega/weth/core"
+	"github.com/EthereumVega/weth/core/bloombits"
+	"github.com/EthereumVega/weth/core/types"
+	"github.com/EthereumVega/weth/ethdb"
+	"github.com/EthereumVega/weth/event"
+	"github.com/EthereumVega/weth/node"
 )
 
 func BenchmarkBloomBits512(b *testing.B) {

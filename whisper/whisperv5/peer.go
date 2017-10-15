@@ -20,10 +20,10 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/EthereumVega/EVA-00D/common"
-	"github.com/EthereumVega/EVA-00D/log"
-	"github.com/EthereumVega/EVA-00D/p2p"
-	"github.com/EthereumVega/EVA-00D/rlp"
+	"github.com/EthereumVega/weth/common"
+	"github.com/EthereumVega/weth/log"
+	"github.com/EthereumVega/weth/p2p"
+	"github.com/EthereumVega/weth/rlp"
 	set "gopkg.in/fatih/set.v0"
 )
 

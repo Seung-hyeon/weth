@@ -19,8 +19,8 @@ package vm
 import (
 	"math/big"
 
-	"github.com/EthereumVega/EVA-00D/common"
-	"github.com/EthereumVega/EVA-00D/core/types"
+	"github.com/EthereumVega/weth/common"
+	"github.com/EthereumVega/weth/core/types"
 )
 
 // StateDB is an EVM database for full state querying.

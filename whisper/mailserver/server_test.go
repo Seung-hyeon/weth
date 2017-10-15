@@ -24,9 +24,9 @@ import (
 	"testing"
 	"time"
 
-	"github.com/EthereumVega/EVA-00D/common"
-	"github.com/EthereumVega/EVA-00D/crypto"
-	whisper "github.com/EthereumVega/EVA-00D/whisper/whisperv5"
+	"github.com/EthereumVega/weth/common"
+	"github.com/EthereumVega/weth/crypto"
+	whisper "github.com/EthereumVega/weth/whisper/whisperv5"
 )
 
 const powRequirement = 0.00001

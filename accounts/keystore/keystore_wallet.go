@@ -19,9 +19,9 @@ package keystore
 import (
 	"math/big"
 
-	ethereum "github.com/EthereumVega/EVA-00D"
-	"github.com/EthereumVega/EVA-00D/accounts"
-	"github.com/EthereumVega/EVA-00D/core/types"
+	ethereum "github.com/EthereumVega/weth"
+	"github.com/EthereumVega/weth/accounts"
+	"github.com/EthereumVega/weth/core/types"
 )
 
 // keystoreWallet implements the accounts.Wallet interface for the original

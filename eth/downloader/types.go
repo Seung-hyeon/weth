@@ -19,7 +19,7 @@ package downloader
 import (
 	"fmt"
 
-	"github.com/EthereumVega/EVA-00D/core/types"
+	"github.com/EthereumVega/weth/core/types"
 )
 
 // peerDropFn is a callback type for dropping a peer detected as malicious.

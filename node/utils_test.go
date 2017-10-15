@@ -22,8 +22,8 @@ package node
 import (
 	"reflect"
 
-	"github.com/EthereumVega/EVA-00D/p2p"
-	"github.com/EthereumVega/EVA-00D/rpc"
+	"github.com/EthereumVega/weth/p2p"
+	"github.com/EthereumVega/weth/rpc"
 )
 
 // NoopService is a trivial implementation of the Service interface.

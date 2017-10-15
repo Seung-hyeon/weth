@@ -22,13 +22,13 @@ import (
 	"sync"
 	"time"
 
-	"github.com/EthereumVega/EVA-00D/common"
-	"github.com/EthereumVega/EVA-00D/crypto"
-	"github.com/EthereumVega/EVA-00D/crypto/ecies"
-	"github.com/EthereumVega/EVA-00D/event/filter"
-	"github.com/EthereumVega/EVA-00D/log"
-	"github.com/EthereumVega/EVA-00D/p2p"
-	"github.com/EthereumVega/EVA-00D/rpc"
+	"github.com/EthereumVega/weth/common"
+	"github.com/EthereumVega/weth/crypto"
+	"github.com/EthereumVega/weth/crypto/ecies"
+	"github.com/EthereumVega/weth/event/filter"
+	"github.com/EthereumVega/weth/log"
+	"github.com/EthereumVega/weth/p2p"
+	"github.com/EthereumVega/weth/rpc"
 
 	"gopkg.in/fatih/set.v0"
 )

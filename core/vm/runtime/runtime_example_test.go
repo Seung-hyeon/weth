@@ -19,8 +19,8 @@ package runtime_test
 import (
 	"fmt"
 
-	"github.com/EthereumVega/EVA-00D/common"
-	"github.com/EthereumVega/EVA-00D/core/vm/runtime"
+	"github.com/EthereumVega/weth/common"
+	"github.com/EthereumVega/weth/core/vm/runtime"
 )
 
 func ExampleExecute() {

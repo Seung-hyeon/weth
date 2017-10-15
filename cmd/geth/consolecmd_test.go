@@ -27,7 +27,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/EthereumVega/EVA-00D/params"
+	"github.com/EthereumVega/weth/params"
 )
 
 const (

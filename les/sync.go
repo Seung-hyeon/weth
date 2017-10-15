@@ -20,9 +20,9 @@ import (
 	"context"
 	"time"
 
-	"github.com/EthereumVega/EVA-00D/core"
-	"github.com/EthereumVega/EVA-00D/eth/downloader"
-	"github.com/EthereumVega/EVA-00D/light"
+	"github.com/EthereumVega/weth/core"
+	"github.com/EthereumVega/weth/eth/downloader"
+	"github.com/EthereumVega/weth/light"
 )
 
 const (

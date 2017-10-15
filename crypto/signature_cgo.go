@@ -23,8 +23,8 @@ import (
 	"crypto/elliptic"
 	"fmt"
 
-	"github.com/EthereumVega/EVA-00D/common/math"
-	"github.com/EthereumVega/EVA-00D/crypto/secp256k1"
+	"github.com/EthereumVega/weth/common/math"
+	"github.com/EthereumVega/weth/crypto/secp256k1"
 )
 
 func Ecrecover(hash, sig []byte) ([]byte, error) {

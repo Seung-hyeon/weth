@@ -26,12 +26,12 @@ import (
 	"runtime"
 	"strings"
 
-	"github.com/EthereumVega/EVA-00D/core"
-	"github.com/EthereumVega/EVA-00D/core/types"
-	"github.com/EthereumVega/EVA-00D/internal/debug"
-	"github.com/EthereumVega/EVA-00D/log"
-	"github.com/EthereumVega/EVA-00D/node"
-	"github.com/EthereumVega/EVA-00D/rlp"
+	"github.com/EthereumVega/weth/core"
+	"github.com/EthereumVega/weth/core/types"
+	"github.com/EthereumVega/weth/internal/debug"
+	"github.com/EthereumVega/weth/log"
+	"github.com/EthereumVega/weth/node"
+	"github.com/EthereumVega/weth/rlp"
 )
 
 const (

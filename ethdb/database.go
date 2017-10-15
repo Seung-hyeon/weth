@@ -22,8 +22,8 @@ import (
 	"sync"
 	"time"
 
-	"github.com/EthereumVega/EVA-00D/log"
-	"github.com/EthereumVega/EVA-00D/metrics"
+	"github.com/EthereumVega/weth/log"
+	"github.com/EthereumVega/weth/metrics"
 	"github.com/syndtr/goleveldb/leveldb"
 	"github.com/syndtr/goleveldb/leveldb/errors"
 	"github.com/syndtr/goleveldb/leveldb/filter"

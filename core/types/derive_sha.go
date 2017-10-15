@@ -19,9 +19,9 @@ package types
 import (
 	"bytes"
 
-	"github.com/EthereumVega/EVA-00D/common"
-	"github.com/EthereumVega/EVA-00D/rlp"
-	"github.com/EthereumVega/EVA-00D/trie"
+	"github.com/EthereumVega/weth/common"
+	"github.com/EthereumVega/weth/rlp"
+	"github.com/EthereumVega/weth/trie"
 )
 
 type DerivableList interface {

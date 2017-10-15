@@ -20,7 +20,7 @@ import (
 	"errors"
 	"sync"
 
-	"github.com/EthereumVega/EVA-00D/common"
+	"github.com/EthereumVega/weth/common"
 )
 
 /*

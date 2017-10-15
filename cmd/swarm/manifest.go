@@ -24,9 +24,9 @@ import (
 	"path/filepath"
 	"strings"
 
-	"github.com/EthereumVega/EVA-00D/cmd/utils"
-	"github.com/EthereumVega/EVA-00D/swarm/api"
-	swarm "github.com/EthereumVega/EVA-00D/swarm/api/client"
+	"github.com/EthereumVega/weth/cmd/utils"
+	"github.com/EthereumVega/weth/swarm/api"
+	swarm "github.com/EthereumVega/weth/swarm/api/client"
 	"gopkg.in/urfave/cli.v1"
 )
 

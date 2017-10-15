@@ -23,13 +23,13 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/EthereumVega/EVA-00D/cmd/utils"
-	"github.com/EthereumVega/EVA-00D/crypto"
-	"github.com/EthereumVega/EVA-00D/log"
-	"github.com/EthereumVega/EVA-00D/p2p/discover"
-	"github.com/EthereumVega/EVA-00D/p2p/discv5"
-	"github.com/EthereumVega/EVA-00D/p2p/nat"
-	"github.com/EthereumVega/EVA-00D/p2p/netutil"
+	"github.com/EthereumVega/weth/cmd/utils"
+	"github.com/EthereumVega/weth/crypto"
+	"github.com/EthereumVega/weth/log"
+	"github.com/EthereumVega/weth/p2p/discover"
+	"github.com/EthereumVega/weth/p2p/discv5"
+	"github.com/EthereumVega/weth/p2p/nat"
+	"github.com/EthereumVega/weth/p2p/netutil"
 )
 
 func main() {

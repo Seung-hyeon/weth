@@ -25,11 +25,11 @@ import (
 	"net"
 	"time"
 
-	"github.com/EthereumVega/EVA-00D/crypto"
-	"github.com/EthereumVega/EVA-00D/log"
-	"github.com/EthereumVega/EVA-00D/p2p/nat"
-	"github.com/EthereumVega/EVA-00D/p2p/netutil"
-	"github.com/EthereumVega/EVA-00D/rlp"
+	"github.com/EthereumVega/weth/crypto"
+	"github.com/EthereumVega/weth/log"
+	"github.com/EthereumVega/weth/p2p/nat"
+	"github.com/EthereumVega/weth/p2p/netutil"
+	"github.com/EthereumVega/weth/rlp"
 )
 
 const Version = 4

@@ -25,15 +25,15 @@ import (
 	"strings"
 	"time"
 
-	"github.com/EthereumVega/EVA-00D/accounts/abi/bind"
-	"github.com/EthereumVega/EVA-00D/common"
-	"github.com/EthereumVega/EVA-00D/eth"
-	"github.com/EthereumVega/EVA-00D/internal/ethapi"
-	"github.com/EthereumVega/EVA-00D/les"
-	"github.com/EthereumVega/EVA-00D/log"
-	"github.com/EthereumVega/EVA-00D/node"
-	"github.com/EthereumVega/EVA-00D/p2p"
-	"github.com/EthereumVega/EVA-00D/rpc"
+	"github.com/EthereumVega/weth/accounts/abi/bind"
+	"github.com/EthereumVega/weth/common"
+	"github.com/EthereumVega/weth/eth"
+	"github.com/EthereumVega/weth/internal/ethapi"
+	"github.com/EthereumVega/weth/les"
+	"github.com/EthereumVega/weth/log"
+	"github.com/EthereumVega/weth/node"
+	"github.com/EthereumVega/weth/p2p"
+	"github.com/EthereumVega/weth/rpc"
 )
 
 // Interval to check for new releases
@@ -149,7 +149,7 @@ func (r *ReleaseService) checkVersion() {
 
 		warning := fmt.Sprintf("Client v%d.%d.%d-%x seems older than the latest upstream release v%d.%d.%d-%x",
 			r.config.Major, r.config.Minor, r.config.Patch, r.config.Commit[:4], version.Major, version.Minor, version.Patch, version.Commit[:4])
-		howtofix := fmt.Sprintf("Please check https://github.com/EthereumVega/EVA-00D/releases for new releases")
+		howtofix := fmt.Sprintf("Please check https://github.com/EthereumVega/weth/releases for new releases")
 		separator := strings.Repeat("-", len(warning))
 
 		log.Warn(separator)

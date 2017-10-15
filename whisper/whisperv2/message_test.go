@@ -22,7 +22,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/EthereumVega/EVA-00D/crypto"
+	"github.com/EthereumVega/weth/crypto"
 )
 
 // Tests whether a message can be wrapped without any identity or encryption.

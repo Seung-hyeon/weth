@@ -20,9 +20,9 @@ import (
 	"fmt"
 	"sync"
 
-	"github.com/EthereumVega/EVA-00D/common"
-	"github.com/EthereumVega/EVA-00D/ethdb"
-	"github.com/EthereumVega/EVA-00D/trie"
+	"github.com/EthereumVega/weth/common"
+	"github.com/EthereumVega/weth/ethdb"
+	"github.com/EthereumVega/weth/trie"
 	lru "github.com/hashicorp/golang-lru"
 )
 

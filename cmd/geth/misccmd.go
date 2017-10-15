@@ -23,10 +23,10 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/EthereumVega/EVA-00D/cmd/utils"
-	"github.com/EthereumVega/EVA-00D/consensus/ethash"
-	"github.com/EthereumVega/EVA-00D/eth"
-	"github.com/EthereumVega/EVA-00D/params"
+	"github.com/EthereumVega/weth/cmd/utils"
+	"github.com/EthereumVega/weth/consensus/ethash"
+	"github.com/EthereumVega/weth/eth"
+	"github.com/EthereumVega/weth/params"
 	"gopkg.in/urfave/cli.v1"
 )
 

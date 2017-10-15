@@ -21,9 +21,9 @@ package weth
 import (
 	"encoding/json"
 
-	"github.com/EthereumVega/EVA-00D/core"
-	"github.com/EthereumVega/EVA-00D/p2p/discv5"
-	"github.com/EthereumVega/EVA-00D/params"
+	"github.com/EthereumVega/weth/core"
+	"github.com/EthereumVega/weth/p2p/discv5"
+	"github.com/EthereumVega/weth/params"
 )
 
 // MainnetGenesis returns the JSON spec to use for the main Ethereum network. It

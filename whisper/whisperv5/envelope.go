@@ -26,11 +26,11 @@ import (
 	"math/big"
 	"time"
 
-	"github.com/EthereumVega/EVA-00D/common"
-	"github.com/EthereumVega/EVA-00D/common/math"
-	"github.com/EthereumVega/EVA-00D/crypto"
-	"github.com/EthereumVega/EVA-00D/crypto/ecies"
-	"github.com/EthereumVega/EVA-00D/rlp"
+	"github.com/EthereumVega/weth/common"
+	"github.com/EthereumVega/weth/common/math"
+	"github.com/EthereumVega/weth/crypto"
+	"github.com/EthereumVega/weth/crypto/ecies"
+	"github.com/EthereumVega/weth/rlp"
 )
 
 // Envelope represents a clear-text data packet to transmit through the Whisper

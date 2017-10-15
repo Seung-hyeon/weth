@@ -24,8 +24,8 @@ import (
 	"encoding/hex"
 	"testing"
 
-	"github.com/EthereumVega/EVA-00D/common/math"
-	"github.com/EthereumVega/EVA-00D/crypto/randentropy"
+	"github.com/EthereumVega/weth/common/math"
+	"github.com/EthereumVega/weth/crypto/randentropy"
 )
 
 const TestCount = 1000

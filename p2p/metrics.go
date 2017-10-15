@@ -21,7 +21,7 @@ package p2p
 import (
 	"net"
 
-	"github.com/EthereumVega/EVA-00D/metrics"
+	"github.com/EthereumVega/weth/metrics"
 )
 
 var (

@@ -16,7 +16,7 @@
 
 package ethclient
 
-import "github.com/EthereumVega/EVA-00D"
+import "github.com/EthereumVega/weth"
 
 // Verify that Client implements the ethereum interfaces.
 var (

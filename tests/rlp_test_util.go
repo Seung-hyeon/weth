@@ -24,7 +24,7 @@ import (
 	"math/big"
 	"strings"
 
-	"github.com/EthereumVega/EVA-00D/rlp"
+	"github.com/EthereumVega/weth/rlp"
 )
 
 // RLPTest is the JSON structure of a single RLP test.

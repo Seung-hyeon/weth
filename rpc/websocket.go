@@ -27,7 +27,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/EthereumVega/EVA-00D/log"
+	"github.com/EthereumVega/weth/log"
 	"golang.org/x/net/websocket"
 	"gopkg.in/fatih/set.v0"
 )
