@@ -27,13 +27,13 @@ import (
 	"sync/atomic"
 	"time"
 
-	ethereum "github.com/ethereum/go-ethereum"
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/core/types"
-	"github.com/ethereum/go-ethereum/ethdb"
-	"github.com/ethereum/go-ethereum/event"
-	"github.com/ethereum/go-ethereum/log"
-	"github.com/ethereum/go-ethereum/params"
+	ethereum "github.com/EthereumVega/EVA-00D"
+	"github.com/EthereumVega/EVA-00D/common"
+	"github.com/EthereumVega/EVA-00D/core/types"
+	"github.com/EthereumVega/EVA-00D/ethdb"
+	"github.com/EthereumVega/EVA-00D/event"
+	"github.com/EthereumVega/EVA-00D/log"
+	"github.com/EthereumVega/EVA-00D/params"
 	"github.com/rcrowley/go-metrics"
 )
 

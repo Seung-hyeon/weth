@@ -19,9 +19,9 @@ package runtime
 import (
 	"math/big"
 
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/core"
-	"github.com/ethereum/go-ethereum/core/vm"
+	"github.com/EthereumVega/EVA-00D/common"
+	"github.com/EthereumVega/EVA-00D/core"
+	"github.com/EthereumVega/EVA-00D/core/vm"
 )
 
 func NewEnv(cfg *Config) *vm.EVM {

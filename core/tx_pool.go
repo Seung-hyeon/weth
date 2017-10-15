@@ -25,13 +25,13 @@ import (
 	"sync"
 	"time"
 
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/core/state"
-	"github.com/ethereum/go-ethereum/core/types"
-	"github.com/ethereum/go-ethereum/event"
-	"github.com/ethereum/go-ethereum/log"
-	"github.com/ethereum/go-ethereum/metrics"
-	"github.com/ethereum/go-ethereum/params"
+	"github.com/EthereumVega/EVA-00D/common"
+	"github.com/EthereumVega/EVA-00D/core/state"
+	"github.com/EthereumVega/EVA-00D/core/types"
+	"github.com/EthereumVega/EVA-00D/event"
+	"github.com/EthereumVega/EVA-00D/log"
+	"github.com/EthereumVega/EVA-00D/metrics"
+	"github.com/EthereumVega/EVA-00D/params"
 	"gopkg.in/karalabe/cookiejar.v2/collections/prque"
 )
 

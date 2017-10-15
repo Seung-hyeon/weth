@@ -22,9 +22,9 @@ import (
 	"io"
 	"math/big"
 
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/common/hexutil"
-	"github.com/ethereum/go-ethereum/rlp"
+	"github.com/EthereumVega/EVA-00D/common"
+	"github.com/EthereumVega/EVA-00D/common/hexutil"
+	"github.com/EthereumVega/EVA-00D/rlp"
 )
 
 //go:generate gencodec -type Receipt -field-override receiptMarshaling -out gen_receipt_json.go
@@ -94,7 +94,7 @@ func NewReceipt(root []byte, failed bool, cumulativeGasUsed *big.Int) *Receipt {
 }
 
 // EncodeRLP implements rlp.Encoder, and flattens the consensus fields of a receipt
-// into an RLP stream. If no post state is present, byzantium fork is assumed.
+// into an RLP stream. If no post state is present, thirdimpact fork is assumed.
 func (r *Receipt) EncodeRLP(w io.Writer) error {
 	return rlp.Encode(w, &receiptRLP{r.statusEncoding(), r.CumulativeGasUsed, r.Bloom, r.Logs})
 }

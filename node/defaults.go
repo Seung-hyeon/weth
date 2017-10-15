@@ -22,15 +22,15 @@ import (
 	"path/filepath"
 	"runtime"
 
-	"github.com/ethereum/go-ethereum/p2p"
-	"github.com/ethereum/go-ethereum/p2p/nat"
+	"github.com/EthereumVega/EVA-00D/p2p"
+	"github.com/EthereumVega/EVA-00D/p2p/nat"
 )
 
 const (
 	DefaultHTTPHost = "localhost" // Default host interface for the HTTP RPC server
-	DefaultHTTPPort = 8545        // Default TCP port for the HTTP RPC server
+	DefaultHTTPPort = 8285        // Default TCP port for the HTTP RPC server
 	DefaultWSHost   = "localhost" // Default host interface for the websocket RPC server
-	DefaultWSPort   = 8546        // Default TCP port for the websocket RPC server
+	DefaultWSPort   = 8286        // Default TCP port for the websocket RPC server
 )
 
 // DefaultConfig contains reasonable default settings.
@@ -41,8 +41,8 @@ var DefaultConfig = Config{
 	WSPort:      DefaultWSPort,
 	WSModules:   []string{"net", "web3"},
 	P2P: p2p.Config{
-		ListenAddr:      ":30303",
-		DiscoveryV5Addr: ":30304",
+		ListenAddr:      ":30313",
+		DiscoveryV5Addr: ":30314",
 		MaxPeers:        25,
 		NAT:             nat.Any(),
 	},

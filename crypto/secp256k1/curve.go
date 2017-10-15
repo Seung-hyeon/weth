@@ -37,7 +37,7 @@ import (
 	"sync"
 	"unsafe"
 
-	"github.com/ethereum/go-ethereum/common/math"
+	"github.com/EthereumVega/EVA-00D/common/math"
 )
 
 /*

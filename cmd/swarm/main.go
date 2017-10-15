@@ -31,23 +31,23 @@ import (
 	"syscall"
 	"time"
 
-	"github.com/ethereum/go-ethereum/accounts"
-	"github.com/ethereum/go-ethereum/accounts/keystore"
-	"github.com/ethereum/go-ethereum/cmd/utils"
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/console"
-	"github.com/ethereum/go-ethereum/contracts/ens"
-	"github.com/ethereum/go-ethereum/crypto"
-	"github.com/ethereum/go-ethereum/ethclient"
-	"github.com/ethereum/go-ethereum/internal/debug"
-	"github.com/ethereum/go-ethereum/log"
-	"github.com/ethereum/go-ethereum/node"
-	"github.com/ethereum/go-ethereum/p2p"
-	"github.com/ethereum/go-ethereum/p2p/discover"
-	"github.com/ethereum/go-ethereum/params"
-	"github.com/ethereum/go-ethereum/rpc"
-	"github.com/ethereum/go-ethereum/swarm"
-	bzzapi "github.com/ethereum/go-ethereum/swarm/api"
+	"github.com/EthereumVega/EVA-00D/accounts"
+	"github.com/EthereumVega/EVA-00D/accounts/keystore"
+	"github.com/EthereumVega/EVA-00D/cmd/utils"
+	"github.com/EthereumVega/EVA-00D/common"
+	"github.com/EthereumVega/EVA-00D/console"
+	"github.com/EthereumVega/EVA-00D/contracts/ens"
+	"github.com/EthereumVega/EVA-00D/crypto"
+	"github.com/EthereumVega/EVA-00D/ethclient"
+	"github.com/EthereumVega/EVA-00D/internal/debug"
+	"github.com/EthereumVega/EVA-00D/log"
+	"github.com/EthereumVega/EVA-00D/node"
+	"github.com/EthereumVega/EVA-00D/p2p"
+	"github.com/EthereumVega/EVA-00D/p2p/discover"
+	"github.com/EthereumVega/EVA-00D/params"
+	"github.com/EthereumVega/EVA-00D/rpc"
+	"github.com/EthereumVega/EVA-00D/swarm"
+	bzzapi "github.com/EthereumVega/EVA-00D/swarm/api"
 	"gopkg.in/urfave/cli.v1"
 )
 
@@ -104,7 +104,7 @@ var (
 	EnsAPIFlag = cli.StringFlag{
 		Name:  "ens-api",
 		Usage: "URL of the Ethereum API provider to use for ENS record lookups",
-		Value: node.DefaultIPCEndpoint("geth"),
+		Value: node.DefaultIPCEndpoint("weth"),
 	}
 	EnsAddrFlag = cli.StringFlag{
 		Name:  "ens-addr",
@@ -149,7 +149,7 @@ var (
 
 var defaultNodeConfig = node.DefaultConfig
 
-// This init function sets defaults so cmd/swarm can run alongside geth.
+// This init function sets defaults so cmd/swarm can run alongside weth.
 func init() {
 	defaultNodeConfig.Name = clientIdentifier
 	defaultNodeConfig.Version = params.VersionWithCommit(gitCommit)

@@ -28,8 +28,8 @@ import (
 	"strings"
 	"time"
 
-	"github.com/ethereum/go-ethereum/log"
-	"github.com/ethereum/go-ethereum/swarm/api"
+	"github.com/EthereumVega/EVA-00D/log"
+	"github.com/EthereumVega/EVA-00D/swarm/api"
 )
 
 //templateMap holds a mapping of an HTTP error code to a template

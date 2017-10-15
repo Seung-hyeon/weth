@@ -20,14 +20,14 @@ import (
 	"fmt"
 	"math/big"
 
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/consensus/ethash"
-	"github.com/ethereum/go-ethereum/consensus/misc"
-	"github.com/ethereum/go-ethereum/core/state"
-	"github.com/ethereum/go-ethereum/core/types"
-	"github.com/ethereum/go-ethereum/core/vm"
-	"github.com/ethereum/go-ethereum/ethdb"
-	"github.com/ethereum/go-ethereum/params"
+	"github.com/EthereumVega/EVA-00D/common"
+	"github.com/EthereumVega/EVA-00D/consensus/ethash"
+	"github.com/EthereumVega/EVA-00D/consensus/misc"
+	"github.com/EthereumVega/EVA-00D/core/state"
+	"github.com/EthereumVega/EVA-00D/core/types"
+	"github.com/EthereumVega/EVA-00D/core/vm"
+	"github.com/EthereumVega/EVA-00D/ethdb"
+	"github.com/EthereumVega/EVA-00D/params"
 )
 
 // So we can deterministically seed different blockchains
@@ -179,7 +179,7 @@ func GenerateChain(config *params.ChainConfig, parent *types.Block, db ethdb.Dat
 		if gen != nil {
 			gen(i, b)
 		}
-		ethash.AccumulateRewards(config, statedb, h, b.uncles)
+		ethash.AccumulateRewards(statedb, h, b.uncles)
 		root, err := statedb.CommitTo(db, config.IsEIP158(h.Number))
 		if err != nil {
 			panic(fmt.Sprintf("state write error: %v", err))

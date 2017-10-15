@@ -16,16 +16,16 @@
 
 // Contains all the wrappers from the bind package.
 
-package geth
+package weth
 
 import (
 	"math/big"
 	"strings"
 
-	"github.com/ethereum/go-ethereum/accounts/abi"
-	"github.com/ethereum/go-ethereum/accounts/abi/bind"
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/core/types"
+	"github.com/EthereumVega/EVA-00D/accounts/abi"
+	"github.com/EthereumVega/EVA-00D/accounts/abi/bind"
+	"github.com/EthereumVega/EVA-00D/common"
+	"github.com/EthereumVega/EVA-00D/core/types"
 )
 
 // Signer is an interaface defining the callback when a contract requires a

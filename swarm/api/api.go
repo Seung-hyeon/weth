@@ -29,9 +29,9 @@ import (
 	"path/filepath"
 	"time"
 
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/log"
-	"github.com/ethereum/go-ethereum/swarm/storage"
+	"github.com/EthereumVega/EVA-00D/common"
+	"github.com/EthereumVega/EVA-00D/log"
+	"github.com/EthereumVega/EVA-00D/swarm/storage"
 )
 
 var hashMatcher = regexp.MustCompile("^[0-9A-Fa-f]{64}")

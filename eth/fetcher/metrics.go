@@ -19,7 +19,7 @@
 package fetcher
 
 import (
-	"github.com/ethereum/go-ethereum/metrics"
+	"github.com/EthereumVega/EVA-00D/metrics"
 )
 
 var (

@@ -27,12 +27,12 @@ import (
 	"testing"
 	"time"
 
-	"github.com/ethereum/go-ethereum/event"
-	"github.com/ethereum/go-ethereum/node"
-	"github.com/ethereum/go-ethereum/p2p"
-	"github.com/ethereum/go-ethereum/p2p/discover"
-	"github.com/ethereum/go-ethereum/p2p/simulations/adapters"
-	"github.com/ethereum/go-ethereum/rpc"
+	"github.com/EthereumVega/EVA-00D/event"
+	"github.com/EthereumVega/EVA-00D/node"
+	"github.com/EthereumVega/EVA-00D/p2p"
+	"github.com/EthereumVega/EVA-00D/p2p/discover"
+	"github.com/EthereumVega/EVA-00D/p2p/simulations/adapters"
+	"github.com/EthereumVega/EVA-00D/rpc"
 )
 
 // testService implements the node.Service interface and provides protocols

@@ -27,12 +27,12 @@ import (
 	"time"
 
 	"github.com/docker/docker/pkg/reexec"
-	"github.com/ethereum/go-ethereum/accounts/keystore"
-	"github.com/ethereum/go-ethereum/internal/cmdtest"
-	"github.com/ethereum/go-ethereum/node"
-	"github.com/ethereum/go-ethereum/p2p"
-	"github.com/ethereum/go-ethereum/rpc"
-	"github.com/ethereum/go-ethereum/swarm"
+	"github.com/EthereumVega/EVA-00D/accounts/keystore"
+	"github.com/EthereumVega/EVA-00D/internal/cmdtest"
+	"github.com/EthereumVega/EVA-00D/node"
+	"github.com/EthereumVega/EVA-00D/p2p"
+	"github.com/EthereumVega/EVA-00D/rpc"
+	"github.com/EthereumVega/EVA-00D/swarm"
 )
 
 func init() {
@@ -78,7 +78,7 @@ type testCluster struct {
 // ports (assigned by first listening on 127.0.0.1:0 and then passing the ports
 // as flags).
 //
-// When starting more than one node, they are connected together using the
+// When starting more than one node, they are connected towether using the
 // admin SetPeer RPC method.
 func newTestCluster(t *testing.T, size int) *testCluster {
 	cluster := &testCluster{}
@@ -112,7 +112,7 @@ func newTestCluster(t *testing.T, size int) *testCluster {
 		return cluster
 	}
 
-	// connect the nodes together
+	// connect the nodes towether
 	for _, node := range cluster.Nodes {
 		if err := node.Client.Call(nil, "admin_addPeer", cluster.Nodes[0].Enode); err != nil {
 			t.Fatal(err)

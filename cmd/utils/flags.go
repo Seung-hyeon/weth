@@ -28,32 +28,32 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/ethereum/go-ethereum/accounts"
-	"github.com/ethereum/go-ethereum/accounts/keystore"
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/consensus"
-	"github.com/ethereum/go-ethereum/consensus/clique"
-	"github.com/ethereum/go-ethereum/consensus/ethash"
-	"github.com/ethereum/go-ethereum/core"
-	"github.com/ethereum/go-ethereum/core/state"
-	"github.com/ethereum/go-ethereum/core/vm"
-	"github.com/ethereum/go-ethereum/crypto"
-	"github.com/ethereum/go-ethereum/eth"
-	"github.com/ethereum/go-ethereum/eth/downloader"
-	"github.com/ethereum/go-ethereum/eth/gasprice"
-	"github.com/ethereum/go-ethereum/ethdb"
-	"github.com/ethereum/go-ethereum/ethstats"
-	"github.com/ethereum/go-ethereum/les"
-	"github.com/ethereum/go-ethereum/log"
-	"github.com/ethereum/go-ethereum/metrics"
-	"github.com/ethereum/go-ethereum/node"
-	"github.com/ethereum/go-ethereum/p2p"
-	"github.com/ethereum/go-ethereum/p2p/discover"
-	"github.com/ethereum/go-ethereum/p2p/discv5"
-	"github.com/ethereum/go-ethereum/p2p/nat"
-	"github.com/ethereum/go-ethereum/p2p/netutil"
-	"github.com/ethereum/go-ethereum/params"
-	whisper "github.com/ethereum/go-ethereum/whisper/whisperv5"
+	"github.com/EthereumVega/EVA-00D/accounts"
+	"github.com/EthereumVega/EVA-00D/accounts/keystore"
+	"github.com/EthereumVega/EVA-00D/common"
+	"github.com/EthereumVega/EVA-00D/consensus"
+	"github.com/EthereumVega/EVA-00D/consensus/clique"
+	"github.com/EthereumVega/EVA-00D/consensus/ethash"
+	"github.com/EthereumVega/EVA-00D/core"
+	"github.com/EthereumVega/EVA-00D/core/state"
+	"github.com/EthereumVega/EVA-00D/core/vm"
+	"github.com/EthereumVega/EVA-00D/crypto"
+	"github.com/EthereumVega/EVA-00D/eth"
+	"github.com/EthereumVega/EVA-00D/eth/downloader"
+	"github.com/EthereumVega/EVA-00D/eth/gasprice"
+	"github.com/EthereumVega/EVA-00D/ethdb"
+	"github.com/EthereumVega/EVA-00D/ethstats"
+	"github.com/EthereumVega/EVA-00D/les"
+	"github.com/EthereumVega/EVA-00D/log"
+	"github.com/EthereumVega/EVA-00D/metrics"
+	"github.com/EthereumVega/EVA-00D/node"
+	"github.com/EthereumVega/EVA-00D/p2p"
+	"github.com/EthereumVega/EVA-00D/p2p/discover"
+	"github.com/EthereumVega/EVA-00D/p2p/discv5"
+	"github.com/EthereumVega/EVA-00D/p2p/nat"
+	"github.com/EthereumVega/EVA-00D/p2p/netutil"
+	"github.com/EthereumVega/EVA-00D/params"
+	whisper "github.com/EthereumVega/EVA-00D/whisper/whisperv5"
 	"gopkg.in/urfave/cli.v1"
 )
 
@@ -412,7 +412,7 @@ var (
 	ListenPortFlag = cli.IntFlag{
 		Name:  "port",
 		Usage: "Network listening port",
-		Value: 30303,
+		Value: 30313,
 	}
 	BootnodesFlag = cli.StringFlag{
 		Name:  "bootnodes",
@@ -687,7 +687,7 @@ func setIPC(ctx *cli.Context, cfg *node.Config) {
 }
 
 // makeDatabaseHandles raises out the number of allowed file handles per process
-// for Geth and returns half of the allowance to assign to the database.
+// for Weth and returns half of the allowance to assign to the database.
 func makeDatabaseHandles() int {
 	if err := raiseFdLimit(2048); err != nil {
 		Fatalf("Failed to raise file descriptor allowance: %v", err)
@@ -1133,11 +1133,11 @@ func MakeConsolePreloads(ctx *cli.Context) []string {
 // This is a temporary function used for migrating old command/flags to the
 // new format.
 //
-// e.g. geth account new --keystore /tmp/mykeystore --lightkdf
+// e.g. weth account new --keystore /tmp/mykeystore --lightkdf
 //
 // is equivalent after calling this method with:
 //
-// geth --keystore /tmp/mykeystore --lightkdf account new
+// weth --keystore /tmp/mykeystore --lightkdf account new
 //
 // This allows the use of the existing configuration functionality.
 // When all flags are migrated this function can be removed and the existing

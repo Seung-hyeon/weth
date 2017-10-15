@@ -24,12 +24,12 @@ import (
 	"os"
 	"path/filepath"
 
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/contracts/ens"
-	"github.com/ethereum/go-ethereum/crypto"
-	"github.com/ethereum/go-ethereum/swarm/network"
-	"github.com/ethereum/go-ethereum/swarm/services/swap"
-	"github.com/ethereum/go-ethereum/swarm/storage"
+	"github.com/EthereumVega/EVA-00D/common"
+	"github.com/EthereumVega/EVA-00D/contracts/ens"
+	"github.com/EthereumVega/EVA-00D/crypto"
+	"github.com/EthereumVega/EVA-00D/swarm/network"
+	"github.com/EthereumVega/EVA-00D/swarm/services/swap"
+	"github.com/EthereumVega/EVA-00D/swarm/storage"
 )
 
 const (
