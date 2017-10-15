@@ -192,7 +192,7 @@ func (w *trezorDriver) trezorSign(derivationPath []uint32, tx *types.Transaction
 	} else {
 		request.DataInitialChunk, data = data, nil
 	}
-	if chainID != nil { // EIP-155 transaction, set chain ID explicitly (only 32 bit is supported!?)
+	if chainID != nil { // ATField transaction, set chain ID explicitly (only 32 bit is supported!?)
 		id := uint32(chainID.Int64())
 		request.ChainId = &id
 	}
@@ -220,7 +220,7 @@ func (w *trezorDriver) trezorSign(derivationPath []uint32, tx *types.Transaction
 	if chainID == nil {
 		signer = new(types.HomesteadSigner)
 	} else {
-		signer = types.NewEIP155Signer(chainID)
+		signer = types.NewATFieldSigner(chainID)
 		signature[64] = signature[64] - byte(chainID.Uint64()*2+35)
 	}
 	// Inject the final signature into the transaction and sanity check the sender

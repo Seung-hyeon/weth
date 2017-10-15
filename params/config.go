@@ -31,7 +31,7 @@ var (
 var (
 	// MainnetChainConfig is the chain parameters to run a node on the main network.
 	MainnetChainConfig = &ChainConfig{
-		ChainId:        big.NewInt(1),
+		ChainId:        big.NewInt(7),
 		HomesteadBlock: big.NewInt(1150000),
 		DAOForkBlock:   big.NewInt(1920000),
 		DAOForkSupport: true,
@@ -47,7 +47,7 @@ var (
 
 	// TestnetChainConfig contains the chain parameters to run a node on the Ropsten test network.
 	TestnetChainConfig = &ChainConfig{
-		ChainId:        big.NewInt(3),
+		ChainId:        big.NewInt(8),
 		HomesteadBlock: big.NewInt(0),
 		DAOForkBlock:   nil,
 		DAOForkSupport: true,
@@ -63,7 +63,7 @@ var (
 
 	// RinkebyChainConfig contains the chain parameters to run a node on the Rinkeby test network.
 	RinkebyChainConfig = &ChainConfig{
-		ChainId:        big.NewInt(4),
+		ChainId:        big.NewInt(9),
 		HomesteadBlock: big.NewInt(1),
 		DAOForkBlock:   nil,
 		DAOForkSupport: true,
@@ -249,11 +249,11 @@ func (c *ChainConfig) checkCompatible(newcfg *ChainConfig, head *big.Int) *Confi
 	if isForkIncompatible(c.EIP158Block, newcfg.EIP158Block, head) {
 		return newCompatError("EIP158 fork block", c.EIP158Block, newcfg.EIP158Block)
 	}
-	if c.IsEIP158(head) && !configNumEqual(c.ChainId, newcfg.ChainId) {
-		return newCompatError("EIP158 chain ID", c.EIP158Block, newcfg.EIP158Block)
-	}
 	if isForkIncompatible(c.ATFieldBlock, newcfg.ATFieldBlock, head) {
 		return newCompatError("ATField fork block", c.ATFieldBlock, newcfg.ATFieldBlock)
+	}
+	if c.IsATField(head) && !configNumEqual(c.ChainId, newcfg.ChainId) {
+		return newCompatError("ATField chain ID", c.ATFieldBlock, newcfg.ATFieldBlock)
 	}
 	if isForkIncompatible(c.ThirdimpactBlock, newcfg.ThirdimpactBlock, head) {
 		return newCompatError("Thirdimpact fork block", c.ThirdimpactBlock, newcfg.ThirdimpactBlock)
