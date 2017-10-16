@@ -21,6 +21,7 @@ package params
 var MainnetBootnodes = []string{
 	// WETH Bootnodes
 	"enode://638fe9b3d312ede167f9375cd08285357229cc13d00d7b9848a9dcf559c87f1c23f346bd445792f8983b03e295d2ffd586ffcdee8b952d72e4af0ab25b3fe240@115.68.120.55:30313", // wjcloud
+	"enode://3dc314a5aa08064af74505c42d8ca0907971d7eb8e88a364a8c5bd6f3b0ed3ba208d2196e2f816fe58fc20c13a6c1d246a115ac03bf1d7fb26c77c0575cadd6b@218.145.199.122:30313", // wjcloud
 }
 
 // TestnetBootnodes are the enode URLs of the P2P bootstrap nodes running on the
