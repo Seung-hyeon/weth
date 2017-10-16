@@ -20,14 +20,14 @@ package params
 // the main Ethereum network.
 var MainnetBootnodes = []string{
 	// WETH Bootnodes
-	"enode://071308f2749fef58f1e9ae712588e549e4fbc50a08e20da6b2a8987f3d9fe375a749e25e4d215ae0d9d0d9b7dbb374eca6ad0b53efa3be51eda890390a43fc54@115.68.120.180:30301", // wjcloud
+	"enode://638fe9b3d312ede167f9375cd08285357229cc13d00d7b9848a9dcf559c87f1c23f346bd445792f8983b03e295d2ffd586ffcdee8b952d72e4af0ab25b3fe240@115.68.120.55:30313", // wjcloud
 }
 
 // TestnetBootnodes are the enode URLs of the P2P bootstrap nodes running on the
 // Ropsten test network.
 var TestnetBootnodes = []string{
-	"enode://6ce05930c72abc632c58e2e4324f7c7ea478cec0ed4fa2528982cf34483094e9cbc9216e7aa349691242576d552a2a56aaeae426c5303ded677ce455ba1acd9d@13.84.180.240:30313", // US-TX
-	"enode://20c9ad97c081d63397d7b685a412227a40e23c8bdc6688c6f37e97cfbc22d2b4d1db1510d8f61e6a8866ad7f0e17c02b14182d37ea7c3c8b9c2683aeb6b733a1@52.169.14.227:30313", // IE
+	// WETH Bootnodes
+	"enode://2a6f2f669e844625abf6a2204cca3e1a0ff65d9acbc4481b6b902bf78b6db326552518e2c5f0c3c8ea37a59d2c663ea71e00b3c1d0402a09b8f67caf591ef561@115.68.122.74:30313", // wjcloud
 }
 
 // RinkebyBootnodes are the enode URLs of the P2P bootstrap nodes running on the
