@@ -42,8 +42,8 @@ type sigCache struct {
 func MakeSigner(config *params.ChainConfig, blockNumber *big.Int) Signer {
 	var signer Signer
 	switch {
-	case config.IsATField(blockNumber):
-		signer = NewATFieldSigner(config.ChainId)
+	case config.IsEIP155(blockNumber):
+		signer = NewEIP155Signer(config.ChainId)
 	case config.IsHomestead(blockNumber):
 		signer = HomesteadSigner{}
 	default:
@@ -102,29 +102,29 @@ type Signer interface {
 	Equal(Signer) bool
 }
 
-// ATFieldTransaction implements Signer using the ATField rules.
-type ATFieldSigner struct {
+// EIP155Transaction implements Signer using the EIP155 rules.
+type EIP155Signer struct {
 	chainId, chainIdMul *big.Int
 }
 
-func NewATFieldSigner(chainId *big.Int) ATFieldSigner {
+func NewEIP155Signer(chainId *big.Int) EIP155Signer {
 	if chainId == nil {
 		chainId = new(big.Int)
 	}
-	return ATFieldSigner{
+	return EIP155Signer{
 		chainId:    chainId,
 		chainIdMul: new(big.Int).Mul(chainId, big.NewInt(2)),
 	}
 }
 
-func (s ATFieldSigner) Equal(s2 Signer) bool {
-	atfield, ok := s2.(ATFieldSigner)
-	return ok && atfield.chainId.Cmp(s.chainId) == 0
+func (s EIP155Signer) Equal(s2 Signer) bool {
+	eip155, ok := s2.(EIP155Signer)
+	return ok && eip155.chainId.Cmp(s.chainId) == 0
 }
 
 var big8 = big.NewInt(8)
 
-func (s ATFieldSigner) Sender(tx *Transaction) (common.Address, error) {
+func (s EIP155Signer) Sender(tx *Transaction) (common.Address, error) {
 	if !tx.Protected() {
 		return HomesteadSigner{}.Sender(tx)
 	}
@@ -138,7 +138,7 @@ func (s ATFieldSigner) Sender(tx *Transaction) (common.Address, error) {
 
 // WithSignature returns a new transaction with the given signature. This signature
 // needs to be in the [R || S || V] format where V is 0 or 1.
-func (s ATFieldSigner) SignatureValues(tx *Transaction, sig []byte) (R, S, V *big.Int, err error) {
+func (s EIP155Signer) SignatureValues(tx *Transaction, sig []byte) (R, S, V *big.Int, err error) {
 	R, S, V, err = HomesteadSigner{}.SignatureValues(tx, sig)
 	if err != nil {
 		return nil, nil, nil, err
@@ -152,7 +152,7 @@ func (s ATFieldSigner) SignatureValues(tx *Transaction, sig []byte) (R, S, V *bi
 
 // Hash returns the hash to be signed by the sender.
 // It does not uniquely identify the transaction.
-func (s ATFieldSigner) Hash(tx *Transaction) common.Hash {
+func (s EIP155Signer) Hash(tx *Transaction) common.Hash {
 	return rlpHash([]interface{}{
 		tx.data.AccountNonce,
 		tx.data.Price,

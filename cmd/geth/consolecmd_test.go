@@ -40,25 +40,25 @@ const (
 func TestConsoleWelcome(t *testing.T) {
 	coinbase := "0x8605cdbbdb6d264aa742e77020dcbc58fcdce182"
 
-	// Start a weth console, make sure it's cleaned up and terminate the console
-	weth := runWeth(t,
+	// Start a geth console, make sure it's cleaned up and terminate the console
+	geth := runGeth(t,
 		"--port", "0", "--maxpeers", "0", "--nodiscover", "--nat", "none",
 		"--etherbase", coinbase, "--shh",
 		"console")
 
 	// Gather all the infos the welcome message needs to contain
-	weth.SetTemplateFunc("goos", func() string { return runtime.GOOS })
-	weth.SetTemplateFunc("goarch", func() string { return runtime.GOARCH })
-	weth.SetTemplateFunc("gover", runtime.Version)
-	weth.SetTemplateFunc("wethver", func() string { return params.Version })
-	weth.SetTemplateFunc("niltime", func() string { return time.Unix(0, 0).Format(time.RFC1123) })
-	weth.SetTemplateFunc("apis", func() string { return ipcAPIs })
+	geth.SetTemplateFunc("goos", func() string { return runtime.GOOS })
+	geth.SetTemplateFunc("goarch", func() string { return runtime.GOARCH })
+	geth.SetTemplateFunc("gover", runtime.Version)
+	geth.SetTemplateFunc("gethver", func() string { return params.Version })
+	geth.SetTemplateFunc("niltime", func() string { return time.Unix(0, 0).Format(time.RFC1123) })
+	geth.SetTemplateFunc("apis", func() string { return ipcAPIs })
 
 	// Verify the actual welcome message to the required template
-	weth.Expect(`
-Welcome to the Weth JavaScript console!
+	geth.Expect(`
+Welcome to the Geth JavaScript console!
 
-instance: Weth/v{{wethver}}/{{goos}}-{{goarch}}/{{gover}}
+instance: Geth/v{{gethver}}/{{goos}}-{{goarch}}/{{gover}}
 coinbase: {{.Etherbase}}
 at block: 0 ({{niltime}})
  datadir: {{.Datadir}}
@@ -66,7 +66,7 @@ at block: 0 ({{niltime}})
 
 > {{.InputLine "exit"}}
 `)
-	weth.ExpectExit()
+	geth.ExpectExit()
 }
 
 // Tests that a console can be attached to a running node via various means.
@@ -75,57 +75,57 @@ func TestIPCAttachWelcome(t *testing.T) {
 	coinbase := "0x8605cdbbdb6d264aa742e77020dcbc58fcdce182"
 	var ipc string
 	if runtime.GOOS == "windows" {
-		ipc = `\\.\pipe\weth` + strconv.Itoa(trulyRandInt(100000, 999999))
+		ipc = `\\.\pipe\geth` + strconv.Itoa(trulyRandInt(100000, 999999))
 	} else {
 		ws := tmpdir(t)
 		defer os.RemoveAll(ws)
-		ipc = filepath.Join(ws, "weth.ipc")
+		ipc = filepath.Join(ws, "geth.ipc")
 	}
 	// Note: we need --shh because testAttachWelcome checks for default
 	// list of ipc modules and shh is included there.
-	weth := runWeth(t,
+	geth := runGeth(t,
 		"--port", "0", "--maxpeers", "0", "--nodiscover", "--nat", "none",
 		"--etherbase", coinbase, "--shh", "--ipcpath", ipc)
 
 	time.Sleep(2 * time.Second) // Simple way to wait for the RPC endpoint to open
-	testAttachWelcome(t, weth, "ipc:"+ipc, ipcAPIs)
+	testAttachWelcome(t, geth, "ipc:"+ipc, ipcAPIs)
 
-	weth.Interrupt()
-	weth.ExpectExit()
+	geth.Interrupt()
+	geth.ExpectExit()
 }
 
 func TestHTTPAttachWelcome(t *testing.T) {
 	coinbase := "0x8605cdbbdb6d264aa742e77020dcbc58fcdce182"
 	port := strconv.Itoa(trulyRandInt(1024, 65536)) // Yeah, sometimes this will fail, sorry :P
-	weth := runWeth(t,
+	geth := runGeth(t,
 		"--port", "0", "--maxpeers", "0", "--nodiscover", "--nat", "none",
 		"--etherbase", coinbase, "--rpc", "--rpcport", port)
 
 	time.Sleep(2 * time.Second) // Simple way to wait for the RPC endpoint to open
-	testAttachWelcome(t, weth, "http://localhost:"+port, httpAPIs)
+	testAttachWelcome(t, geth, "http://localhost:"+port, httpAPIs)
 
-	weth.Interrupt()
-	weth.ExpectExit()
+	geth.Interrupt()
+	geth.ExpectExit()
 }
 
 func TestWSAttachWelcome(t *testing.T) {
 	coinbase := "0x8605cdbbdb6d264aa742e77020dcbc58fcdce182"
 	port := strconv.Itoa(trulyRandInt(1024, 65536)) // Yeah, sometimes this will fail, sorry :P
 
-	weth := runWeth(t,
+	geth := runGeth(t,
 		"--port", "0", "--maxpeers", "0", "--nodiscover", "--nat", "none",
 		"--etherbase", coinbase, "--ws", "--wsport", port)
 
 	time.Sleep(2 * time.Second) // Simple way to wait for the RPC endpoint to open
-	testAttachWelcome(t, weth, "ws://localhost:"+port, httpAPIs)
+	testAttachWelcome(t, geth, "ws://localhost:"+port, httpAPIs)
 
-	weth.Interrupt()
-	weth.ExpectExit()
+	geth.Interrupt()
+	geth.ExpectExit()
 }
 
-func testAttachWelcome(t *testing.T, weth *testweth, endpoint, apis string) {
-	// Attach to a running weth note and terminate immediately
-	attach := runWeth(t, "attach", endpoint)
+func testAttachWelcome(t *testing.T, geth *testgeth, endpoint, apis string) {
+	// Attach to a running geth note and terminate immediately
+	attach := runGeth(t, "attach", endpoint)
 	defer attach.ExpectExit()
 	attach.CloseStdin()
 
@@ -133,18 +133,18 @@ func testAttachWelcome(t *testing.T, weth *testweth, endpoint, apis string) {
 	attach.SetTemplateFunc("goos", func() string { return runtime.GOOS })
 	attach.SetTemplateFunc("goarch", func() string { return runtime.GOARCH })
 	attach.SetTemplateFunc("gover", runtime.Version)
-	attach.SetTemplateFunc("wethver", func() string { return params.Version })
-	attach.SetTemplateFunc("etherbase", func() string { return weth.Etherbase })
+	attach.SetTemplateFunc("gethver", func() string { return params.Version })
+	attach.SetTemplateFunc("etherbase", func() string { return geth.Etherbase })
 	attach.SetTemplateFunc("niltime", func() string { return time.Unix(0, 0).Format(time.RFC1123) })
 	attach.SetTemplateFunc("ipc", func() bool { return strings.HasPrefix(endpoint, "ipc") })
-	attach.SetTemplateFunc("datadir", func() string { return weth.Datadir })
+	attach.SetTemplateFunc("datadir", func() string { return geth.Datadir })
 	attach.SetTemplateFunc("apis", func() string { return apis })
 
 	// Verify the actual welcome message to the required template
 	attach.Expect(`
-Welcome to the Weth JavaScript console!
+Welcome to the Geth JavaScript console!
 
-instance: Weth/v{{wethver}}/{{goos}}-{{goarch}}/{{gover}}
+instance: Geth/v{{gethver}}/{{goos}}-{{goarch}}/{{gover}}
 coinbase: {{etherbase}}
 at block: 0 ({{niltime}}){{if ipc}}
  datadir: {{datadir}}{{end}}

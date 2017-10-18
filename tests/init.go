@@ -41,17 +41,17 @@ var Forks = map[string]*params.ChainConfig{
 		ChainId:        big.NewInt(1),
 		HomesteadBlock: big.NewInt(0),
 		EIP150Block:    big.NewInt(0),
-		ATFieldBlock:    big.NewInt(0),
+		EIP155Block:    big.NewInt(0),
 		EIP158Block:    big.NewInt(0),
 	},
-	"Thirdimpact": &params.ChainConfig{
+	"Byzantium": &params.ChainConfig{
 		ChainId:        big.NewInt(1),
 		HomesteadBlock: big.NewInt(0),
 		EIP150Block:    big.NewInt(0),
-		ATFieldBlock:    big.NewInt(0),
+		EIP155Block:    big.NewInt(0),
 		EIP158Block:    big.NewInt(0),
 		DAOForkBlock:   big.NewInt(0),
-		ThirdimpactBlock: big.NewInt(0),
+		ByzantiumBlock: big.NewInt(0),
 	},
 	"FrontierToHomesteadAt5": &params.ChainConfig{
 		ChainId:        big.NewInt(1),
@@ -68,13 +68,13 @@ var Forks = map[string]*params.ChainConfig{
 		DAOForkBlock:   big.NewInt(5),
 		DAOForkSupport: true,
 	},
-	"EIP158ToThirdimpactAt5": &params.ChainConfig{
+	"EIP158ToByzantiumAt5": &params.ChainConfig{
 		ChainId:        big.NewInt(1),
 		HomesteadBlock: big.NewInt(0),
 		EIP150Block:    big.NewInt(0),
-		ATFieldBlock:    big.NewInt(0),
+		EIP155Block:    big.NewInt(0),
 		EIP158Block:    big.NewInt(0),
-		ThirdimpactBlock: big.NewInt(5),
+		ByzantiumBlock: big.NewInt(5),
 	},
 }
 

@@ -16,7 +16,7 @@
 
 // Contains perverted wrappers to allow crossing over empty interfaces.
 
-package weth
+package geth
 
 import (
 	"errors"

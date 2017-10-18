@@ -16,7 +16,7 @@
 
 // Contains a wrapper for the Ethereum client.
 
-package weth
+package geth
 
 import (
 	"math/big"

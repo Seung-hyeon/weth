@@ -58,7 +58,7 @@ func setDefaults(cfg *Config) {
 			DAOForkBlock:   new(big.Int),
 			DAOForkSupport: false,
 			EIP150Block:    new(big.Int),
-			ATFieldBlock:    new(big.Int),
+			EIP155Block:    new(big.Int),
 			EIP158Block:    new(big.Int),
 		}
 	}

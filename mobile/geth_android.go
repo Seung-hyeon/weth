@@ -16,7 +16,7 @@
 
 // +build android
 
-package weth
+package geth
 
 // clientIdentifier is a hard coded identifier to report into the network.
-var clientIdentifier = "WethDroid"
+var clientIdentifier = "GethDroid"

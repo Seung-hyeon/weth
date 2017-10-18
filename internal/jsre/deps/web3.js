@@ -1231,7 +1231,7 @@ SolidityParam.prototype.withOffset = function (offset) {
 };
 
 /**
- * This method should be used to combine solidity params towether
+ * This method should be used to combine solidity params together
  * eg. when appending an array
  *
  * @method combine
@@ -1779,7 +1779,7 @@ var ETH_UNITS = [
     'ether',
     'grand',
     'Mether',
-    'Wether',
+    'Gether',
     'Tether',
     'Pether',
     'Eether',
@@ -1909,7 +1909,7 @@ var unitMap = {
     'kether':       '1000000000000000000000',
     'grand':        '1000000000000000000000',
     'mether':       '1000000000000000000000000',
-    'wether':       '1000000000000000000000000000',
+    'gether':       '1000000000000000000000000000',
     'tether':       '1000000000000000000000000000000'
 };
 
@@ -2150,7 +2150,7 @@ var getValueOfUnit = function (unit) {
  * - ether      --             --
  * - kether                    --           grand
  * - mether
- * - wether
+ * - gether
  * - tether
  *
  * @method fromWei
@@ -2178,7 +2178,7 @@ var fromWei = function(number, unit) {
  * - ether      --             --
  * - kether                    --           grand
  * - mether
- * - wether
+ * - gether
  * - tether
  *
  * @method toWei
@@ -3239,7 +3239,7 @@ SolidityEvent.prototype.signature = function () {
  * @method encode
  * @param {Object} indexed
  * @param {Object} options
- * @return {Object} everything combined towether and encoded
+ * @return {Object} everything combined together and encoded
  */
 SolidityEvent.prototype.encode = function (indexed, options) {
     indexed = indexed || {};
@@ -4292,7 +4292,7 @@ var XHR2 = require('xhr2'); // jshint ignore: line
  * HttpProvider should be used to send rpc calls over http
  */
 var HttpProvider = function (host, timeout, user, password) {
-  this.host = host || 'http://localhost:8285';
+  this.host = host || 'http://localhost:8545';
   this.timeout = timeout || 0;
   this.user = user;
   this.password = password;
