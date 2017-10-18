@@ -22,15 +22,13 @@ import (
 	"fmt"
 	"math/big"
 
-	"github.com/EthereumVega/weth/common"
-	"github.com/EthereumVega/weth/crypto"
-	"github.com/EthereumVega/weth/params"
+	"github.com/EthereumVega/EVA-00D/common"
+	"github.com/EthereumVega/EVA-00D/crypto"
+	"github.com/EthereumVega/EVA-00D/params"
 )
 
 var (
 	ErrInvalidChainId = errors.New("invalid chain id for signer")
-	big8 = big.NewInt(8)
-	big6 = big.NewInt(6)
 )
 
 // sigCache is used to cache the derived sender and contains
@@ -44,8 +42,6 @@ type sigCache struct {
 func MakeSigner(config *params.ChainConfig, blockNumber *big.Int) Signer {
 	var signer Signer
 	switch {
-	case config.IsATField(blockNumber):
-		signer = NewEIP155Signer(new(big.Int).Add(big6, config.ChainId))
 	case config.IsEIP155(blockNumber):
 		signer = NewEIP155Signer(config.ChainId)
 	case config.IsHomestead(blockNumber):
@@ -123,14 +119,16 @@ func NewEIP155Signer(chainId *big.Int) EIP155Signer {
 
 func (s EIP155Signer) Equal(s2 Signer) bool {
 	eip155, ok := s2.(EIP155Signer)
-	return ok && (eip155.chainId.Cmp(s.chainId) == 0 || eip155.chainId.Cmp(new(big.Int).Add(big6, s.chainId)) == 0)
+	return ok && eip155.chainId.Cmp(s.chainId) == 0
 }
+
+var big8 = big.NewInt(8)
 
 func (s EIP155Signer) Sender(tx *Transaction) (common.Address, error) {
 	if !tx.Protected() {
 		return HomesteadSigner{}.Sender(tx)
 	}
-	if tx.ChainId().Cmp(s.chainId) != 0 && tx.ChainId().Cmp(new(big.Int).Add(big6, s.chainId)) != 0 {
+	if tx.ChainId().Cmp(s.chainId) != 0 {
 		return common.Address{}, ErrInvalidChainId
 	}
 	V := new(big.Int).Sub(tx.data.V, s.chainIdMul)
