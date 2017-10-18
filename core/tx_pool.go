@@ -25,13 +25,13 @@ import (
 	"sync"
 	"time"
 
-	"github.com/EthereumVega/weth/common"
-	"github.com/EthereumVega/weth/core/state"
-	"github.com/EthereumVega/weth/core/types"
-	"github.com/EthereumVega/weth/event"
-	"github.com/EthereumVega/weth/log"
-	"github.com/EthereumVega/weth/metrics"
-	"github.com/EthereumVega/weth/params"
+	"github.com/EthereumVega/EVA-00D/common"
+	"github.com/EthereumVega/EVA-00D/core/state"
+	"github.com/EthereumVega/EVA-00D/core/types"
+	"github.com/EthereumVega/EVA-00D/event"
+	"github.com/EthereumVega/EVA-00D/log"
+	"github.com/EthereumVega/EVA-00D/metrics"
+	"github.com/EthereumVega/EVA-00D/params"
 	"gopkg.in/karalabe/cookiejar.v2/collections/prque"
 )
 
@@ -214,7 +214,7 @@ func NewTxPool(config TxPoolConfig, chainconfig *params.ChainConfig, chain block
 		config:      config,
 		chainconfig: chainconfig,
 		chain:       chain,
-		signer:      types.NewATFieldSigner(chainconfig.ChainId),
+		signer:      types.NewEIP155Signer(chainconfig.ChainId),
 		pending:     make(map[common.Address]*txList),
 		queue:       make(map[common.Address]*txList),
 		beats:       make(map[common.Address]time.Time),
@@ -231,10 +231,10 @@ func NewTxPool(config TxPoolConfig, chainconfig *params.ChainConfig, chain block
 		pool.journal = newTxJournal(config.Journal)
 
 		if err := pool.journal.load(pool.AddLocal); err != nil {
-			log.Warn("Failed to load transaction journal", "err", err)
+			log.Debug("Failed to load transaction journal", "err", err)
 		}
 		if err := pool.journal.rotate(pool.local()); err != nil {
-			log.Warn("Failed to rotate transaction journal", "err", err)
+			log.Debug("Failed to rotate transaction journal", "err", err)
 		}
 	}
 	// Subscribe events from blockchain

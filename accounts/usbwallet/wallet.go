@@ -25,11 +25,11 @@ import (
 	"sync"
 	"time"
 
-	ethereum "github.com/EthereumVega/weth"
-	"github.com/EthereumVega/weth/accounts"
-	"github.com/EthereumVega/weth/common"
-	"github.com/EthereumVega/weth/core/types"
-	"github.com/EthereumVega/weth/log"
+	ethereum "github.com/EthereumVega/EVA-00D"
+	"github.com/EthereumVega/EVA-00D/accounts"
+	"github.com/EthereumVega/EVA-00D/common"
+	"github.com/EthereumVega/EVA-00D/core/types"
+	"github.com/EthereumVega/EVA-00D/log"
 	"github.com/karalabe/hid"
 )
 
@@ -506,7 +506,7 @@ func (w *wallet) SignHash(account accounts.Account, hash []byte) ([]byte, error)
 // transaction or a failure if the user denied the transaction.
 //
 // Note, if the version of the Ethereum application running on the Ledger wallet is
-// too old to sign ATField transactions, but such is requested nonetheless, an error
+// too old to sign EIP-155 transactions, but such is requested nonetheless, an error
 // will be returned opposed to silently signing in Homestead mode.
 func (w *wallet) SignTx(account accounts.Account, tx *types.Transaction, chainID *big.Int) (*types.Transaction, error) {
 	w.stateLock.RLock() // Comms have own mutex, this is for the state fields

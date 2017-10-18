@@ -22,8 +22,8 @@ import (
 
 	"math/big"
 
-	"github.com/EthereumVega/weth/common"
-	"github.com/EthereumVega/weth/params"
+	"github.com/EthereumVega/EVA-00D/common"
+	"github.com/EthereumVega/EVA-00D/params"
 )
 
 var (
@@ -34,7 +34,7 @@ var (
 		DAOForkSupport: true,
 		EIP150Block:    big.NewInt(2463000),
 		EIP150Hash:     common.HexToHash("0x2086799aeebeae135c246c65021c82b4e15a2c451340993aacfd2751886514f0"),
-		ATFieldBlock:    big.NewInt(2675000),
+		EIP155Block:    big.NewInt(2675000),
 		EIP158Block:    big.NewInt(2675000),
 		ThirdimpactBlock: big.NewInt(4370000),
 	}

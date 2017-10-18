@@ -23,9 +23,9 @@ import (
 	"math/big"
 	"testing"
 
-	"github.com/EthereumVega/weth/common"
-	"github.com/EthereumVega/weth/crypto"
-	"github.com/EthereumVega/weth/rlp"
+	"github.com/EthereumVega/EVA-00D/common"
+	"github.com/EthereumVega/EVA-00D/crypto"
+	"github.com/EthereumVega/EVA-00D/rlp"
 )
 
 // The values in those tests are from the Transaction Tests
@@ -198,7 +198,7 @@ func TestTransactionJSON(t *testing.T) {
 	if err != nil {
 		t.Fatalf("could not generate key: %v", err)
 	}
-	signer := NewATFieldSigner(common.Big1)
+	signer := NewEIP155Signer(common.Big1)
 
 	for i := uint64(0); i < 25; i++ {
 		var tx *Transaction

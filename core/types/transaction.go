@@ -24,10 +24,10 @@ import (
 	"math/big"
 	"sync/atomic"
 
-	"github.com/EthereumVega/weth/common"
-	"github.com/EthereumVega/weth/common/hexutil"
-	"github.com/EthereumVega/weth/crypto"
-	"github.com/EthereumVega/weth/rlp"
+	"github.com/EthereumVega/EVA-00D/common"
+	"github.com/EthereumVega/EVA-00D/common/hexutil"
+	"github.com/EthereumVega/EVA-00D/crypto"
+	"github.com/EthereumVega/EVA-00D/rlp"
 )
 
 //go:generate gencodec -type txdata -field-override txdataMarshaling -out gen_tx_json.go
@@ -40,7 +40,7 @@ var (
 // deriveSigner makes a *best* guess about which signer to use.
 func deriveSigner(V *big.Int) Signer {
 	if V.Sign() != 0 && isProtectedV(V) {
-		return NewATFieldSigner(deriveChainId(V))
+		return NewEIP155Signer(deriveChainId(V))
 	} else {
 		return HomesteadSigner{}
 	}

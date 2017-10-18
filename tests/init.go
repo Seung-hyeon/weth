@@ -20,7 +20,7 @@ import (
 	"fmt"
 	"math/big"
 
-	"github.com/EthereumVega/weth/params"
+	"github.com/EthereumVega/EVA-00D/params"
 )
 
 // This table defines supported forks and their chain config.
@@ -41,14 +41,14 @@ var Forks = map[string]*params.ChainConfig{
 		ChainId:        big.NewInt(1),
 		HomesteadBlock: big.NewInt(0),
 		EIP150Block:    big.NewInt(0),
-		ATFieldBlock:    big.NewInt(0),
+		EIP155Block:    big.NewInt(0),
 		EIP158Block:    big.NewInt(0),
 	},
 	"Thirdimpact": &params.ChainConfig{
 		ChainId:        big.NewInt(1),
 		HomesteadBlock: big.NewInt(0),
 		EIP150Block:    big.NewInt(0),
-		ATFieldBlock:    big.NewInt(0),
+		EIP155Block:    big.NewInt(0),
 		EIP158Block:    big.NewInt(0),
 		DAOForkBlock:   big.NewInt(0),
 		ThirdimpactBlock: big.NewInt(0),
@@ -72,7 +72,7 @@ var Forks = map[string]*params.ChainConfig{
 		ChainId:        big.NewInt(1),
 		HomesteadBlock: big.NewInt(0),
 		EIP150Block:    big.NewInt(0),
-		ATFieldBlock:    big.NewInt(0),
+		EIP155Block:    big.NewInt(0),
 		EIP158Block:    big.NewInt(0),
 		ThirdimpactBlock: big.NewInt(5),
 	},

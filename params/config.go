@@ -20,7 +20,7 @@ import (
 	"fmt"
 	"math/big"
 
-	"github.com/EthereumVega/weth/common"
+	"github.com/EthereumVega/EVA-00D/common"
 )
 
 var (
@@ -31,7 +31,7 @@ var (
 var (
 	// MainnetChainConfig is the chain parameters to run a node on the main network.
 	MainnetChainConfig = &ChainConfig{
-		ChainId:        big.NewInt(7),
+		ChainId:        big.NewInt(1),
 		HomesteadBlock: big.NewInt(1150000),
 		DAOForkBlock:   big.NewInt(1920000),
 		DAOForkSupport: true,
@@ -47,7 +47,7 @@ var (
 
 	// TestnetChainConfig contains the chain parameters to run a node on the Ropsten test network.
 	TestnetChainConfig = &ChainConfig{
-		ChainId:        big.NewInt(8),
+		ChainId:        big.NewInt(3),
 		HomesteadBlock: big.NewInt(0),
 		DAOForkBlock:   nil,
 		DAOForkSupport: true,
@@ -55,15 +55,15 @@ var (
 		EIP150Hash:     common.HexToHash("0x41941023680923e0fe4d74a34bdac8141f2540e3ae90623718e47d66d1ca4a2d"),
 		EIP155Block:    big.NewInt(10),
 		EIP158Block:    big.NewInt(10),
-		ATFieldBlock:   big.NewInt(10),
-		ThirdimpactBlock: big.NewInt(20),
+		ATFieldBlock:   big.NewInt(1700000),
+		ThirdimpactBlock: big.NewInt(2000000),
 
 		Ethash: new(EthashConfig),
 	}
 
 	// RinkebyChainConfig contains the chain parameters to run a node on the Rinkeby test network.
 	RinkebyChainConfig = &ChainConfig{
-		ChainId:        big.NewInt(9),
+		ChainId:        big.NewInt(4),
 		HomesteadBlock: big.NewInt(1),
 		DAOForkBlock:   nil,
 		DAOForkSupport: true,
@@ -251,9 +251,6 @@ func (c *ChainConfig) checkCompatible(newcfg *ChainConfig, head *big.Int) *Confi
 	}
 	if isForkIncompatible(c.ATFieldBlock, newcfg.ATFieldBlock, head) {
 		return newCompatError("ATField fork block", c.ATFieldBlock, newcfg.ATFieldBlock)
-	}
-	if c.IsATField(head) && !configNumEqual(c.ChainId, newcfg.ChainId) {
-		return newCompatError("ATField chain ID", c.ATFieldBlock, newcfg.ATFieldBlock)
 	}
 	if isForkIncompatible(c.ThirdimpactBlock, newcfg.ThirdimpactBlock, head) {
 		return newCompatError("Thirdimpact fork block", c.ThirdimpactBlock, newcfg.ThirdimpactBlock)

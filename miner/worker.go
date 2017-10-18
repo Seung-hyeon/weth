@@ -24,17 +24,17 @@ import (
 	"sync/atomic"
 	"time"
 
-	"github.com/EthereumVega/weth/common"
-	"github.com/EthereumVega/weth/consensus"
-	"github.com/EthereumVega/weth/consensus/misc"
-	"github.com/EthereumVega/weth/core"
-	"github.com/EthereumVega/weth/core/state"
-	"github.com/EthereumVega/weth/core/types"
-	"github.com/EthereumVega/weth/core/vm"
-	"github.com/EthereumVega/weth/ethdb"
-	"github.com/EthereumVega/weth/event"
-	"github.com/EthereumVega/weth/log"
-	"github.com/EthereumVega/weth/params"
+	"github.com/EthereumVega/EVA-00D/common"
+	"github.com/EthereumVega/EVA-00D/consensus"
+	"github.com/EthereumVega/EVA-00D/consensus/misc"
+	"github.com/EthereumVega/EVA-00D/core"
+	"github.com/EthereumVega/EVA-00D/core/state"
+	"github.com/EthereumVega/EVA-00D/core/types"
+	"github.com/EthereumVega/EVA-00D/core/vm"
+	"github.com/EthereumVega/EVA-00D/ethdb"
+	"github.com/EthereumVega/EVA-00D/event"
+	"github.com/EthereumVega/EVA-00D/log"
+	"github.com/EthereumVega/EVA-00D/params"
 	"gopkg.in/fatih/set.v0"
 )
 
@@ -49,6 +49,10 @@ const (
 	chainHeadChanSize = 10
 	// chainSideChanSize is the size of channel listening to ChainSideEvent.
 	chainSideChanSize = 10
+)
+
+var (
+	ChainIdAddition = big.NewInt(6)
 )
 
 // Agent can register themself with the worker
@@ -357,7 +361,7 @@ func (self *worker) makeCurrent(parent *types.Block, header *types.Header) error
 	}
 	work := &Work{
 		config:    self.config,
-		signer:    types.NewATFieldSigner(self.config.ChainId),
+		signer:    types.NewEIP155Signer(self.config.ChainId),
 		state:     state,
 		ancestors: set.New(),
 		family:    set.New(),
@@ -516,12 +520,12 @@ func (env *Work) commitTransactions(mux *event.TypeMux, txs *types.TransactionsB
 		// Error may be ignored here. The error has already been checked
 		// during transaction acceptance is the transaction pool.
 		//
-		// We use the atfield signer regardless of the current hf.
+		// We use the eip155 signer regardless of the current hf.
 		from, _ := types.Sender(env.signer, tx)
-		// Check whether the tx is replay protected. If we're not in the ATField hf
+		// Check whether the tx is replay protected. If we're not in the EIP155 hf
 		// phase, start ignoring the sender until we do.
-		if tx.Protected() && !env.config.IsATField(env.header.Number) {
-			log.Trace("Ignoring reply protected transaction", "hash", tx.Hash(), "atfield", env.config.ATFieldBlock)
+		if tx.Protected() && (!env.config.IsEIP155(env.header.Number) || !env.config.IsThirdimpact(env.header.Number) && tx.ChainId().Cmp(new(big.Int).Add(ChainIdAddition, env.config.ChainId)) == 0) {
+			log.Trace("Ignoring reply protected transaction", "hash", tx.Hash(), "eip155", env.config.EIP155Block, "Thirdimpact", env.config.ThirdimpactBlock)
 
 			txs.Pop()
 			continue

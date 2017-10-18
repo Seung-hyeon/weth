@@ -25,10 +25,10 @@ import (
 	"math/rand"
 	"time"
 
-	"github.com/EthereumVega/weth/common"
-	"github.com/EthereumVega/weth/core"
-	"github.com/EthereumVega/weth/log"
-	"github.com/EthereumVega/weth/params"
+	"github.com/EthereumVega/EVA-00D/common"
+	"github.com/EthereumVega/EVA-00D/core"
+	"github.com/EthereumVega/EVA-00D/log"
+	"github.com/EthereumVega/EVA-00D/params"
 )
 
 // makeGenesis creates a new genesis struct based on some user input.
@@ -42,7 +42,7 @@ func (w *wizard) makeGenesis() {
 		Config: &params.ChainConfig{
 			HomesteadBlock: big.NewInt(1),
 			EIP150Block:    big.NewInt(2),
-			ATFieldBlock:    big.NewInt(3),
+			EIP155Block:    big.NewInt(3),
 			EIP158Block:    big.NewInt(3),
 			ThirdimpactBlock: big.NewInt(4),
 		},
@@ -159,8 +159,8 @@ func (w *wizard) manageGenesis() {
 		w.conf.genesis.Config.EIP150Block = w.readDefaultBigInt(w.conf.genesis.Config.EIP150Block)
 
 		fmt.Println()
-		fmt.Printf("Which block should ATField come into effect? (default = %v)\n", w.conf.genesis.Config.ATFieldBlock)
-		w.conf.genesis.Config.ATFieldBlock = w.readDefaultBigInt(w.conf.genesis.Config.ATFieldBlock)
+		fmt.Printf("Which block should EIP155 come into effect? (default = %v)\n", w.conf.genesis.Config.EIP155Block)
+		w.conf.genesis.Config.EIP155Block = w.readDefaultBigInt(w.conf.genesis.Config.EIP155Block)
 
 		fmt.Println()
 		fmt.Printf("Which block should EIP158 come into effect? (default = %v)\n", w.conf.genesis.Config.EIP158Block)

@@ -21,12 +21,12 @@ import (
 	"math/big"
 	"time"
 
-	"github.com/EthereumVega/weth/common"
-	"github.com/EthereumVega/weth/core/state"
-	"github.com/EthereumVega/weth/core/vm"
-	"github.com/EthereumVega/weth/crypto"
-	"github.com/EthereumVega/weth/ethdb"
-	"github.com/EthereumVega/weth/params"
+	"github.com/EthereumVega/EVA-00D/common"
+	"github.com/EthereumVega/EVA-00D/core/state"
+	"github.com/EthereumVega/EVA-00D/core/vm"
+	"github.com/EthereumVega/EVA-00D/crypto"
+	"github.com/EthereumVega/EVA-00D/ethdb"
+	"github.com/EthereumVega/EVA-00D/params"
 )
 
 // Config is a basic type specifying certain configuration flags for running
@@ -58,7 +58,7 @@ func setDefaults(cfg *Config) {
 			DAOForkBlock:   new(big.Int),
 			DAOForkSupport: false,
 			EIP150Block:    new(big.Int),
-			ATFieldBlock:    new(big.Int),
+			EIP155Block:    new(big.Int),
 			EIP158Block:    new(big.Int),
 		}
 	}
