@@ -126,7 +126,7 @@ var (
 	}
 	NetworkIdFlag = cli.Uint64Flag{
 		Name:  "networkid",
-		Usage: "Network identifier (integer, 1=Frontier, 2=Morden (disused), 3=Ropsten, 4=Rinkeby)",
+		Usage: "Network identifier (integer, 7=EVA-Mainnet 8=EVA-testnet 9=EVA-Rinkeby)",
 		Value: eth.DefaultConfig.NetworkId,
 	}
 	TestnetFlag = cli.BoolFlag{
@@ -412,7 +412,7 @@ var (
 	ListenPortFlag = cli.IntFlag{
 		Name:  "port",
 		Usage: "Network listening port",
-		Value: 30303,
+		Value: 30313,
 	}
 	BootnodesFlag = cli.StringFlag{
 		Name:  "bootnodes",
@@ -687,7 +687,7 @@ func setIPC(ctx *cli.Context, cfg *node.Config) {
 }
 
 // makeDatabaseHandles raises out the number of allowed file handles per process
-// for Geth and returns half of the allowance to assign to the database.
+// for Weth and returns half of the allowance to assign to the database.
 func makeDatabaseHandles() int {
 	if err := raiseFdLimit(2048); err != nil {
 		Fatalf("Failed to raise file descriptor allowance: %v", err)
@@ -977,12 +977,12 @@ func SetEthConfig(ctx *cli.Context, stack *node.Node, cfg *eth.Config) {
 	switch {
 	case ctx.GlobalBool(TestnetFlag.Name):
 		if !ctx.GlobalIsSet(NetworkIdFlag.Name) {
-			cfg.NetworkId = 3
+			cfg.NetworkId = 8
 		}
 		cfg.Genesis = core.DefaultTestnetGenesisBlock()
 	case ctx.GlobalBool(RinkebyFlag.Name):
 		if !ctx.GlobalIsSet(NetworkIdFlag.Name) {
-			cfg.NetworkId = 4
+			cfg.NetworkId = 9
 		}
 		cfg.Genesis = core.DefaultRinkebyGenesisBlock()
 	case ctx.GlobalBool(DevModeFlag.Name):
@@ -1133,11 +1133,11 @@ func MakeConsolePreloads(ctx *cli.Context) []string {
 // This is a temporary function used for migrating old command/flags to the
 // new format.
 //
-// e.g. geth account new --keystore /tmp/mykeystore --lightkdf
+// e.g. weth account new --keystore /tmp/mykeystore --lightkdf
 //
 // is equivalent after calling this method with:
 //
-// geth --keystore /tmp/mykeystore --lightkdf account new
+// weth --keystore /tmp/mykeystore --lightkdf account new
 //
 // This allows the use of the existing configuration functionality.
 // When all flags are migrated this function can be removed and the existing

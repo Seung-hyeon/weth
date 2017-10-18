@@ -155,7 +155,7 @@ func (w *ledgerDriver) Derive(path accounts.DerivationPath) (common.Address, err
 // waiting for the user to confirm or deny the transaction.
 //
 // Note, if the version of the Ethereum application running on the Ledger wallet is
-// too old to sign EIP-155 transactions, but such is requested nonetheless, an error
+// too old to sign ATField transactions, but such is requested nonetheless, an error
 // will be returned opposed to silently signing in Homestead mode.
 func (w *ledgerDriver) SignTx(path accounts.DerivationPath, tx *types.Transaction, chainID *big.Int) (common.Address, *types.Transaction, error) {
 	// If the Ethereum app doesn't run, abort
@@ -304,7 +304,7 @@ func (w *ledgerDriver) ledgerSign(derivationPath []uint32, tx *types.Transaction
 	for i, component := range derivationPath {
 		binary.BigEndian.PutUint32(path[1+4*i:], component)
 	}
-	// Create the transaction RLP based on whether legacy or EIP155 signing was requeste
+	// Create the transaction RLP based on whether legacy or ATField signing was requeste
 	var (
 		txrlp []byte
 		err   error
@@ -351,7 +351,7 @@ func (w *ledgerDriver) ledgerSign(derivationPath []uint32, tx *types.Transaction
 	if chainID == nil {
 		signer = new(types.HomesteadSigner)
 	} else {
-		signer = types.NewEIP155Signer(chainID)
+		signer = types.NewATFieldSigner(chainID)
 		signature[64] = signature[64] - byte(chainID.Uint64()*2+35)
 	}
 	signed, err := tx.WithSignature(signer, signature)
