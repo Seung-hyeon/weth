@@ -20,7 +20,7 @@ package params
 // the main Ethereum network.
 var MainnetBootnodes = []string{
 	// WETH Bootnodes
-	"enode://638fe9b3d312ede167f9375cd08285357229cc13d00d7b9848a9dcf559c87f1c23f346bd445792f8983b03e295d2ffd586ffcdee8b952d72e4af0ab25b3fe240@115.68.120.55:30313", // wjcloud
+	"enode://630a8dfd4d59e44d72a837baedaae9365057c1895bf539c0ad5930064f09eaecc85e7ff0c5c715f8fbc3a4d7346bcc2d419b45ce09dd9ed55491454379bca571@115.68.120.55:30313", // wjcloud
 	"enode://71285812c2bc8d6e4c75355603a83f457382ba0aa3277aa17664fd3321afe1cd7efa27bfba82ff7850e7755a42565930aa4aa2f3e62e58d9f7a5db898d6d2dab@218.145.199.122:30313", // wjcloud
 }
 
