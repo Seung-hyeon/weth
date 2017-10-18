@@ -20,7 +20,7 @@ import (
 	"math/big"
 	"testing"
 
-	"github.com/EthereumVega/EVA-00D/params"
+	"github.com/EthereumVega/weth/params"
 )
 
 func TestTransaction(t *testing.T) {

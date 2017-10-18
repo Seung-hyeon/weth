@@ -24,21 +24,21 @@ import (
 	"strings"
 	"time"
 
-	"github.com/EthereumVega/EVA-00D/accounts"
-	"github.com/EthereumVega/EVA-00D/accounts/keystore"
-	"github.com/EthereumVega/EVA-00D/common"
-	"github.com/EthereumVega/EVA-00D/common/hexutil"
-	"github.com/EthereumVega/EVA-00D/common/math"
-	"github.com/EthereumVega/EVA-00D/consensus/ethash"
-	"github.com/EthereumVega/EVA-00D/core"
-	"github.com/EthereumVega/EVA-00D/core/types"
-	"github.com/EthereumVega/EVA-00D/core/vm"
-	"github.com/EthereumVega/EVA-00D/crypto"
-	"github.com/EthereumVega/EVA-00D/log"
-	"github.com/EthereumVega/EVA-00D/p2p"
-	"github.com/EthereumVega/EVA-00D/params"
-	"github.com/EthereumVega/EVA-00D/rlp"
-	"github.com/EthereumVega/EVA-00D/rpc"
+	"github.com/EthereumVega/weth/accounts"
+	"github.com/EthereumVega/weth/accounts/keystore"
+	"github.com/EthereumVega/weth/common"
+	"github.com/EthereumVega/weth/common/hexutil"
+	"github.com/EthereumVega/weth/common/math"
+	"github.com/EthereumVega/weth/consensus/ethash"
+	"github.com/EthereumVega/weth/core"
+	"github.com/EthereumVega/weth/core/types"
+	"github.com/EthereumVega/weth/core/vm"
+	"github.com/EthereumVega/weth/crypto"
+	"github.com/EthereumVega/weth/log"
+	"github.com/EthereumVega/weth/p2p"
+	"github.com/EthereumVega/weth/params"
+	"github.com/EthereumVega/weth/rlp"
+	"github.com/EthereumVega/weth/rpc"
 	"github.com/syndtr/goleveldb/leveldb"
 	"github.com/syndtr/goleveldb/leveldb/util"
 )
@@ -390,7 +390,7 @@ func signHash(data []byte) []byte {
 //
 // The key used to calculate the signature is decrypted with the given password.
 //
-// https://github.com/EthereumVega/EVA-00D/wiki/Management-APIs#personal_sign
+// https://github.com/EthereumVega/weth/wiki/Management-APIs#personal_sign
 func (s *PrivateAccountAPI) Sign(ctx context.Context, data hexutil.Bytes, addr common.Address, passwd string) (hexutil.Bytes, error) {
 	// Look up the wallet containing the requested signer
 	account := accounts.Account{Address: addr}
@@ -417,7 +417,7 @@ func (s *PrivateAccountAPI) Sign(ctx context.Context, data hexutil.Bytes, addr c
 // Note, the signature must conform to the secp256k1 curve R, S and V values, where
 // the V value must be be 27 or 28 for legacy reasons.
 //
-// https://github.com/EthereumVega/EVA-00D/wiki/Management-APIs#personal_ecRecover
+// https://github.com/EthereumVega/weth/wiki/Management-APIs#personal_ecRecover
 func (s *PrivateAccountAPI) EcRecover(ctx context.Context, data, sig hexutil.Bytes) (common.Address, error) {
 	if len(sig) != 65 {
 		return common.Address{}, fmt.Errorf("signature must be 65 bytes long")

@@ -20,7 +20,7 @@ import (
 	"fmt"
 	"math/big"
 
-	"github.com/EthereumVega/EVA-00D/params"
+	"github.com/EthereumVega/weth/params"
 )
 
 // This table defines supported forks and their chain config.

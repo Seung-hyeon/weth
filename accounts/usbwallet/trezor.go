@@ -27,12 +27,12 @@ import (
 	"io"
 	"math/big"
 
-	"github.com/EthereumVega/EVA-00D/accounts"
-	"github.com/EthereumVega/EVA-00D/accounts/usbwallet/internal/trezor"
-	"github.com/EthereumVega/EVA-00D/common"
-	"github.com/EthereumVega/EVA-00D/common/hexutil"
-	"github.com/EthereumVega/EVA-00D/core/types"
-	"github.com/EthereumVega/EVA-00D/log"
+	"github.com/EthereumVega/weth/accounts"
+	"github.com/EthereumVega/weth/accounts/usbwallet/internal/trezor"
+	"github.com/EthereumVega/weth/common"
+	"github.com/EthereumVega/weth/common/hexutil"
+	"github.com/EthereumVega/weth/core/types"
+	"github.com/EthereumVega/weth/log"
 	"github.com/golang/protobuf/proto"
 )
 

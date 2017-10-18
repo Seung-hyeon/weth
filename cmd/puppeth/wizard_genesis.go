@@ -25,10 +25,10 @@ import (
 	"math/rand"
 	"time"
 
-	"github.com/EthereumVega/EVA-00D/common"
-	"github.com/EthereumVega/EVA-00D/core"
-	"github.com/EthereumVega/EVA-00D/log"
-	"github.com/EthereumVega/EVA-00D/params"
+	"github.com/EthereumVega/weth/common"
+	"github.com/EthereumVega/weth/core"
+	"github.com/EthereumVega/weth/log"
+	"github.com/EthereumVega/weth/params"
 )
 
 // makeGenesis creates a new genesis struct based on some user input.
