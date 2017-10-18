@@ -71,8 +71,8 @@ var (
 		EIP150Hash:     common.HexToHash("0x9b095b36c15eaf13044373aef8ee0bd3a382a5abb92e402afa44b8249c3a90e9"),
 		EIP155Block:    big.NewInt(3),
 		EIP158Block:    big.NewInt(3),
-		ATFieldBlock:   big.NewInt(math.MaxInt64), // Don't enable yet
-                ThirdimpactBlock: big.NewInt(math.MaxInt64), // Don't enable yet
+		ATFieldBlock:   big.NewInt(4), // Don't enable yet
+                ThirdimpactBlock: big.NewInt(5), // Don't enable yet
 
 		Clique: &CliqueConfig{
 			Period: 15,
