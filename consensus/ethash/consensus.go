@@ -36,8 +36,10 @@ import (
 
 // Ethash proof-of-work protocol constants.
 var (
-	blockReward *big.Int = big.NewInt(5e+18) // Block reward in wei for successfully mining a block
- 	maxUncles            = 2                 // Maximum number of uncles allowed in a single block
+	frontierBlockReward   *big.Int = big.NewInt(5e+18) // Block reward in wei for successfully mining a block
+  ATFieldBlockReward    *big.Int = new(big.Int).Mul(big.NewInt(15000), big.NewInt(1e+18)) // Block reward in wei for successfully premining Ethereum Vega.
+	ThirdimpactBlockReward   *big.Int = big.NewInt(5e+18) // Block reward in wei for successfully mining a block
+  maxUncles                      = 2                 // Maximum number of uncles allowed in a single block
 )
 
 // Various error messages to mark blocks invalid. These should be private to
@@ -495,7 +497,7 @@ func (ethash *Ethash) Prepare(chain consensus.ChainReader, header *types.Header)
 // setting the final state and assembling the block.
 func (ethash *Ethash) Finalize(chain consensus.ChainReader, header *types.Header, state *state.StateDB, txs []*types.Transaction, uncles []*types.Header, receipts []*types.Receipt) (*types.Block, error) {
 	// Accumulate any block and uncle rewards and commit the final state root
-	AccumulateRewards(state, header, uncles)
+	AccumulateRewards(chain.Config(), state, header, uncles)
 	header.Root = state.IntermediateRoot(chain.Config().IsEIP158(header.Number))
 
 	// Header seems complete, assemble into a block and return
@@ -511,7 +513,16 @@ var (
 // AccumulateRewards credits the coinbase of the given block with the mining
 // reward. The total reward consists of the static block reward and rewards for
 // included uncles. The coinbase of each uncle block is also rewarded.
-func AccumulateRewards(state *state.StateDB, header *types.Header, uncles []*types.Header) {
+func AccumulateRewards(config *params.ChainConfig, state *state.StateDB, header *types.Header, uncles []*types.Header) {
+ 	// Select the correct block reward based on chain progression
+	blockReward := frontierBlockReward
+ 	if config.IsATField(header.Number) {
+ 		blockReward = ATFieldBlockReward
+ 	}
+	if config.IsThirdimpact(header.Number) {
+ 		blockReward = ThirdimpactBlockReward
+ 	}
+ 	// Accumulate the rewards for the miner and any included uncles
 	reward := new(big.Int).Set(blockReward)
 	r := new(big.Int)
 	for _, uncle := range uncles {

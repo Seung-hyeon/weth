@@ -40,7 +40,7 @@ var (
 		EIP155Block:    big.NewInt(2675000),
 		EIP158Block:    big.NewInt(2675000),
 		ATFieldBlock:   big.NewInt(4370000),
-                ThirdimpactBlock: big.NewInt(4670000),
+                ThirdimpactBlock: big.NewInt(4370100),
 
 		Ethash: new(EthashConfig),
 	}
@@ -56,7 +56,7 @@ var (
 		EIP155Block:    big.NewInt(10),
 		EIP158Block:    big.NewInt(10),
 		ATFieldBlock:   big.NewInt(20),
-		ThirdimpactBlock: big.NewInt(100),
+		ThirdimpactBlock: big.NewInt(120),
 
 		Ethash: new(EthashConfig),
 	}
