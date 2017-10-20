@@ -359,11 +359,11 @@ func (s *PrivateAccountAPI) SendTransaction(ctx context.Context, args SendTxArgs
 	// Assemble the transaction and sign with the wallet
 	tx := args.toTransaction()
 
-	var chainID *big.Int
-	if config := s.b.ChainConfig(); config.IsEIP155(s.b.CurrentBlock().Number()) {
-		chainID = config.ChainId
+	var atfieldID *big.Int
+	if config := s.b.ChainConfig(); config.IsATField(s.b.CurrentBlock().Number()) {
+		atfieldID = config.ATFieldId
 	}
-	signed, err := wallet.SignTxWithPassphrase(account, passwd, tx, chainID)
+	signed, err := wallet.SignTxWithPassphrase(account, passwd, tx, atfieldID)
 	if err != nil {
 		return common.Hash{}, err
 	}
@@ -819,7 +819,7 @@ type RPCTransaction struct {
 func newRPCTransaction(tx *types.Transaction, blockHash common.Hash, blockNumber uint64, index uint64) *RPCTransaction {
 	var signer types.Signer = types.FrontierSigner{}
 	if tx.Protected() {
-		signer = types.NewEIP155Signer(tx.ChainId())
+		signer = types.NewATFieldSigner(tx.ATFieldId())
 	}
 	from, _ := types.Sender(signer, tx)
 	v, r, s := tx.RawSignatureValues()
@@ -989,7 +989,7 @@ func (s *PublicTransactionPoolAPI) GetTransactionReceipt(hash common.Hash) (map[
 
 	var signer types.Signer = types.FrontierSigner{}
 	if tx.Protected() {
-		signer = types.NewEIP155Signer(tx.ChainId())
+		signer = types.NewATFieldSigner(tx.ATFieldId())
 	}
 	from, _ := types.Sender(signer, tx)
 
@@ -1033,11 +1033,11 @@ func (s *PublicTransactionPoolAPI) sign(addr common.Address, tx *types.Transacti
 		return nil, err
 	}
 	// Request the wallet to sign the transaction
-	var chainID *big.Int
-	if config := s.b.ChainConfig(); config.IsEIP155(s.b.CurrentBlock().Number()) {
-		chainID = config.ChainId
+	var atfieldID *big.Int
+	if config := s.b.ChainConfig(); config.IsATField(s.b.CurrentBlock().Number()) {
+		atfieldID = config.ATFieldId
 	}
-	return wallet.SignTx(account, tx, chainID)
+	return wallet.SignTx(account, tx, atfieldID)
 }
 
 // SendTxArgs represents the arguments to sumbit a new transaction into the transaction pool.
@@ -1128,11 +1128,11 @@ func (s *PublicTransactionPoolAPI) SendTransaction(ctx context.Context, args Sen
 	// Assemble the transaction and sign with the wallet
 	tx := args.toTransaction()
 
-	var chainID *big.Int
-	if config := s.b.ChainConfig(); config.IsEIP155(s.b.CurrentBlock().Number()) {
-		chainID = config.ChainId
+	var atfieldID *big.Int
+	if config := s.b.ChainConfig(); config.IsATField(s.b.CurrentBlock().Number()) {
+		atfieldID = config.ATFieldId
 	}
-	signed, err := wallet.SignTx(account, tx, chainID)
+	signed, err := wallet.SignTx(account, tx, atfieldID)
 	if err != nil {
 		return common.Hash{}, err
 	}
@@ -1216,7 +1216,7 @@ func (s *PublicTransactionPoolAPI) PendingTransactions() ([]*RPCTransaction, err
 	for _, tx := range pending {
 		var signer types.Signer = types.HomesteadSigner{}
 		if tx.Protected() {
-			signer = types.NewEIP155Signer(tx.ChainId())
+			signer = types.NewATFieldSigner(tx.ATFieldId())
 		}
 		from, _ := types.Sender(signer, tx)
 		if _, err := s.b.AccountManager().Find(accounts.Account{Address: from}); err == nil {
@@ -1244,7 +1244,7 @@ func (s *PublicTransactionPoolAPI) Resend(ctx context.Context, sendArgs SendTxAr
 	for _, p := range pending {
 		var signer types.Signer = types.HomesteadSigner{}
 		if p.Protected() {
-			signer = types.NewEIP155Signer(p.ChainId())
+			signer = types.NewATFieldSigner(p.ATFieldId())
 		}
 		wantSigHash := signer.Hash(matchTx)
 

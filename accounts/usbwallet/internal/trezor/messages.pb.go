@@ -2018,6 +2018,7 @@ type EthereumSignTx struct {
 	DataInitialChunk []byte   `protobuf:"bytes,7,opt,name=data_initial_chunk,json=dataInitialChunk" json:"data_initial_chunk,omitempty"`
 	DataLength       *uint32  `protobuf:"varint,8,opt,name=data_length,json=dataLength" json:"data_length,omitempty"`
 	ChainId          *uint32  `protobuf:"varint,9,opt,name=chain_id,json=chainId" json:"chain_id,omitempty"`
+	ATFieldId          *uint32  `protobuf:"varint,10,opt,name=atfield_id,json=atfieldId" json:"atfield_id,omitempty"`
 	XXX_unrecognized []byte   `json:"-"`
 }
 
@@ -2085,6 +2086,13 @@ func (m *EthereumSignTx) GetDataLength() uint32 {
 func (m *EthereumSignTx) GetChainId() uint32 {
 	if m != nil && m.ChainId != nil {
 		return *m.ChainId
+	}
+	return 0
+}
+
+func (m *EthereumSignTx) GetATFieldId() uint32 {
+	if m != nil && m.ATFieldId != nil {
+		return *m.ATFieldId
 	}
 	return 0
 }

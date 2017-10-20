@@ -51,10 +51,6 @@ const (
 	chainSideChanSize = 10
 )
 
-var (
-	ChainIdAddition = big.NewInt(6)
-)
-
 // Agent can register themself with the worker
 type Agent interface {
 	Work() chan<- *Work
@@ -361,7 +357,7 @@ func (self *worker) makeCurrent(parent *types.Block, header *types.Header) error
 	}
 	work := &Work{
 		config:    self.config,
-		signer:    types.NewEIP155Signer(self.config.ChainId),
+		signer:    types.NewATFieldSigner(self.config.ATFieldId),
 		state:     state,
 		ancestors: set.New(),
 		family:    set.New(),
@@ -524,8 +520,8 @@ func (env *Work) commitTransactions(mux *event.TypeMux, txs *types.TransactionsB
 		from, _ := types.Sender(env.signer, tx)
 		// Check whether the tx is replay protected. If we're not in the EIP155 hf
 		// phase, start ignoring the sender until we do.
-		if tx.Protected() && (!env.config.IsEIP155(env.header.Number) || !env.config.IsThirdimpact(env.header.Number) && tx.ChainId().Cmp(new(big.Int).Add(ChainIdAddition, env.config.ChainId)) == 0) {
-			log.Trace("Ignoring reply protected transaction", "hash", tx.Hash(), "eip155", env.config.EIP155Block, "Thirdimpact", env.config.ThirdimpactBlock)
+		if tx.Protected() && !env.config.IsEIP155(env.header.Number) {
+			log.Trace("Ignoring reply protected transaction", "hash", tx.Hash(), "eip155", env.config.EIP155Block)
 
 			txs.Pop()
 			continue

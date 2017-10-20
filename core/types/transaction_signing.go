@@ -29,8 +29,8 @@ import (
 
 var (
 	ErrInvalidChainId = errors.New("invalid chain id for signer")
+	ErrInvalidATFieldId = errors.New("invalid atfield id for signer")
 	big8 = big.NewInt(8)
-	big6 = big.NewInt(6)
 )
 
 // sigCache is used to cache the derived sender and contains
@@ -45,7 +45,7 @@ func MakeSigner(config *params.ChainConfig, blockNumber *big.Int) Signer {
 	var signer Signer
 	switch {
 	case config.IsATField(blockNumber):
-		signer = NewEIP155Signer(new(big.Int).Add(big6, config.ChainId))
+		signer = NewATFieldSigner(config.ATFieldId)
 	case config.IsEIP155(blockNumber):
 		signer = NewEIP155Signer(config.ChainId)
 	case config.IsHomestead(blockNumber):
@@ -106,6 +106,66 @@ type Signer interface {
 	Equal(Signer) bool
 }
 
+// ATFieldTransaction implements Signer using the ATField rules.
+type ATFieldSigner struct {
+	atfieldId, atfieldIdMul *big.Int
+}
+
+func NewATFieldSigner(atfieldId *big.Int) ATFieldSigner {
+	if atfieldId == nil {
+		atfieldId = new(big.Int)
+	}
+	return ATFieldSigner{
+		atfieldId:    atfieldId,
+		atfieldIdMul: new(big.Int).Mul(atfieldId, big.NewInt(2)),
+	}
+}
+
+func (s ATFieldSigner) Equal(s2 Signer) bool {
+	atfield, ok := s2.(ATFieldSigner)
+	return ok && (atfield.atfieldId.Cmp(s.atfieldId) == 0)
+}
+
+func (s ATFieldSigner) Sender(tx *Transaction) (common.Address, error) {
+	if !tx.Protected() {
+		return HomesteadSigner{}.Sender(tx)
+	}
+	if tx.ATFieldId().Cmp(s.atfieldId) != 0{
+		return common.Address{}, ErrInvalidATFieldId
+	}
+	V := new(big.Int).Sub(tx.data.V, s.atfieldIdMul)
+	V.Sub(V, big8)
+	return recoverPlain(s.Hash(tx), tx.data.R, tx.data.S, V, true)
+}
+
+// WithSignature returns a new transaction with the given signature. This signature
+// needs to be in the [R || S || V] format where V is 0 or 1.
+func (s ATFieldSigner) SignatureValues(tx *Transaction, sig []byte) (R, S, V *big.Int, err error) {
+	R, S, V, err = HomesteadSigner{}.SignatureValues(tx, sig)
+	if err != nil {
+		return nil, nil, nil, err
+	}
+	if s.atfieldId.Sign() != 0 {
+		V = big.NewInt(int64(sig[64] + 35))
+		V.Add(V, s.atfieldIdMul)
+	}
+	return R, S, V, nil
+}
+
+// Hash returns the hash to be signed by the sender.
+// It does not uniquely identify the transaction.
+func (s ATFieldSigner) Hash(tx *Transaction) common.Hash {
+	return rlpHash([]interface{}{
+		tx.data.AccountNonce,
+		tx.data.Price,
+		tx.data.GasLimit,
+		tx.data.Recipient,
+		tx.data.Amount,
+		tx.data.Payload,
+		s.atfieldId, uint(0), uint(0),
+	})
+}
+
 // EIP155Transaction implements Signer using the EIP155 rules.
 type EIP155Signer struct {
 	chainId, chainIdMul *big.Int
@@ -123,14 +183,14 @@ func NewEIP155Signer(chainId *big.Int) EIP155Signer {
 
 func (s EIP155Signer) Equal(s2 Signer) bool {
 	eip155, ok := s2.(EIP155Signer)
-	return ok && (eip155.chainId.Cmp(s.chainId) == 0 || eip155.chainId.Cmp(new(big.Int).Add(big6, s.chainId)) == 0)
+	return ok && (eip155.chainId.Cmp(s.chainId) == 0)
 }
 
 func (s EIP155Signer) Sender(tx *Transaction) (common.Address, error) {
 	if !tx.Protected() {
 		return HomesteadSigner{}.Sender(tx)
 	}
-	if tx.ChainId().Cmp(s.chainId) != 0 && tx.ChainId().Cmp(new(big.Int).Add(big6, s.chainId)) != 0 {
+	if tx.ChainId().Cmp(s.chainId) != 0{
 		return common.Address{}, ErrInvalidChainId
 	}
 	V := new(big.Int).Sub(tx.data.V, s.chainIdMul)
@@ -246,6 +306,19 @@ func recoverPlain(sighash common.Hash, R, S, Vb *big.Int, homestead bool) (commo
 	var addr common.Address
 	copy(addr[:], crypto.Keccak256(pub[1:])[12:])
 	return addr, nil
+}
+
+// deriveATFieldId derives the chain id from the given v parameter
+func deriveATFieldId(v *big.Int) *big.Int {
+	if v.BitLen() <= 64 {
+		v := v.Uint64()
+		if v == 27 || v == 28 {
+			return new(big.Int)
+		}
+		return new(big.Int).SetUint64((v - 35) / 2)
+	}
+	v = new(big.Int).Sub(v, big.NewInt(35))
+	return v.Div(v, big.NewInt(2))
 }
 
 // deriveChainId derives the chain id from the given v parameter

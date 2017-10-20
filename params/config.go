@@ -32,6 +32,7 @@ var (
 	// MainnetChainConfig is the chain parameters to run a node on the main network.
 	MainnetChainConfig = &ChainConfig{
 		ChainId:        big.NewInt(1),
+		ATFieldId:      big.NewInt(7),
 		HomesteadBlock: big.NewInt(1150000),
 		DAOForkBlock:   big.NewInt(1920000),
 		DAOForkSupport: true,
@@ -48,6 +49,7 @@ var (
 	// TestnetChainConfig contains the chain parameters to run a node on the Ropsten test network.
 	TestnetChainConfig = &ChainConfig{
 		ChainId:        big.NewInt(3),
+		ATFieldId:      big.NewInt(8),
 		HomesteadBlock: big.NewInt(0),
 		DAOForkBlock:   nil,
 		DAOForkSupport: true,
@@ -64,6 +66,7 @@ var (
 	// RinkebyChainConfig contains the chain parameters to run a node on the Rinkeby test network.
 	RinkebyChainConfig = &ChainConfig{
 		ChainId:        big.NewInt(4),
+		ATFieldId:      big.NewInt(9),
 		HomesteadBlock: big.NewInt(1),
 		DAOForkBlock:   nil,
 		DAOForkSupport: true,
@@ -88,8 +91,8 @@ var (
 	// means that all fields must be set at all times. This forces
 	// anyone adding flags to the config to also have to set these
 	// fields.
-	AllProtocolChanges = &ChainConfig{big.NewInt(1337), big.NewInt(0), nil, false, big.NewInt(0), common.Hash{}, big.NewInt(0), big.NewInt(0), big.NewInt(0), big.NewInt(0), new(EthashConfig), nil}
-	TestChainConfig    = &ChainConfig{big.NewInt(1), big.NewInt(0), nil, false, big.NewInt(0), common.Hash{}, big.NewInt(0), big.NewInt(0), big.NewInt(0), big.NewInt(0), new(EthashConfig), nil}
+	AllProtocolChanges = &ChainConfig{big.NewInt(1337), big.NewInt(0), big.NewInt(0), nil, false, big.NewInt(0), common.Hash{}, big.NewInt(0), big.NewInt(0), big.NewInt(0), big.NewInt(0), new(EthashConfig), nil}
+	TestChainConfig    = &ChainConfig{big.NewInt(1), big.NewInt(0), big.NewInt(0), nil, false, big.NewInt(0), common.Hash{}, big.NewInt(0), big.NewInt(0), big.NewInt(0), big.NewInt(0), new(EthashConfig), nil}
 	TestRules          = TestChainConfig.Rules(new(big.Int))
 )
 
@@ -100,6 +103,7 @@ var (
 // set of configuration options.
 type ChainConfig struct {
 	ChainId *big.Int `json:"chainId"` // Chain id identifies the current chain and is used for replay protection
+	ATFieldId *big.Int `json:"atfieldId"` // ATField id identifies the current chain and is used for replay protection
 
 	HomesteadBlock *big.Int `json:"homesteadBlock,omitempty"` // Homestead switch block (nil = no fork, 0 = already homestead)
 
@@ -151,8 +155,9 @@ func (c *ChainConfig) String() string {
 	default:
 		engine = "unknown"
 	}
-	return fmt.Sprintf("{ChainID: %v Homestead: %v DAO: %v DAOSupport: %v EIP150: %v EIP155: %v EIP158: %v ATField: %v Thirdimpact: %v Engine: %v}",
+	return fmt.Sprintf("{ChainID: %v ATFieldID: %v Homestead: %v DAO: %v DAOSupport: %v EIP150: %v EIP155: %v EIP158: %v ATField: %v Thirdimpact: %v Engine: %v}",
 		c.ChainId,
+		c.ATFieldId,
 		c.HomesteadBlock,
 		c.DAOForkBlock,
 		c.DAOForkSupport,
@@ -249,8 +254,14 @@ func (c *ChainConfig) checkCompatible(newcfg *ChainConfig, head *big.Int) *Confi
 	if isForkIncompatible(c.EIP158Block, newcfg.EIP158Block, head) {
 		return newCompatError("EIP158 fork block", c.EIP158Block, newcfg.EIP158Block)
 	}
+	if c.IsEIP158(head) && !configNumEqual(c.ChainId, newcfg.ChainId) {
+		return newCompatError("EIP158 chain ID", c.EIP158Block, newcfg.EIP158Block)
+	}
 	if isForkIncompatible(c.ATFieldBlock, newcfg.ATFieldBlock, head) {
 		return newCompatError("ATField fork block", c.ATFieldBlock, newcfg.ATFieldBlock)
+	}
+	if c.IsATField(head) && !configNumEqual(c.ATFieldId, newcfg.ATFieldId) {
+		return newCompatError("ATField ID", c.ATFieldBlock, newcfg.ATFieldBlock)
 	}
 	if isForkIncompatible(c.ThirdimpactBlock, newcfg.ThirdimpactBlock, head) {
 		return newCompatError("Thirdimpact fork block", c.ThirdimpactBlock, newcfg.ThirdimpactBlock)
@@ -319,15 +330,19 @@ func (err *ConfigCompatError) Error() string {
 // Rules is a one time interface meaning that it shouldn't be used in between transition
 // phases.
 type Rules struct {
-	ChainId                                   *big.Int
+	ChainId, ATFieldId                        *big.Int
 	IsHomestead, IsEIP150, IsEIP155, IsEIP158 bool
 	IsThirdimpact, IsATField                  bool
 }
 
 func (c *ChainConfig) Rules(num *big.Int) Rules {
 	chainId := c.ChainId
+	atfieldId := c.ATFieldId
 	if chainId == nil {
 		chainId = new(big.Int)
 	}
-	return Rules{ChainId: new(big.Int).Set(chainId), IsHomestead: c.IsHomestead(num), IsEIP150: c.IsEIP150(num), IsEIP155: c.IsEIP155(num), IsEIP158: c.IsEIP158(num), IsATField: c.IsATField(num), IsThirdimpact: c.IsThirdimpact(num)}
+	if atfieldId == nil {
+		atfieldId = new(big.Int)
+	}
+	return Rules{ChainId: new(big.Int).Set(chainId), ATFieldId: new(big.Int).Set(atfieldId), IsHomestead: c.IsHomestead(num), IsEIP150: c.IsEIP150(num), IsEIP155: c.IsEIP155(num), IsEIP158: c.IsEIP158(num), IsATField: c.IsATField(num), IsThirdimpact: c.IsThirdimpact(num)}
 }
