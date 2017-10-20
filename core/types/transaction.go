@@ -27,6 +27,7 @@ import (
 	"github.com/EthereumVega/weth/common"
 	"github.com/EthereumVega/weth/common/hexutil"
 	"github.com/EthereumVega/weth/crypto"
+	"github.com/EthereumVega/weth/params"
 	"github.com/EthereumVega/weth/rlp"
 )
 
@@ -38,20 +39,26 @@ var (
 )
 
 // deriveSigner makes a *best* guess about which signer to use.
-func deriveSigner(V *big.Int) Signer {
-	if V.Sign() != 0 && isProtectedV(V) {
-		return NewEIP155Signer(deriveChainId(V))
-	} else {
-		return HomesteadSigner{}
+func deriveSigner(V *big.Int, config *params.ChainConfig, blockNumber *big.Int) Signer {
+	  if config.IsATField(blockNumber) {
+		  return NewATFieldSigner(deriveATFieldId(V))
+	  } else {
+		if V.Sign() != 0 && isProtectedV(V) {
+			return NewEIP155Signer(deriveChainId(V))
+		} else {
+			return HomesteadSigner{}
+		}
 	}
 }
 
 type Transaction struct {
 	data txdata
 	// caches
-	hash atomic.Value
-	size atomic.Value
-	from atomic.Value
+	hash        atomic.Value
+	size        atomic.Value
+	from        atomic.Value
+	config      *params.ChainConfig
+	blockNumber *big.Int
 }
 
 type txdata struct {
@@ -68,7 +75,9 @@ type txdata struct {
 	S *big.Int `json:"s" gencodec:"required"`
 
 	// This is only used when marshaling to JSON.
-	Hash *common.Hash `json:"hash" rlp:"-"`
+	Hash        *common.Hash `json:"hash" rlp:"-"`
+	config      *params.ChainConfig
+	blockNumber *big.Int
 }
 
 type txdataMarshaling struct {
@@ -80,6 +89,8 @@ type txdataMarshaling struct {
 	V            *hexutil.Big
 	R            *hexutil.Big
 	S            *hexutil.Big
+	config       *params.ChainConfig
+	blockNumber  *big.Int
 }
 
 func NewTransaction(nonce uint64, to common.Address, amount, gasLimit, gasPrice *big.Int, data []byte) *Transaction {
@@ -121,6 +132,11 @@ func newTransaction(nonce uint64, to *common.Address, amount, gasLimit, gasPrice
 // ChainId returns which chain id this transaction was signed for (if at all)
 func (tx *Transaction) ChainId() *big.Int {
 	return deriveChainId(tx.data.V)
+}
+
+// ATFieldId returns which chain id this transaction was signed for (if at all)
+func (tx *Transaction) ATFieldId() *big.Int {
+	return deriveATFieldId(tx.data.V)
 }
 
 // Protected returns whether the transaction is protected from replay protection.
@@ -167,11 +183,16 @@ func (tx *Transaction) UnmarshalJSON(input []byte) error {
 		return err
 	}
 	var V byte
-	if isProtectedV(dec.V) {
-		chainId := deriveChainId(dec.V).Uint64()
-		V = byte(dec.V.Uint64() - 35 - 2*chainId)
+	if tx.config.IsATField(tx.blockNumber) {
+		atfieldId := deriveATFieldId(dec.V).Uint64()
+		V = byte(dec.V.Uint64() - 35 - 2*atfieldId)
 	} else {
-		V = byte(dec.V.Uint64() - 27)
+		if isProtectedV(dec.V) {
+			chainId := deriveChainId(dec.V).Uint64()
+			V = byte(dec.V.Uint64() - 35 - 2*chainId)
+		} else {
+			V = byte(dec.V.Uint64() - 27)
+		}
 	}
 	if !crypto.ValidateSignatureValues(V, dec.R, dec.S, false) {
 		return ErrInvalidSig
@@ -268,7 +289,7 @@ func (tx *Transaction) String() string {
 	if tx.data.V != nil {
 		// make a best guess about the signer and use that to derive
 		// the sender.
-		signer := deriveSigner(tx.data.V)
+		signer := deriveSigner(tx.data.V, tx.config, tx.blockNumber)
 		if f, err := Sender(signer, tx); err != nil { // derive but don't cache
 			from = "[invalid sender: invalid sig]"
 		} else {
