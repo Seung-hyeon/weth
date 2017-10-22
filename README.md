@@ -1,7 +1,7 @@
 # Went-ethereum(WETH)
 ## Introducing Ethereum Vega(EVA)
 
-Brief introduce: Ethereum Vega is a hard fork of Ethereum, with a original block rewards served with replay-attack protection. It has hardforked at the block number 4370000 so all ethereum holders before block 4369999 will hold EVA with the same amount.
+Ethereum Vega is a hard fork of Ethereum, with a original block rewards served with replay-attack protection. It has hardforked at the block number 4370000 so all ethereum holders before block 4369999 will hold EVA with the same amount.
 
 ## Technical spec
 
