@@ -1,8 +1,9 @@
 # Went-ethereum(WETH)
 
+[![Build Status](https://travis-ci.org/EthereumVega/weth.svg?branch=master)](https://travis-ci.org/EthereumVega/weth)
 [![Gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/ethereumvega1/Lobby?utm_source=share-link&utm_medium=link&utm_campaign=share-link)
 
-a
+
 ## Introducing Ethereum Vega(EVA)
 
 Ethereum Vega is a hard fork of Ethereum, with a original block rewards served with replay-attack protection. It has hardforked at the block number 4370000 so all ethereum holders before block 4369999 will hold EVA with the same amount of ETH.
