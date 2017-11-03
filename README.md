@@ -1,9 +1,6 @@
 # Went-ethereum(WETH)
 
-[![Build Status](https://travis-ci.org/EthereumVega/weth.svg?branch=master)](https://travis-ci.org/EthereumVega/weth)
 [![Gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/ethereumvega1/Lobby?utm_source=share-link&utm_medium=link&utm_campaign=share-link)
-a
-
 
 ## Introducing Ethereum Vega(EVA)
 
